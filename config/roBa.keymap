@@ -93,8 +93,8 @@
 &mt LS(LCTRL) TAB  &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 INT_MUHENKAN  &lt 2 SPACE  &lt 3 ENTER      &lt 4 BACKSPACE  &lt 5 INT_HENKAN                               &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
-            sensor-bindings = <&scroll_up_down>;
+sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+sensor-bindings = <&scroll_up_down>;
         };
 
         MARk {
