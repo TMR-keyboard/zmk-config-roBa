@@ -151,10 +151,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &audioswitchzg02        &audioswitchliberty5  &kp LC(TAB)              &trans                       &trans     &kp HOME  &kp UP    &kp END    &trans
-&kp HOME        &bt BT_SEL 0            &bt BT_SEL 1          &bt BT_SEL 2             &kp END  &trans      &trans  &kp LC(W)  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LC(T)
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans                &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans     &trans    &trans    &trans     &trans
-&trans          &trans                  &trans                &trans                   &trans   &trans      &trans  &trans                                    &trans
+&kp ESCAPE      &audioswitchzg02        &audioswitchliberty5  &kp LC(TAB)              &trans                       &trans    &kp HOME  &kp UP     &kp END  &trans
+&kp HOME        &bt BT_SEL 0            &bt BT_SEL 1          &bt BT_SEL 2             &kp END  &trans      &trans  &kp HOME  &kp LEFT  &kp RIGHT  &kp END  &kp LC(T)
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans                &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans    &kp DOWN  &trans     &trans   &trans
+&trans          &trans                  &trans                &trans                   &trans   &trans      &trans  &trans                                  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LA(LC(LG(LEFT_ARROW))) LA(LC(LG(RIGHT_ARROW)))>;
@@ -164,7 +164,7 @@
             bindings = <
 &kp LSHFT  &trans  &trans  &kp LBKT   &kp RBKT                       &kp F1  &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)
 &trans     &trans  &trans  &kp FSLH   &kp BSLH  &trans      &kp ESC  &kp F6  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp F10
-&trans     &trans  &trans  &kp COMMA  &kp DOT   &trans      &trans   &kp N0  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp F11
+&trans     &trans  &trans  &kp COMMA  &kp DOT   &trans      &trans   &kp N0  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp QUESTION
 &trans     &trans  &trans  &trans     &trans    &trans      &trans   &trans                                              &kp F12
             >;
 
