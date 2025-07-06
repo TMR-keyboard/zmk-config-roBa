@@ -14,17 +14,18 @@
     automouse-layer = <4>;
     scroll-layers = <1>;
 
-     arrows {
-         layers = <3>;
-         bindings =
-             <&kp RIGHT_ARROW>,
-             <&kp LEFT_ARROW>,
-             <&kp UP_ARROW>,
-             <&kp DOWN_ARROW>;
-         tick = <10>;
-         wait-ms = <5>;
-         tap-ms = <5>;
-     };
+    arrows {
+        layers = <3>;
+        bindings =
+            <&kp RIGHT_ARROW>,
+            <&kp LEFT_ARROW>,
+            <&kp UP_ARROW>,
+            <&kp DOWN_ARROW>;
+
+        tick = <10>;
+        wait-ms = <5>;
+        tap-ms = <5>;
+    };
 };
 
 / {
@@ -182,11 +183,13 @@
 
         LAYER_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp A   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&kp Q          &kp L         &kp U         &kp COMMA    &kp DOT                                                  &kp F        &kp W  &kp R  &kp Y  &kp P
+&kp E          &kp I         &kp A         &kp O        &kp MINUS  &mkp MB3           &to 6                      &kp K        &kp T  &kp N  &kp S  &kp H
+&kp Z          &kp X         &kp C         &kp V        &kp SEMI   &mkp MB4           &mkp MB5                   &kp G        &kp D  &kp M  &kp J  &kp B
+&mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &lt 1 SPACE  &mkp LCLK  &momkp 2 RCLK      &mt RIGHT_SHIFT BACKSPACE  &lt 3 ENTER                       &kp ESC
             >;
+
+            sensor-bindings = <&scroll_up_down>;
         };
 
         layer_6 {
