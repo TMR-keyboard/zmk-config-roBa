@@ -32,29 +32,16 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
+        comma {
+            bindings = <&kp COMMA>;
+            key-positions = <18 19>;
+            layers = <0>;
         };
 
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+        dot {
+            bindings = <&kp PERIOD>;
+            key-positions = <19 20>;
+            layers = <0>;
         };
     };
 
@@ -132,10 +119,10 @@
 
         default_layer {
             bindings = <
-&kp Q              &kp W         &kp E         &kp R        &kp T                                      &kp Y            &kp U  &kp I             &kp O           &kp P
-&kp A              &kp S         &kp D         &kp F        &kp G      &mkp MB3           &to 6        &kp H            &kp J  &kp K             &kp L           &lt 4 MINUS
-&mt LEFT_SHIFT Z   &kp X         &kp C         &kp V        &kp B      &mkp MB4           &mkp MB5     &kp N            &kp M  &kp INT_MUHENKAN  &kp INT_HENKAN  &mt LEFT_SHIFT SLASH
-&mt LS(LCTRL) TAB  &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 SPACE  &mkp LCLK  &momkp 2 RCLK      &lt 2 ENTER  &lt 3 BACKSPACE                                           &kp ESCAPE
+&kp Q             &kp W         &kp E         &kp R        &kp T                                               &kp Y            &kp U  &kp I             &kp O           &kp P
+&kp A             &kp S         &kp D         &kp F        &kp G      &mkp MB3                    &to 6        &kp H            &kp J  &kp K             &kp L           &lt 4 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B      &mkp MB4                    &mkp MB5     &kp N            &kp M  &kp INT_MUHENKAN  &kp INT_HENKAN  &mt LEFT_SHIFT SLASH
+&mt LCTRL TAB     &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &lt 2 ENTER  &lt 3 BACKSPACE                                           &kp ESCAPE
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -163,10 +150,10 @@
 
         MARk {
             bindings = <
-&kp LSHFT  &trans  &trans  &kp LBKT              &kp RBKT                                    &kp F1  &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)
-&trans     &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans      &kp ESC  &kp F6  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp F10
-&trans     &trans  &trans  &kp COMMA             &kp DOT                &trans      &trans   &kp N0  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp QUESTION
-&trans     &trans  &trans  &trans                &trans                 &trans      &trans   &trans                                              &kp F12
+&kp LSHFT  &trans  &kp LBKT      &kp RBKT      &kp RBKT                       &kp F1  &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)
+&trans     &trans  &kp LS(LPAR)  &kp LS(RPAR)  &kp N0    &trans      &kp ESC  &kp F6  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp F10
+&trans     &trans  &kp SEMI      &kp APOS      &kp DOT   &trans      &trans   &kp N0  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp QUESTION
+&trans     &trans  &trans        &trans        &trans    &trans      &trans   &trans                                              &kp F12
             >;
 
             sensor-bindings = <&inc_dec_kp LS(LC(LG(NUMBER_1))) LS(LC(LG(NUMBER_2)))>;
@@ -183,10 +170,10 @@
 
         Ohnisi {
             bindings = <
-&kp Q          &kp L         &kp U         &kp COMMA    &kp DOT                                                  &kp F        &kp W  &kp R  &kp Y  &kp P
-&kp E          &kp I         &kp A         &kp O        &kp MINUS  &mkp MB3           &to 6                      &kp K        &kp T  &kp N  &kp S  &kp H
-&kp Z          &kp X         &kp C         &kp V        &kp SEMI   &mkp MB4           &mkp MB5                   &kp G        &kp D  &kp M  &kp J  &kp B
-&mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &lt 1 SPACE  &mkp LCLK  &momkp 2 RCLK      &mt RIGHT_SHIFT BACKSPACE  &lt 3 ENTER                       &kp ESC
+&kp Q          &kp L         &kp U         &kp COMMA    &kp DOT                                             &kp F            &kp W  &kp R  &kp Y  &kp P
+&kp E          &kp I         &kp A         &kp O        &kp MINUS  &mkp MB3                    &to 6        &kp K            &kp T  &kp N  &kp S  &kp H
+&kp Z          &kp X         &kp C         &kp V        &kp SEMI   &mkp MB4                    &mkp MB5     &kp G            &kp D  &kp M  &kp J  &kp B
+&mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &lt 1 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &lt 2 ENTER  &lt 3 BACKSPACE                       &kp ESC
             >;
 
             sensor-bindings = <&scroll_up_down>;
