@@ -183,7 +183,7 @@
             bindings = <
 &kp Q  &kp W  &kp Y  &kp Q  &kp Q                                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &kp D  &kp D  &kp Z  &kp X  &kp D      &kp ESCAPE                  &to 0    &kp D         &kp D         &kp D         &kp D         &kp D
-&kp D  &kp D  &kp D  &kp D  &kp D      &kp D                       &kp D    &kp D         &kp D         &kp D         &kp D         &bt BT_CLR
+&kp D  &kp D  &kp D  &kp D  &kp D      &kp D                       &kp D    &kp J         &kp D         &kp D         &kp D         &bt BT_CLR
 &kp D  &kp D  &kp D  &kp D  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &kp RET  &kp X                                                   &bt BT_CLR_ALL
             >;
 
