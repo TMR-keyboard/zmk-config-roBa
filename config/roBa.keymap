@@ -130,10 +130,10 @@
 
         NUM {
             bindings = <
-&kp F9  &kp F10  &kp F11  &kp F12  &kp PLUS                                                    &kp CARET            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp ASTERISK
-&kp F5  &kp F6   &kp F7   &kp F8   &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp TILDE        &kp PLUS             &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS
-&kp F1  &kp F2   &kp F3   &kp F4   &kp PERIOD    &kp EQUAL                    &kp COLON        &kp PERIOD           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SLASH
-&trans  &trans   &trans   &trans   &trans        &trans                       &kp KP_NUMBER_0  &mt LCTRL BACKSPACE                                                     &kp PIPE
+&kp F9  &kp F10  &kp F11  &kp F12          &kp PLUS                                                    &kp CARET            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp ASTERISK
+&kp F5  &kp F6   &kp F7   &kp F8           &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp TILDE        &kp PLUS             &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS
+&kp F1  &kp F2   &kp F3   &kp F4           &kp PERIOD    &kp EQUAL                    &kp COLON        &kp PERIOD           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SLASH
+&trans  &trans   &trans   &mt LCTRL SPACE  &trans        &trans                       &kp KP_NUMBER_0  &mt LCTRL BACKSPACE                                                     &kp PIPE
             >;
         };
 
