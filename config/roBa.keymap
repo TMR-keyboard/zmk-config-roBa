@@ -182,9 +182,9 @@
 
         Ohnisi {
             bindings = <
-&kp Q          &kp L         &kp U         &kp COMMA    &kp DOT                                             &kp F            &kp W  &kp R  &kp Y  &kp P
+&kp Q          &kp Z         &kp U         &kp COMMA    &kp DOT                                             &kp F            &kp W  &kp R  &kp Y  &kp P
 &kp E          &kp I         &kp A         &kp O        &kp MINUS  &mkp MB3                    &to 6        &kp K            &kp T  &kp N  &kp S  &kp H
-&kp Z          &kp X         &kp C         &kp V        &kp SEMI   &mkp MB4                    &mkp MB5     &kp G            &kp D  &kp M  &kp J  &kp B
+&kp L          &kp X         &kp C         &kp V        &kp SEMI   &mkp MB4                    &mkp MB5     &kp G            &kp D  &kp M  &kp J  &kp B
 &mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &lt 1 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &lt 2 ENTER  &lt 3 BACKSPACE                       &kp ESC
             >;
 
