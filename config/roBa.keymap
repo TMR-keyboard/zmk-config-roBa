@@ -33,7 +33,7 @@
         compatible = "zmk,combos";
 
         comma {
-            bindings = <&kp LC(INT_HENKAN)>;
+            bindings = <&kp INT_HENKAN>;
             key-positions = <18 19>;
             layers = <0 5>;
         };
