@@ -10,9 +10,7 @@
     quick-tap-ms = <0>;
 };
 
-&trackball {
-    scroll-layers = <1>;
-};
+&trackball { scroll-layers = <1>; };
 
 / {
     combos {
@@ -78,6 +76,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
 
@@ -115,7 +114,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R        &kp T                                               &kp Y            &kp U  &kp I      &kp O       &kp P
-&kp A             &kp S         &kp D         &kp F        &kp G      &mkp MB3                    &to 6        &kp H            &kp J  &kp K      &kp L       &lt 4 MINUS
+&kp A             &kp S         &kp D         &kp F        &kp G      &to 5                       &to 6        &kp H            &kp J  &kp K      &kp L       &lt 4 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B      &mkp MB4                    &mkp MB5     &kp N            &kp M  &kp COMMA  &kp PERIOD  &mt LEFT_SHIFT SLASH
 &mt LCTRL TAB     &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &lt 2 ENTER  &lt 3 BACKSPACE                                &kp ESCAPE
             >;
@@ -166,7 +165,7 @@
         Ohnisi {
             bindings = <
 &kp Q          &kp Z         &kp U         &kp COMMA    &kp DOT                                             &kp F            &kp W  &kp R  &kp Y  &kp P
-&kp E          &kp I         &kp A         &kp O        &kp MINUS  &mkp MB3                    &to 6        &kp K            &kp T  &kp N  &kp S  &kp H
+&kp E          &kp I         &kp A         &kp O        &kp MINUS  &to 0                       &to 6        &kp K            &kp T  &kp N  &kp S  &kp H
 &kp L          &kp X         &kp C         &kp V        &kp SEMI   &mkp MB4                    &mkp MB5     &kp G            &kp D  &kp M  &kp J  &kp B
 &mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &lt 1 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &lt 2 ENTER  &lt 3 BACKSPACE                       &kp ESC
             >;
@@ -177,8 +176,8 @@
         layer_6 {
             bindings = <
 &kp Q  &kp W  &kp Y      &kp Q           &kp Q                                                &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&kp D  &kp D  &mkp MCLK  &kp LEFT_SHIFT  &kp D      &kp ESCAPE                  &to 0         &kp D         &mt LEFT_SHIFT X  &kp Z         &kp D         &kp D
-&kp D  &kp D  &kp D      &kp D           &kp D      &kp D                       &kp D         &kp J         &kp D             &kp D         &kp D         &bt BT_CLR
+&kp D  &kp D  &mkp MCLK  &kp LEFT_SHIFT  &kp D      &kp ESCAPE                  &none         &kp D         &mt LEFT_SHIFT X  &kp Z         &kp D         &kp D
+&kp D  &kp D  &kp D      &kp D           &kp D      &kp D                       &to 5         &kp J         &kp D             &kp D         &kp D         &bt BT_CLR
 &kp D  &kp D  &kp D      &lt 1 SPACE     &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &kp KP_ENTER  &kp X                                                       &bt BT_CLR_ALL
             >;
 
