@@ -11,21 +11,7 @@
 };
 
 &trackball {
-    automouse-layer = <4>;
     scroll-layers = <1>;
-
-    arrows {
-        layers = <3>;
-        bindings =
-            <&kp RIGHT_ARROW>,
-            <&kp LEFT_ARROW>,
-            <&kp UP_ARROW>,
-            <&kp DOWN_ARROW>;
-
-        tick = <10>;
-        wait-ms = <5>;
-        tap-ms = <5>;
-    };
 };
 
 / {
@@ -80,9 +66,6 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-            // 追加: スクロールのタップ時間を設定 (20ms)
-
             tap-ms = <20>;
         };
 
