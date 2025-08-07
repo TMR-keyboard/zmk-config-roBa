@@ -18,26 +18,14 @@
 
         comma {
             bindings = <&kp INT_HENKAN>;
-            key-positions = <18 19>;
-            layers = <0 5>;
+            key-positions = <13 18>;
+            layers = <6 0>;
         };
 
         dot {
             bindings = <&kp INT_MUHENKAN>;
-            key-positions = <19 20>;
-            layers = <0 5>;
-        };
-
-        to-layer {
-            bindings = <&to 5>;
-            key-positions = <0 9>;
-            layers = <0>;
-        };
-
-        to-layer0 {
-            bindings = <&to 0>;
-            key-positions = <0 9>;
-            layers = <5>;
+            key-positions = <19 12>;
+            layers = <6 0>;
         };
     };
 
@@ -45,7 +33,7 @@
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&to 6 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
 
@@ -72,7 +60,7 @@
     };
 
     behaviors {
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+        scroll_up_down: up.down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
@@ -111,15 +99,15 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Ohnisi {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R        &kp T                                               &kp Y            &kp U  &kp I      &kp O       &kp P
-&kp A             &kp S         &kp D         &kp F        &kp G      &to 5                       &to 6        &kp H            &kp J  &kp K      &kp L       &lt 4 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B      &mkp MB4                    &mkp MB5     &kp N            &kp M  &kp COMMA  &kp PERIOD  &mt LEFT_SHIFT SLASH
-&mt LCTRL TAB     &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &lt 2 ENTER  &lt 3 BACKSPACE                                &kp ESCAPE
+&kp Q          &kp Z         &kp U         &kp COMMA    &kp DOT                                             &kp F            &kp W  &kp R  &kp Y  &kp P
+&kp E          &kp I         &kp A         &kp O        &kp MINUS  &to 6                       &to 5        &kp K            &kp T  &kp N  &kp S  &kp H
+&kp L          &kp X         &kp C         &kp V        &kp SEMI   &mkp MB4                    &mkp MB5     &kp G            &kp D  &kp M  &kp J  &kp B
+&mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &lt 1 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &lt 2 ENTER  &lt 3 BACKSPACE                       &kp ESC
             >;
 
-            sensor-bindings = <&inc_dec_kp A B>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         NUM {
@@ -162,22 +150,22 @@
             >;
         };
 
-        Ohnisi {
+        default_layer {
             bindings = <
-&kp Q          &kp Z         &kp U         &kp COMMA    &kp DOT                                             &kp F            &kp W  &kp R  &kp Y  &kp P
-&kp E          &kp I         &kp A         &kp O        &kp MINUS  &to 0                       &to 6        &kp K            &kp T  &kp N  &kp S  &kp H
-&kp L          &kp X         &kp C         &kp V        &kp SEMI   &mkp MB4                    &mkp MB5     &kp G            &kp D  &kp M  &kp J  &kp B
-&mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &lt 1 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &lt 2 ENTER  &lt 3 BACKSPACE                       &kp ESC
+&kp Q             &kp W         &kp E         &kp R        &kp T                                               &kp Y            &kp U  &kp I      &kp O       &kp P
+&kp A             &kp S         &kp D         &kp F        &kp G      &to 0                       &to 6        &kp H            &kp J  &kp K      &kp L       &lt 4 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B      &mkp MB4                    &mkp MB5     &kp N            &kp M  &kp COMMA  &kp PERIOD  &mt LEFT_SHIFT SLASH
+&mt LCTRL TAB     &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &lt 2 ENTER  &lt 3 BACKSPACE                                &kp ESCAPE
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp A B>;
         };
 
         layer_6 {
             bindings = <
 &kp Q  &kp W  &kp Y      &kp Q           &kp Q                                                &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &kp D  &kp D  &mkp MCLK  &kp LEFT_SHIFT  &kp D      &kp ESCAPE                  &none         &kp D         &mt LEFT_SHIFT X  &kp Z         &kp D         &kp D
-&kp D  &kp D  &kp D      &kp D           &kp D      &kp D                       &to 5         &kp J         &kp D             &kp D         &kp D         &bt BT_CLR
+&kp D  &kp D  &kp D      &kp D           &kp D      &kp D                       &to 0         &kp J         &kp D             &kp D         &kp D         &bt BT_CLR
 &kp D  &kp D  &kp D      &lt 1 SPACE     &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &kp KP_ENTER  &kp X                                                       &bt BT_CLR_ALL
             >;
 
