@@ -119,7 +119,7 @@
 &mt LCTRL TAB     &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &lt 2 ENTER  &lt 3 BACKSPACE                                &kp ESCAPE
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp A B>;
         };
 
         NUM {
