@@ -130,6 +130,7 @@ trackball_scroll: tr_scr {
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>, <&msc SCRL_UP>, <&msc SCRL_DOWN>;
     };
+
     sensor-bindings = <&trackball_scroll>;
         };
 
