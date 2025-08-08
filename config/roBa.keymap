@@ -10,21 +10,8 @@
     quick-tap-ms = <0>;
 };
 
-&trackball { scroll-layers = <5>; 
- 
-    arrows {
-         layers = <2>;
-         bindings =
-             <&msc SCRL_RIGHT>,
-             <&msc SCRL_LEFT>,
-             <&msc SCRL_UP>,
-             <&msc SCRL_DOWN>;
-
-         tick = <10>;
-         wait-ms = <5>;
-         tap-ms = <5>;
-     };
-};
+&trackball {
+  };
 
 / {
     combos { compatible = "zmk,combos"; };
@@ -137,6 +124,13 @@
 &kp F1  &kp F2   &kp F3   &kp F4   &kp PERIOD    &kp EQUAL                    &kp COLON     &kp N0               &kp N1  &kp N2  &kp N3  &kp DOT
 &trans  &trans   &trans   &trans   &trans        &trans                       &kp KP_ENTER  &mt LCTRL BACKSPACE                          &kp PIPE
             >;
+    
+trackball_scroll: tr_scr {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>, <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+    };
+    sensor-bindings = <&trackball_scroll>;
         };
 
         ARROW {
