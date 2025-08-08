@@ -19,7 +19,7 @@
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 6 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&to 1 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
 
@@ -78,7 +78,16 @@
             bindings = <&mo>, <&mkp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <50>;
+            tapping-term-ms = <0>;
+        };
+
+        LTadvance: LTadvance {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTADVANCE";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
         };
     };
 
@@ -87,10 +96,21 @@
 
         Ohnisi {
             bindings = <
-&kp Q          &kp Z         &kp U         &kp COMMA    &kp DOT                                             &kp F            &kp W  &kp R  &kp Y  &kp P
-&kp E          &kp I         &kp A         &kp O        &kp MINUS  &to 6                       &to 5        &kp K            &kp T  &kp N  &kp S  &kp H
-&kp L          &kp X         &kp C         &kp V        &kp SEMI   &kp INT5                    &kp INT4     &kp G            &kp D  &kp M  &kp J  &kp B
-&mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &lt 1 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &lt 2 ENTER  &lt 3 BACKSPACE                       &kp ESC
+&kp Q        &kp Z         &kp U         &kp COMMA           &kp DOT                                                    &kp F                   &kp W  &kp R  &kp Y  &kp P
+&kp E        &kp I         &kp A         &kp O               &kp MINUS  &to 1                       &to 6               &kp K                   &kp T  &kp N  &kp S  &kp H
+&mt LCTRL L  &kp X         &kp C         &kp V               &kp SEMI   &kp INT5                    &kp INT4            &kp G                   &kp D  &kp M  &kp J  &mt RCTRL B
+&kp TAB      &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 2 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &LTadvance 3 ENTER  &LTadvance 4 BACKSPACE                       &kp ESC
+            >;
+
+            sensor-bindings = <&scroll_up_down>;
+        };
+
+        layer_6 {
+            bindings = <
+&kp Q  &kp W  &kp Y      &kp Q           &kp Q                                                &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&kp D  &kp D  &mkp MCLK  &kp LEFT_SHIFT  &kp D      &kp ESCAPE                  &none         &kp D         &mt LEFT_SHIFT X  &kp Z         &kp D         &kp D
+&kp D  &kp D  &kp D      &kp D           &kp D      &kp D                       &to 0         &kp J         &kp D             &kp D         &kp D         &bt BT_CLR
+&kp D  &kp D  &kp D      &lt 3 SPACE     &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &kp KP_ENTER  &kp X                                                       &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -107,10 +127,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &audioswitchzg02        &audioswitchliberty5  &kp LC(TAB)              &trans                                      &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp PAGE_DOWN
-&bt BT_SEL 0    &bt BT_SEL 1            &bt BT_SEL 2          &bt BT_SEL 3             &bt BT_SEL 4  &kp K_PLAY_PAUSE      &trans  &trans     &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &bt BT_CLR_ALL        &kp LG(LS(RIGHT_ARROW))  &trans        &trans                &trans  &trans     &mkp MB4  &mkp MB3  &mkp MB5   &trans
-&trans          &trans                  &trans                &trans                   &trans        &trans                &trans  &trans                                    &trans
+&bt BT_SEL 0    &bt BT_SEL 1                &bt BT_SEL 2  &bt BT_SEL 3                 &bt BT_SEL 4                                &kp PG_UP             &kp HOME  &kp UP    &kp END    &kp PAGE_DOWN
+&kp Q           &kp LC(LS(TAB))             &kp LC(T)     &kp LC(TAB)                  &kp Q         &kp K_PLAY_PAUSE      &trans  &kp LA(LG(LC(LEFT)))  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LA(LC(LG(RIGHT)))
+&kp LEFT_SHIFT  &kp LG(LC(LA(LEFT_ARROW)))  &kp LC(W)     &kp LG(LA(LC(RIGHT_ARROW)))  &trans        &trans                &trans  &trans                &mkp MB4  &mkp MB3  &mkp MB5   &trans
+&trans          &trans                      &trans        &trans                       &trans        &trans                &trans  &trans                                               &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&inc_dec_kp LA(LC(LG(LEFT_ARROW))) LA(LC(LG(RIGHT_ARROW)))>;
@@ -118,10 +138,10 @@
 
         MARk {
             bindings = <
-&kp LSHFT  &trans  &kp LBKT      &kp RBKT      &kp RBKT                       &kp F1  &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)
-&trans     &trans  &kp LS(LPAR)  &kp LS(RPAR)  &kp N0    &trans      &kp ESC  &kp F6  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp F10
-&trans     &trans  &kp SEMI      &kp APOS      &kp DOT   &trans      &trans   &kp N0  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp QUESTION
-&trans     &trans  &trans        &trans        &trans    &trans      &trans   &trans                                              &kp F12
+&kp LSHFT  &trans  &kp LBKT      &kp RBKT      &trans                       &kp F1  &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)
+&trans     &trans  &kp LS(LPAR)  &kp LS(RPAR)  &trans  &trans      &kp ESC  &kp F6  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp F10
+&trans     &trans  &kp SEMI      &kp APOS      &trans  &trans      &trans   &kp N0  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp QUESTION
+&trans     &trans  &trans        &trans        &trans  &trans      &trans   &trans                                              &kp F12
             >;
 
             sensor-bindings = <&inc_dec_kp LS(LC(LG(NUMBER_1))) LS(LC(LG(NUMBER_2)))>;
@@ -139,23 +159,12 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R        &kp T                                               &kp Y            &kp U  &kp I      &kp O       &kp P
-&kp A             &kp S         &kp D         &kp F        &kp G      &to 0                       &to 6        &kp H            &kp J  &kp K      &kp L       &lt 4 MINUS
+&kp A             &kp S         &kp D         &kp F        &kp G      &to 0                       &to 1        &kp H            &kp J  &kp K      &kp L       &lt 5 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B      &mkp MB4                    &mkp MB5     &kp N            &kp M  &kp COMMA  &kp PERIOD  &mt LEFT_SHIFT SLASH
-&mt LCTRL TAB     &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &lt 2 ENTER  &lt 3 BACKSPACE                                &kp ESCAPE
+&mt LCTRL TAB     &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &lt 4 ENTER  &lt 4 BACKSPACE                                &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp A B>;
-        };
-
-        layer_6 {
-            bindings = <
-&kp Q  &kp W  &kp Y      &kp Q           &kp Q                                                &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&kp D  &kp D  &mkp MCLK  &kp LEFT_SHIFT  &kp D      &kp ESCAPE                  &none         &kp D         &mt LEFT_SHIFT X  &kp Z         &kp D         &kp D
-&kp D  &kp D  &kp D      &kp D           &kp D      &kp D                       &to 0         &kp J         &kp D             &kp D         &kp D         &bt BT_CLR
-&kp D  &kp D  &kp D      &lt 1 SPACE     &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &kp KP_ENTER  &kp X                                                       &bt BT_CLR_ALL
-            >;
-
-            sensor-bindings = <&scroll_up_down>;
         };
     };
 };
