@@ -17,10 +17,7 @@
 
 
 
-&trackball { scroll-layers = <2>; 
-
- 
-};
+&trackball { scroll-layers = <2>; };
 
 
 
@@ -242,6 +239,9 @@
 &trans  &trans   &trans   &trans   &trans        &trans                       &kp KP_ENTER  &mt LCTRL BACKSPACE                          &kp PIPE
 
             >;
+
+            sensor-bindings = <&inc_dec_kp LA(LC(LG(LEFT_ARROW))) LA(LC(LG(RIGHT_ARROW)))>;
+
 
         };
 
