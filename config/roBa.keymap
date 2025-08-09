@@ -221,6 +221,8 @@
 
             >;
 
+            sensor-bindings = <&scroll_up_down>;
+
 
         };
 
@@ -240,7 +242,6 @@
 
             >;
 
-            sensor-bindings = <&inc_dec_kp LA(LC(LG(LEFT_ARROW))) LA(LC(LG(RIGHT_ARROW)))>;
 
 
         };
