@@ -5,14 +5,8 @@
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 80
 
-&mt {
-       
-
-    flavor = "balanced";
-
-       
-
-    quick-tap-ms = <0>;
+&mt {    flavor = "balanced";
+quick-tap-ms = <0>;
 };
 
 &trackball {
