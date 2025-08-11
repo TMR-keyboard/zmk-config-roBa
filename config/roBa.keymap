@@ -16,7 +16,8 @@
 };
 
 &trackball {
-    scroll-layers = <2>;
+    automouse-layer = <5>;
+    scroll-layers = <6>;
 
      
 };
@@ -36,9 +37,9 @@
 
             compatible = "zmk,behavior-macro-one-param";
 
-                        #
+                        
 
-            binding-cells = <1>;
+            #binding-cells = <1>;
 
                        
 
@@ -58,9 +59,9 @@
 
             compatible = "zmk,behavior-macro";
 
-                        #
+                        
 
-            binding-cells = <0>;
+            #binding-cells = <0>;
 
                        
 
@@ -80,9 +81,8 @@
 
             compatible = "zmk,behavior-macro";
 
-                        #
-
-            binding-cells = <0>;
+                        
+            #binding-cells = <0>;
 
                        
 
@@ -102,9 +102,9 @@
 
             compatible = "zmk,behavior-macro";
 
-                        #
+                        
 
-            binding-cells = <0>;
+            #binding-cells = <0>;
 
                        
 
@@ -130,9 +130,9 @@
 
             compatible = "zmk,behavior-sensor-rotate";
 
-                        #
+                        
 
-            sensor-binding-cells = <0>;
+            #sensor-binding-cells = <0>;
 
                        
 
@@ -160,9 +160,9 @@
 
             bindings = <&mo>, <&to_layer_0>;
 
-                        #
+                        
 
-            binding-cells = <2>;
+            #binding-cells = <2>;
 
                        
 
@@ -186,9 +186,9 @@
 
             bindings = <&kp>, <&mkp>;
 
-                        #
+                        
 
-            binding-cells = <2>;
+            #binding-cells = <2>;
 
                        
 
@@ -212,9 +212,9 @@
 
             bindings = <&mo>, <&mkp>;
 
-                        #
+                        
 
-            binding-cells = <2>;
+            #binding-cells = <2>;
 
                        
 
@@ -238,9 +238,9 @@
 
             bindings = <&mo>, <&kp>;
 
-                        #
+                        
 
-            binding-cells = <2>;
+            #binding-cells = <2>;
 
                        
 
