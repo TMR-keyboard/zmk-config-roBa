@@ -100,9 +100,9 @@
         Ohnisi {
             bindings = <
 &kp Q        &kp Z         &kp U         &kp COMMA           &kp DOT                                                                               &kp F          &kp W  &lt 3 R  &kp Y  &kp P
-&kp E        &kp I         &kp A         &kp O               &kp MINUS           &to 1                               &kp ESCAPE                    &kp K          &kp T  &kp N    &kp S  &kp H
-&mt LCTRL L  &kp X         &kp C         &kp V               &kp SEMI            &kp TAB                             &kp TAB                       &kp G          &kp D  &kp M    &kp J  &mt RCTRL B
-&kp TAB      &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 4 SPACE  &LTadvance 6 ENTER  &mt LEFT_SHIFT INTERNATIONAL_5      &LTadvance 5 INTERNATIONAL_4  &kp BACKSPACE                         &kp ESC
+&kp E        &kp I         &kp A         &kp O               &kp MINUS                     &to 1                               &kp ESCAPE          &kp K          &kp T  &kp N    &kp S  &kp H
+&mt LCTRL L  &kp X         &kp C         &kp V               &kp SEMI                      &kp TAB                             &kp TAB             &kp G          &kp D  &kp M    &kp J  &mt RCTRL B
+&kp TAB      &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 4 SPACE  &LTadvance 6 INTERNATIONAL_5  &mt LEFT_SHIFT INTERNATIONAL_4      &LTadvance 5 ENTER  &kp BACKSPACE                         &kp ESC
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -123,7 +123,7 @@
             bindings = <
 &to_layer_0 Q  &to_layer_0 Z  &to_layer_0 U  &to_layer_0 COMMA  &to_layer_0 PERIOD                         &to_layer_0 F  &to_layer_0 W  &trans    &to_layer_0 Y  &to_layer_0 P
 &to_layer_0 E  &to_layer_0 I  &to_layer_0 A  &to_layer_0 O      &to_layer_0 MINUS      &trans      &trans  &to_layer_0 K  &mkp MB1       &mkp MB3  &mkp MB2       &to_layer_0 H
-&to_layer_0 L  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V      &to_layer_0 SEMICOLON  &trans      &trans  &to_layer_0 G  &to_layer_0 D  &to 0     &to_layer_0 J  &to_layer_0 B
+&to_layer_0 L  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V      &to_layer_0 SEMICOLON  &trans      &trans  &to_layer_0 G  &mkp MB4       &to 0     &mkp MB5       &to_layer_0 B
 &trans         &trans         &trans         &trans             &trans                 &trans      &trans  &trans                                                 &trans
             >;
         };
@@ -132,7 +132,7 @@
             bindings = <
 &to_layer_0 Q  &to_layer_0 Z  &to_layer_0 U  &to_layer_0 COMMA  &to_layer_0 PERIOD                         &to_layer_0 F  &to_layer_0 W  &trans    &to_layer_0 Y  &to_layer_0 P
 &to_layer_0 E  &to_layer_0 I  &to_layer_0 A  &to_layer_0 O      &to_layer_0 MINUS      &trans      &trans  &to_layer_0 K  &mkp MB1       &mkp MB3  &mkp MB2       &to_layer_0 H
-&to_layer_0 L  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V      &to_layer_0 SEMICOLON  &trans      &trans  &to_layer_0 G  &to_layer_0 D  &to 0     &to_layer_0 J  &to_layer_0 B
+&to_layer_0 L  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V      &to_layer_0 SEMICOLON  &trans      &trans  &to_layer_0 G  &mkp MB4       &to 0     &mkp MB5       &to_layer_0 B
 &trans         &trans         &trans         &trans             &trans                 &trans      &trans  &trans                                                 &trans
             >;
         };
