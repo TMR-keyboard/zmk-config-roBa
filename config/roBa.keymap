@@ -102,7 +102,7 @@
 &kp Q        &kp J         &kp U         &kp COMMA           &kp DOT                                                                               &kp F          &kp W  &lt 3 R  &kp Y  &kp P
 &kp E        &kp I         &kp A         &kp O               &kp MINUS                     &to 1                               &kp ESCAPE          &kp K          &kp T  &kp N    &kp S  &kp H
 &mt LCTRL L  &kp X         &kp N         &kp V               &kp C                         &kp TAB                             &kp TAB             &kp G          &kp D  &kp M    &kp Z  &mt RCTRL B
-&kp TAB      &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 4 SPACE  &LTadvance 6 INTERNATIONAL_1  &mt LEFT_SHIFT INTERNATIONAL_4      &LTadvance 5 ENTER  &kp BACKSPACE                         &kp ESC
+&kp TAB      &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 4 SPACE  &LTadvance 6 INTERNATIONAL_5  &mt LEFT_SHIFT INTERNATIONAL_4      &LTadvance 5 ENTER  &kp BACKSPACE                         &kp ESC
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -148,7 +148,7 @@
 
         MARk {
             bindings = <
-&kp LSHFT  &trans  &kp RBKT    &kp APOS    &trans                       &kp F1  &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)
+&kp LSHFT  &trans  &kp RBKT    &kp GRAVE   &trans                       &kp F1  &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)
 &trans     &trans  &kp LS(N8)  &kp LS(N9)  &trans  &trans      &kp ESC  &kp F6  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LBKT
 &trans     &trans  &kp SEMI    &kp APOS    &trans  &trans      &trans   &kp N0  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp QUESTION
 &trans     &trans  &trans      &trans      &trans  &trans      &trans   &trans                                              &kp F12
