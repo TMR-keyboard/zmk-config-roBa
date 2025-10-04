@@ -110,10 +110,10 @@
 
         layer_6 {
             bindings = <
-&kp Q  &kp W  &kp Y           &kp Q           &kp Q                                          &bt BT_SEL 0  &bt BT_SEL 1      &trans  &bt BT_SEL 3  &bt BT_SEL 4
-&kp D  &kp D  &mkp MCLK       &kp LEFT_SHIFT  &kp D   &to 0                       &none      &kp D         &mt LEFT_SHIFT X  &kp Z   &kp D         &kp D
-&kp D  &kp D  &kp D           &kp D           &kp D   &kp B                       &to 0      &kp J         &kp D             &to 0   &kp D         &bt BT_CLR
-&kp D  &kp D  &msc SCRL_DOWN  &trans          &trans  &kpmkp LEFT_SHIFT RCLK      &kp ENTER  &kp X                                                 &bt BT_CLR_ALL
+&kp Q  &kp W     &kp E      &kp R      &kp T                                     &kp Y  &kp U  &kp I  &kp O    &kp P
+&kp A  &kp S     &mkp MCLK  &kp F      &kp G      &to 0               &none      &kp H  &kp J  &kp K  &kp L    &kp SEMI
+&kp Z  &kp X     &kp C      &kp V      &kp B      &kp N               &to 0      &kp N  &kp M  &kp D  &kp DOT  &kp FSLH
+&kp D  &kp LGUI  &kp LALT   &kp SPACE  &kp LCTRL  &kp LEFT_SHIFT      &kp ENTER  &kp X                         &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&scroll_up_down>;
