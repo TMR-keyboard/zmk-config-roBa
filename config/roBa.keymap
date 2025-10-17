@@ -110,10 +110,10 @@
 
         layer_6 {
             bindings = <
-&kp Q  &kp W     &kp E      &kp R      &kp T                                     &kp Y  &kp U  &kp I  &kp O    &kp P
-&kp A  &kp S     &mkp MCLK  &kp F      &kp G      &to 0               &none      &kp H  &kp J  &kp K  &kp L    &kp SEMI
-&kp Z  &kp X     &kp C      &kp V      &kp B      &kp N               &to 0      &kp N  &kp M  &kp D  &kp DOT  &kp FSLH
-&kp D  &kp LGUI  &kp LALT   &kp SPACE  &kp LCTRL  &kp LEFT_SHIFT      &kp ENTER  &kp X                         &bt BT_CLR_ALL
+&kp Q  &kp W     &kp E     &kp R           &kp T                                     &kp Y  &kp U  &kp I  &kp O    &kp P
+&kp A  &kp S     &kp D     &kp LEFT_SHIFT  &kp G      &to 0               &none      &kp H  &kp J  &kp K  &kp L    &kp SEMI
+&kp Z  &kp X     &kp C     &kp V           &kp B      &kp N               &to 0      &kp N  &kp M  &kp D  &kp DOT  &kp FSLH
+&kp D  &kp LGUI  &kp LALT  &kp SPACE       &kp LCTRL  &kp LEFT_SHIFT      &kp ENTER  &kp X                         &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -122,7 +122,7 @@
         layer_7 {
             bindings = <
 &to_layer_0 Q      &to_layer_0 Z  &to_layer_0 U  &to_layer_0 COMMA  &to_layer_0 PERIOD                                         &to_layer_0 F  &to_layer_0 W  &trans    &to_layer_0 Y  &to_layer_0 P
-&to_layer_0 E      &to_layer_0 I  &to_layer_0 A  &to_layer_0 O      &to_layer_0 MINUS      &trans                      &trans  &to_layer_0 K  &mkp MB1       &mkp MB3  &mkp MB2       &to_layer_0 H
+&to_layer_0 E      &to_layer_0 I  &mkp MCLK      &kp LEFT_SHIFT     &to_layer_0 MINUS      &trans                      &trans  &to_layer_0 K  &mkp MB1       &mkp MB3  &mkp MB2       &to_layer_0 H
 &to_layer_0 LCTRL  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V      &to_layer_0 SEMICOLON  &trans                      &trans  &to_layer_0 G  &mkp MB4       &to 0     &mkp MB5       &to_layer_0 LCTRL
 &trans             &trans         &trans         &trans             &trans                 &to_layer_0 LEFT_SHIFT      &trans  &trans                                                 &trans
             >;
@@ -131,7 +131,7 @@
         MOUSE {
             bindings = <
 &to_layer_0 Q      &to_layer_0 Z  &to_layer_0 U  &to_layer_0 COMMA  &to_layer_0 PERIOD                                         &to_layer_0 F  &to_layer_0 W  &trans    &to_layer_0 Y  &to_layer_0 P
-&to_layer_0 E      &to_layer_0 I  &to_layer_0 A  &to_layer_0 O      &to_layer_0 MINUS      &trans                      &trans  &to_layer_0 K  &mkp MB1       &mkp MB3  &mkp MB2       &to_layer_0 H
+&to_layer_0 E      &to_layer_0 I  &mkp MCLK      &kp LEFT_SHIFT     &to_layer_0 MINUS      &trans                      &trans  &to_layer_0 K  &mkp MB1       &mkp MB3  &mkp MB2       &to_layer_0 H
 &to_layer_0 LCTRL  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V      &to_layer_0 SEMICOLON  &trans                      &trans  &to_layer_0 G  &mkp MB4       &to 0     &mkp MB5       &to_layer_0 RCTRL
 &trans             &trans         &trans         &trans             &trans                 &to_layer_0 LEFT_SHIFT      &trans  &trans                                                 &trans
             >;
