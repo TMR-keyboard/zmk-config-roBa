@@ -44,6 +44,13 @@
             bindings = <&kp LS(LA(LC(L)))>;
             label = "AUDIOSWITCHLIBERTY5";
         };
+
+        pin: password {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N9 &kp NUMBER_2 &kp N0>;
+            label = "PASSWORD";
+        };
     };
 
     behaviors {
@@ -99,14 +106,14 @@
             bindings = <
 &kp Q        &kp J         &kp U         &kp COMMA           &kp DOT                                                     &kp F          &kp W  &lt 3 R  &kp Y  &kp P
 &kp E        &kp I         &kp A         &kp O               &kp MINUS  &to 1                       &to 1                &kp K          &kp T  &kp N    &kp S  &kp H
-&mt LCTRL L  &kp X         &kp N         &kp V               &kp C      &kp INTERNATIONAL_4         &kp INTERNATIONAL_5  &kp G          &kp D  &kp M    &kp Z  &mt RCTRL B
+&mt LCTRL L  &kp X         &kp N         &kp V               &kp C      &kp INT5                    &kp INTERNATIONAL_4  &kp G          &kp D  &kp M    &kp Z  &mt RCTRL B
 &mo 4        &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 6 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &LTadvance 5 ENTER   &kp BACKSPACE                         &mo 4
             >;
 
             sensor-bindings = <&scroll_up_down>;
         };
 
-        layer_6 {
+        blender {
             bindings = <
 &kp N1  &kp N2    &kp N3        &kp R             &kp T                                            &kp Y  &kp U  &lt 3 I  &kp O    &kp P
 &kp A   &kp S     &kp NUMBER_6  &kp LS(NUMBER_6)  &mt LCTRL TAB  &to 0                  &to 0      &kp H  &kp R  &kp G    &kp S    &kp SEMI
@@ -137,10 +144,10 @@
 
         NUM {
             bindings = <
-&kp F9  &kp F10  &kp F11  &kp F12  &kp PLUS                                              &kp ASTERISK         &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp SLASH
-&kp F5  &kp F6   &kp F7   &kp F8   &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp TILDE  &kp PLUS             &kp KP_NUMBER_4  &kp KP_N5        &kp KP_NUMBER_6  &kp MINUS
-&kp F1  &kp F2   &kp F3   &kp F4   &kp PERIOD    &kp EQUAL                    &kp COLON  &kp KP_NUMBER_0      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT
-&trans  &trans   &trans   &trans   &trans        &trans                       &kp ENTER  &mt LCTRL BACKSPACE                                                     &kp PIPE
+&kp F9  &kp F10  &kp F11  &kp F12  &kp PLUS                                              &kp ASTERISK   &kp N7  &kp N8  &kp N9  &kp SLASH
+&kp F5  &kp F6   &kp F7   &kp F8   &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp TILDE  &kp PLUS       &kp N4  &kp N5  &kp N6  &kp MINUS
+&kp F1  &kp F2   &kp F3   &kp F4   &kp PERIOD    &kp EQUAL                    &kp COLON  &kp N0         &kp N1  &kp N2  &kp N3  &kp DOT
+&trans  &trans   &trans   &trans   &trans        &pin                         &kp ENTER  &kp BACKSPACE                          &kp PIPE
             >;
         };
 
