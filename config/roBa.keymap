@@ -118,10 +118,10 @@
 
         Ohnisi {
             bindings = <
-&kp Q        &kp J         &kp U         &kp COMMA           &kp DOT                                                     &kp F          &kp W  &lt 3 R  &kp Y  &kp P
-&kp E        &kp I         &kp A         &kp O               &kp MINUS  &to 1                       &to 1                &kp K          &kp T  &kp N    &kp S  &kp H
-&mt LCTRL L  &kp X         &kp N         &kp V               &kp C      &kp INT5                    &kp INTERNATIONAL_4  &kp G          &kp D  &kp M    &kp Z  &mt RCTRL B
-&mo 4        &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 6 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &LTadvance 5 ENTER   &kp BACKSPACE                         &mo 4
+&kp Q        &kp J         &kp U         &kp COMMA           &kp DOT                                                    &kp F          &kp W  &lt 3 R  &kp Y  &kp P
+&kp E        &kp I         &kp A         &kp O               &kp MINUS  &to 1                       &mkp MCLK           &kp K          &kp T  &kp N    &kp S  &kp H
+&mt LCTRL L  &kp X         &kp N         &kp V               &kp C      &mkp MB4                    &mkp MB5            &kp G          &kp D  &kp M    &kp Z  &mt RCTRL B
+&mo 4        &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 6 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &LTadvance 5 ENTER  &kp BACKSPACE                         &mo 4
             >;
 
             sensor-bindings = <&scroll_up_down>;
