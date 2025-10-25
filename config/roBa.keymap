@@ -62,8 +62,15 @@
         pin: password {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N0 &kp N9 &kp NUMBER_2 &kp N0>;
+            bindings = <&kp BACKSPACE &kp BACKSPACE &kp BACKSPACE &kp N0 &kp N9 &kp NUMBER_2 &kp N0 &kp ENTER>;
             label = "PASSWORD";
+        };
+
+        sleep: sleep {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(X) &kp U &kp S>;
+            label = "SLEEP";
         };
     };
 
@@ -118,10 +125,10 @@
 
         Ohnisi {
             bindings = <
-&kp Q        &kp J         &kp U         &kp COMMA           &kp DOT                                                    &kp F          &kp W  &lt 3 R  &kp Y  &kp P
-&kp E        &kp I         &kp A         &kp O               &kp MINUS  &to 1                       &mkp MCLK           &kp K          &kp T  &kp N    &kp S  &kp H
-&mt LCTRL L  &kp X         &kp N         &kp V               &kp C      &mkp MB4                    &mkp MB5            &kp G          &kp D  &kp M    &kp Z  &mt RCTRL B
-&mo 4        &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 6 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &LTadvance 5 ENTER  &kp BACKSPACE                         &mo 4
+&kp Q          &kp J         &kp U         &kp COMMA           &kp DOT                                                    &kp F          &kp W  &lt 3 R  &kp Y  &kp P
+&kp E          &kp I         &kp A         &kp O               &kp MINUS  &to 1                       &mkp MCLK           &kp K          &kp T  &kp N    &kp S  &kp H
+&lt 4 L        &kp X         &kp N         &kp V               &kp C      &mkp MB4                    &mkp MB5            &kp G          &kp D  &kp M    &kp Z  &lt 4 B
+&mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 6 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &LTadvance 5 ENTER  &kp BACKSPACE                         &mt LCTRL ESCAPE
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -129,10 +136,10 @@
 
         blender {
             bindings = <
-&kp N1  &kp N2    &kp N3        &kp R             &kp T                                            &kp Y  &kp U  &lt 3 I  &kp O    &kp P
-&kp A   &kp S     &kp NUMBER_6  &kp LS(NUMBER_6)  &mt LCTRL TAB  &to 0                  &to 0      &kp H  &kp R  &kp G    &kp S    &kp SEMI
-&kp Z   &kp Z     &kp X         &kp Y             &kp B          &kp PERIOD             &kp SLASH  &kp N  &kp M  &kp D    &kp DOT  &kp FSLH
-&trans  &kp LGUI  &kp LALT      &trans            &trans         &kpmkp LCTRL RCLK      &kp LC(Z)  &kp X                           &trans
+&kp N1  &kp N2    &kp N3              &kp R               &kp T                                            &kp Y  &kp U  &lt 3 I  &kp O    &kp P
+&kp A   &kp S     &kp LS(LA(LC(N8)))  &kp LS(LA(LC(N9)))  &mt LCTRL TAB  &to 0                  &to 0      &kp H  &kp R  &kp G    &kp S    &kp SEMI
+&trans  &kp Z     &kp X               &kp Y               &kp B          &kp PERIOD             &kp SLASH  &kp N  &kp M  &kp D    &kp DOT  &kp FSLH
+&trans  &kp LGUI  &kp LALT            &trans              &trans         &kpmkp LCTRL RCLK      &kp LC(Z)  &kp X                           &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -167,7 +174,7 @@
 
         MARk {
             bindings = <
-&kp LSHFT  &trans  &kp RBKT    &kp GRAVE   &trans                       &kp F1  &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)
+&kp LSHFT  &trans  &kp RBKT    &kp BSLH    &trans                       &kp F1  &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)
 &trans     &trans  &kp LS(N8)  &kp LS(N9)  &trans  &trans      &kp ESC  &kp F6  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LBKT
 &trans     &trans  &kp SEMI    &kp APOS    &trans  &trans      &trans   &kp N0  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp QUESTION
 &trans     &trans  &trans      &trans      &trans  &trans      &trans   &trans                                              &kp F12
@@ -178,10 +185,10 @@
 
         ARROW {
             bindings = <
-&bt BT_SEL 0              &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                                         &kp PG_UP             &kp HOME         &kp UP       &kp END    &kp PAGE_DOWN
-&kp LS(LA(LG(LC(LEFT))))  &kp LG(LEFT)      &kp LA(TAB)        &kp LG(RIGHT)      &kp LC(LA(LS(LG(RIGHT))))  &bt BT_CLR_ALL      &audioswitchzg02      &kp LA(LG(LC(LEFT)))  &kp LEFT         &kp DOWN     &kp RIGHT  &kp LA(LC(LG(RIGHT)))
-&kp LG(UP_ARROW)          &kp LG(LS(LEFT))  &kp LC(LA(LG(P)))  &kp LG(LS(RIGHT))  &trans                     &kp LG(LS(S))       &audioswitchliberty5  &trans                &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(T)  &kp LC(W)
-&trans                    &trans            &trans             &trans             &trans                     &trans              &kp LC(C)             &kp LC(V)                                                      &trans
+&bt BT_SEL 0              &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                                         &kp PG_UP             &kp HOME         &kp UP     &kp END      &kp PAGE_DOWN
+&kp LS(LA(LG(LC(LEFT))))  &kp LG(LEFT)      &kp LG(TAB)        &kp LG(RIGHT)      &kp LC(LA(LS(LG(RIGHT))))  &bt BT_CLR_ALL      &audioswitchzg02      &kp LA(LG(LC(LEFT)))  &kp LEFT         &kp DOWN   &kp RIGHT    &kp LA(LC(LG(RIGHT)))
+&kp LG(UP_ARROW)          &kp LG(LS(LEFT))  &kp LC(LA(LG(P)))  &kp LG(LS(RIGHT))  &sleep                     &kp LG(LS(S))       &audioswitchliberty5  &trans                &kp LC(LS(TAB))  &kp LC(T)  &kp LC(TAB)  &kp LC(W)
+&trans                    &trans            &trans             &trans             &trans                     &trans              &kp LC(C)             &kp LC(V)                                                      &pin
             >;
 
             sensor-bindings = <&inc_dec_kp LA(LC(LG(LEFT_ARROW))) LA(LC(LG(RIGHT_ARROW)))>;
