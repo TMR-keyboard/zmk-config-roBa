@@ -72,6 +72,17 @@
             bindings = <&kp LG(X) &kp U &kp S>;
             label = "SLEEP";
         };
+
+        wintabclick: wintabclick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_WIN &kp TAB>,
+                <&macro_pause_for_release>,
+                <&mkp LCLK>;
+
+            label = "WINTABCLICK";
+        };
     };
 
     behaviors {
@@ -174,10 +185,10 @@
 
         MARk {
             bindings = <
-&kp LSHFT  &trans  &kp RBKT    &kp BSLH    &trans                       &kp F1  &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)
-&trans     &trans  &kp LS(N8)  &kp LS(N9)  &trans  &trans      &kp ESC  &kp F6  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LBKT
-&trans     &trans  &kp SEMI    &kp APOS    &trans  &trans      &trans   &kp N0  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp QUESTION
-&trans     &trans  &trans      &trans      &trans  &trans      &trans   &trans                                              &kp F12
+&kp LSHFT  &trans  &kp RBKT    &kp BSLH    &trans                       &kp F1        &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)
+&trans     &trans  &kp LS(N8)  &kp LS(N9)  &trans  &trans      &kp ESC  &kp F6        &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LBKT
+&trans     &trans  &kp SEMI    &kp APOS    &trans  &trans      &trans   &kp LS(FSLH)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp QUESTION
+&trans     &trans  &trans      &trans      &trans  &trans      &trans   &trans                                                    &kp F12
             >;
 
             sensor-bindings = <&inc_dec_kp LS(LC(LG(NUMBER_1))) LS(LC(LG(NUMBER_2)))>;
@@ -186,7 +197,7 @@
         ARROW {
             bindings = <
 &bt BT_SEL 0              &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                                         &kp PG_UP             &kp HOME         &kp UP     &kp END      &kp PAGE_DOWN
-&kp LS(LA(LG(LC(LEFT))))  &kp LG(LEFT)      &kp LG(TAB)        &kp LG(RIGHT)      &kp LC(LA(LS(LG(RIGHT))))  &bt BT_CLR_ALL      &audioswitchzg02      &kp LA(LG(LC(LEFT)))  &kp LEFT         &kp DOWN   &kp RIGHT    &kp LA(LC(LG(RIGHT)))
+&kp LS(LA(LG(LC(LEFT))))  &kp LG(LEFT)      &wintabclick       &kp LG(RIGHT)      &kp LC(LA(LS(LG(RIGHT))))  &bt BT_CLR_ALL      &audioswitchzg02      &kp LA(LG(LC(LEFT)))  &kp LEFT         &kp DOWN   &kp RIGHT    &kp LA(LC(LG(RIGHT)))
 &kp LG(UP_ARROW)          &kp LG(LS(LEFT))  &kp LC(LA(LG(P)))  &kp LG(LS(RIGHT))  &sleep                     &kp LG(LS(S))       &audioswitchliberty5  &trans                &kp LC(LS(TAB))  &kp LC(T)  &kp LC(TAB)  &kp LC(W)
 &trans                    &trans            &trans             &trans             &trans                     &trans              &kp LC(C)             &kp LC(V)                                                      &pin
             >;
