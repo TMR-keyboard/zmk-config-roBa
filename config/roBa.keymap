@@ -184,10 +184,10 @@
 
         blender {
             bindings = <
-&kp N1  &kp N2    &kp N3              &kp R               &kp T                                            &kp Y  &kp U  &lt 3 I  &kp O    &kp P
-&kp A   &kp S     &kp LS(LA(LC(N8)))  &kp LS(LA(LC(N9)))  &mt LCTRL TAB  &to 0                  &to 0      &kp H  &kp R  &kp G    &kp S    &kp SEMI
-&trans  &kp Z     &kp X               &kp Y               &kp B          &kp PERIOD             &kp SLASH  &kp N  &kp M  &kp D    &kp DOT  &kp FSLH
-&trans  &kp LGUI  &kp LALT            &trans              &trans         &kpmkp LCTRL RCLK      &kp LC(Z)  &kp X                           &trans
+&kp N1  &kp N2    &kp N3              &kp R               &kp T                                                 &kp Y  &kp U  &lt 3 I  &kp O    &kp P
+&kp A   &kp S     &kp LS(LA(LC(N8)))  &kp LS(LA(LC(N9)))  &mt LCTRL TAB  &to 0                       &to 0      &kp H  &kp R  &kp G    &kp S    &kp SEMI
+&trans  &kp Z     &kp X               &kp Y               &kp B          &kp PERIOD                  &kp SLASH  &kp N  &kp M  &kp D    &kp DOT  &kp FSLH
+&trans  &kp LGUI  &kp LALT            &trans              &trans         &kpmkp LEFT_SHIFT RCLK      &kp LC(Z)  &kp X                           &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
