@@ -90,6 +90,36 @@
 
             label = "WINTABCLICK";
         };
+
+        kakko: kakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp RIGHT_BRACKET>,
+                <&macro_wait_time 15>,
+                <&kp BACKSLASH>,
+                <&macro_wait_time 15>,
+                <&kp ENTER>,
+                <&macro_wait_time 15>,
+                <&kp LEFT>;
+
+            label = "KAKKO";
+        };
+
+        kakko2: kakko2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(N8)>,
+                <&macro_wait_time 15>,
+                <&kp LS(N9)>,
+                <&macro_wait_time 15>,
+                <&kp ENTER>,
+                <&macro_wait_time 15>,
+                <&kp LEFT>;
+
+            label = "KAKKO2";
+        };
     };
 
     behaviors {
@@ -192,10 +222,10 @@
 
         MARk {
             bindings = <
-&kp LSHFT  &trans  &kp RBKT    &kp BSLH    &trans                       &kp F1        &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)
-&trans     &trans  &kp LS(N8)  &kp LS(N9)  &trans  &trans      &kp ESC  &kp F6        &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LBKT
-&trans     &trans  &kp SEMI    &kp APOS    &trans  &trans      &trans   &kp LS(FSLH)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp QUESTION
-&trans     &trans  &trans      &trans      &trans  &trans      &trans   &trans                                                    &kp F12
+&kp LSHFT  &kp RIGHT_BRACKET  &kakko    &kp BSLH    &trans                       &kp F1        &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)
+&trans     &kp LS(N8)         &kakko2   &kp LS(N9)  &trans  &trans      &kp ESC  &kp F6        &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LBKT
+&trans     &trans             &kp SEMI  &kp APOS    &trans  &trans      &trans   &kp LS(FSLH)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp QUESTION
+&trans     &trans             &trans    &trans      &trans  &trans      &trans   &trans                                                    &kp F12
             >;
 
             sensor-bindings = <&inc_dec_kp LS(LC(LG(NUMBER_1))) LS(LC(LG(NUMBER_2)))>;
