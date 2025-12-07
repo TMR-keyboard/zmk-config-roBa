@@ -220,7 +220,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        layer_7 {
+        layer_infinity {
             bindings = <
 &to_layer_0 Q      &to_layer_0 Z  &to_layer_0 U  &to_layer_0 COMMA  &to_layer_0 PERIOD                         &to_layer_0 F  &to_layer_0 W  &trans    &to_layer_0 Y  &to_layer_0 P
 &to_layer_0 E      &to_layer_0 I  &mkp MCLK      &kp LEFT_SHIFT     &to_layer_0 MINUS      &trans      &to 0   &to_layer_0 K  &mkp MB1       &mkp MB3  &mkp MB2       &to_layer_0 H
