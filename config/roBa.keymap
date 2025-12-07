@@ -28,6 +28,33 @@
             key-positions = <39 40>;
             layers = <0 1>;
         };
+
+        leftclick {
+            bindings = <&mkp LCLK>;
+            key-positions = <18 19>;
+        };
+
+        rightclick {
+            bindings = <&mkp RCLK>;
+            key-positions = <19 20>;
+        };
+
+        mclk {
+            bindings = <&mkp MCLK>;
+            key-positions = <18 20>;
+        };
+
+        toblender {
+            bindings = <&to 1>;
+            key-positions = <9 0>;
+            layers = <0>;
+        };
+
+        toonishi {
+            bindings = <&to 0>;
+            key-positions = <9 0>;
+            layers = <1>;
+        };
     };
 
     macros {
@@ -174,7 +201,7 @@
         Ohnisi {
             bindings = <
 &kp Q          &kp J         &kp U         &kp COMMA           &kp DOT                                                    &kp F          &kp W  &lt 3 R  &kp Y  &kp P
-&kp E          &kp I         &kp A         &kp O               &kp MINUS  &to 1                       &mkp MCLK           &kp K          &kp T  &kp N    &kp S  &kp H
+&kp E          &kp I         &kp A         &kp O               &kp MINUS  &none                       &mkp MCLK           &kp K          &kp T  &kp N    &kp S  &kp H
 &lt 4 L        &kp X         &kp N         &kp V               &kp C      &mkp MB4                    &mkp MB5            &kp G          &kp D  &kp M    &kp Z  &lt 4 B
 &mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 6 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &LTadvance 5 ENTER  &kp BACKSPACE                         &mt LCTRL ESCAPE
             >;
@@ -233,13 +260,22 @@
 
         ARROW {
             bindings = <
-&bt BT_SEL 0              &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                                         &kp PG_UP             &kp HOME         &kp UP     &kp END      &kp PAGE_DOWN
-&kp LS(LA(LG(LC(LEFT))))  &kp LG(LEFT)      &wintabclick       &kp LG(RIGHT)      &kp LC(LA(LS(LG(RIGHT))))  &bt BT_CLR_ALL      &audioswitchzg02      &kp LA(LG(LC(LEFT)))  &kp LEFT         &kp DOWN   &kp RIGHT    &kp LA(LC(LG(RIGHT)))
-&kp LG(UP_ARROW)          &kp LG(LS(LEFT))  &kp LC(LA(LG(P)))  &kp LG(LS(RIGHT))  &sleep                     &kp LG(LS(S))       &audioswitchliberty5  &trans                &kp LC(LS(TAB))  &kp LC(T)  &kp LC(TAB)  &kp LC(W)
-&trans                    &trans            &trans             &trans             &trans                     &trans              &kp LC(C)             &kp LC(V)                                                      &pin
+&bt BT_SEL 0          &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                                     &kp PG_UP             &kp HOME         &kp UP     &kp END      &kp PAGE_DOWN
+&kp LS(LA(LC(LEFT)))  &kp LG(LEFT)      &wintabclick       &kp LG(RIGHT)      &kp LC(LA(LS(RIGHT)))  &bt BT_CLR_ALL      &audioswitchzg02      &kp LA(LG(LC(LEFT)))  &kp LEFT         &kp DOWN   &kp RIGHT    &kp LA(LC(LG(RIGHT)))
+&kp LG(UP_ARROW)      &kp LG(LS(LEFT))  &kp LC(LA(LG(P)))  &kp LG(LS(RIGHT))  &sleep                 &kp LG(LS(S))       &audioswitchliberty5  &trans                &kp LC(LS(TAB))  &kp LC(T)  &kp LC(TAB)  &kp LC(W)
+&trans                &trans            &trans             &trans             &trans                 &trans              &kp LC(C)             &kp LC(V)                                                      &pin
             >;
 
             sensor-bindings = <&inc_dec_kp LA(LC(LG(LEFT_ARROW))) LA(LC(LG(RIGHT_ARROW)))>;
+        };
+
+        layer_7 {
+            bindings = <
+&kp Q    &kp J                      &kp U            &kp COMMA              &kp DOT                                           &kp F              &kp W     &kp UP_ARROW  &kp Y      &kp P
+&kp E    &kp LC(LS(RIGHT_BRACKET))  &mt LCTRL LC(B)  &kp LC(LS(BACKSLASH))  &kp MINUS  &kp SPACE                   &kp SPACE  &kp LS(LEFT)       &kp LEFT  &kp DOWN      &kp RIGHT  &kp LS(RIGHT)
+&kp L    &kp LC(X)                  &kp LC(C)        &kp LC(V)              &kp C      &kp SPACE                   &kp SPACE  &kp G              &kp J     &kp K         &kp L      &kp B
+&kp TAB  &kp LGUI                   &kp LALT         &kp SPACE              &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &kp LC(Z)  &kp LC(BACKSPACE)                                     &kp ESC
+            >;
         };
     };
 };
