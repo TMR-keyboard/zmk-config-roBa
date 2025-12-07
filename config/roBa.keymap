@@ -281,13 +281,15 @@
             sensor-bindings = <&inc_dec_kp LA(LC(LG(LEFT_ARROW))) LA(LC(LG(RIGHT_ARROW)))>;
         };
 
-        layer_7 {
+        layer_8 {
             bindings = <
-&kp Q    &kp J                      &kp U            &kp COMMA              &kp DOT                                           &kp F              &kp W     &kp UP_ARROW  &kp Y      &kp P
-&kp E    &kp LC(LS(RIGHT_BRACKET))  &mt LCTRL LC(B)  &kp LC(LS(BACKSLASH))  &kp MINUS  &kp SPACE                   &kp SPACE  &kp LS(LEFT)       &kp LEFT  &kp DOWN      &kp RIGHT  &kp LS(RIGHT)
-&kp L    &kp LC(X)                  &kp LC(C)        &kp LC(V)              &kp C      &kp SPACE                   &kp SPACE  &kp G              &kp J     &kp K         &kp L      &kp B
-&kp TAB  &kp LGUI                   &kp LALT         &kp SPACE              &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &kp LC(Z)  &kp LC(BACKSPACE)                                     &kp ESC
+&kp Q          &kp J                      &kp K            &kp L                  &kp DOT                                               &kp F          &kp SPACE          &kp UP    &kp SPACE      &kp P
+&kp E          &kp LC(LS(RIGHT_BRACKET))  &mt LCTRL LC(B)  &kp LS(LC(BACKSLASH))  &kp MINUS  &none                  &mkp MCLK           &kp LS(LEFT)   &kp LEFT           &kp DOWN  &kp RIGHT      &kp LS(RIGHT)
+&lt 4 L        &kp LC(X)                  &kp LC(C)        &kp LC(V)              &kp C      &mkp MB4               &mkp MB5            &kp SPACE      &kp RIGHT_BRACKET  &kp M     &kp BACKSLASH  &kp SPACE
+&mt LCTRL TAB  &kp LEFT_GUI               &kp LEFT_ALT     &LTadvance 6 SPACE     &mkp LCLK  &kpmkp LCTRL RCLK      &LTadvance 5 LC(Z)  &kp BACKSPACE                                              &mt LCTRL ESCAPE
             >;
+
+            sensor-bindings = <&scroll_up_down>;
         };
     };
 };
