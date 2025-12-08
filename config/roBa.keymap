@@ -62,12 +62,12 @@
             layers = <0>;
         };
 
-        MB4 {
+        mb {
             bindings = <&mkp MB4>;
             key-positions = <19 30>;
         };
 
-        MB5 {
+        mbnn {
             bindings = <&mkp MB5>;
             key-positions = <19 32>;
         };
@@ -240,7 +240,7 @@
             bindings = <
 &none          &kp J                      &kp K            &kp L                  &none                                                      &none          &none              &LTadvance 4 UP_ARROW  &none          &none
 &none          &kp LC(LS(RIGHT_BRACKET))  &mt LCTRL LC(B)  &kp LS(LC(BACKSLASH))  &none      &none                       &to 0               &kp LS(LEFT)   &kp LEFT           &kp DOWN               &kp RIGHT      &kp LS(RIGHT)
-&lt 5 L        &kp LC(X)                  &kp LC(C)        &kp LC(V)              &kp C      &mkp MB4                    &mkp MB5            &none          &kp RIGHT_BRACKET  &kp M                  &kp BACKSLASH  &none
+&lt 5 L        &kp LC(X)                  &kp LC(C)        &kp LC(V)              &kp C      &mkp MB4                    &mkp MB5            &none          &kp RIGHT_BRACKET  &none                  &kp BACKSLASH  &none
 &mt LCTRL TAB  &kp LEFT_GUI               &kp LEFT_ALT     &LTadvance 7 SPACE     &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &LTadvance 6 LC(Z)  &kp BACKSPACE                                                           &mt LCTRL ESCAPE
             >;
 
