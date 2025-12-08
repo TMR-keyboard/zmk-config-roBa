@@ -216,7 +216,7 @@
 
         Ohnisi {
             bindings = <
-&kp Q          &kp J         &kp U         &kp COMMA           &kp DOT                                                    &kp F          &kp W  &lt 4 R  &kp Y  &kp P
+&kp Q          &kp J         &kp U         &kp COMMA           &kp DOT                                                    &kp F          &kp W  &lt 3 R  &kp Y  &kp P
 &kp E          &kp I         &kp A         &kp O               &kp MINUS  &none                       &none               &kp K          &kp T  &kp N    &kp S  &kp H
 &lt 5 L        &kp X         &kp N         &kp V               &kp C      &mkp MB4                    &mkp MB5            &kp G          &kp D  &kp M    &kp Z  &lt 5 B
 &mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 7 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &LTadvance 6 ENTER  &kp BACKSPACE                         &mt LCTRL ESCAPE
@@ -227,7 +227,7 @@
 
         blender {
             bindings = <
-&kp N1  &kp N2    &kp N3              &kp R               &kp T                                                 &kp Y  &kp U  &lt 4 I  &kp O    &kp P
+&kp N1  &kp N2    &kp N3              &kp R               &kp T                                                 &kp Y  &kp U  &lt 3 I  &kp O    &kp P
 &kp A   &kp S     &kp LS(LA(LC(N8)))  &kp LS(LA(LC(N9)))  &mt LCTRL TAB  &to 0                       &to 0      &kp H  &kp R  &kp G    &kp S    &kp SEMI
 &trans  &kp Z     &kp X               &kp Y               &kp B          &kp PERIOD                  &kp SLASH  &kp N  &kp M  &kp D    &kp DOT  &kp FSLH
 &trans  &kp LGUI  &kp LALT            &trans              &trans         &kpmkp LEFT_SHIFT RCLK      &kp LC(Z)  &kp X                           &trans
@@ -238,7 +238,7 @@
 
         layer_8 {
             bindings = <
-&none          &kp J                      &kp K            &kp L                  &none                                                      &none          &none              &LTadvance 4 UP_ARROW  &none          &none
+&none          &kp J                      &kp K            &kp L                  &none                                                      &none          &none              &LTadvance 3 UP_ARROW  &none          &none
 &none          &kp LC(LS(RIGHT_BRACKET))  &mt LCTRL LC(B)  &kp LS(LC(BACKSLASH))  &none      &none                       &to 0               &kp LS(LEFT)   &kp LEFT           &kp DOWN               &kp RIGHT      &kp LS(RIGHT)
 &lt 5 L        &kp LC(X)                  &kp LC(C)        &kp LC(V)              &kp C      &mkp MB4                    &mkp MB5            &none          &kp RIGHT_BRACKET  &none                  &kp BACKSLASH  &none
 &mt LCTRL TAB  &kp LEFT_GUI               &kp LEFT_ALT     &LTadvance 7 SPACE     &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &LTadvance 6 LC(Z)  &kp BACKSPACE                                                           &mt LCTRL ESCAPE
