@@ -17,16 +17,6 @@
     combos {
         compatible = "zmk,combos";
 
-        intfour {
-            bindings = <&to 7>;
-            key-positions = <9 21>;
-        };
-
-        intfive {
-            bindings = <&to 0>;
-            key-positions = <33 42>;
-        };
-
         leftclick {
             bindings = <&mkp LCLK>;
             key-positions = <18 19>;
@@ -288,7 +278,7 @@
         test {
             bindings = <
 &kp LANGUAGE_7  &kp LANGUAGE_8  &kp LANGUAGE_9  &kp INT_HENKAN  &kp INT_MUHENKAN                    &kp INTERNATIONAL_1  &kp INT2             &kp INTERNATIONAL_3  &kp INTERNATIONAL_4  &kp INTERNATIONAL_5
-&kp S           &kp S           &kp S           &kp S           &kp S             &kp S      &kp S  &kp INT6             &kp INTERNATIONAL_7  &kp INTERNATIONAL_8  &kp INTERNATIONAL_9  &kp LANGUAGE_1
+&kp S           &kp S           &kp S           &kp S           &kp S             &none      &kp S  &kp INT6             &kp INTERNATIONAL_7  &kp INTERNATIONAL_8  &kp INTERNATIONAL_9  &kp LANGUAGE_1
 &kp S           &kp S           &kp S           &kp S           &kp S             &kp S      &kp S  &kp LANGUAGE_2       &kp LANGUAGE_3       &kp LANGUAGE_4       &kp LANGUAGE_5       &kp LANGUAGE_6
 &kp S           &kp S           &kp S           &kp S           &kp S             &kp S      &kp S  &kp S                                                                               &kp S
             >;
