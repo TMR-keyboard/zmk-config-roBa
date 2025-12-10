@@ -18,7 +18,7 @@
         compatible = "zmk,combos";
 
         intfour {
-            bindings = <&to 8>;
+            bindings = <&to 7>;
             key-positions = <9 21>;
         };
 
@@ -216,8 +216,8 @@
             bindings = <
 &kp Q          &kp J         &kp U         &kp COMMA           &kp DOT                            &kp F          &kp W  &lt 3 R  &kp Y  &kp P
 &kp E          &kp I         &kp A         &kp O               &kp MINUS  &none         &none     &kp K          &kp T  &kp N    &kp S  &kp H
-&lt 5 L        &kp X         &kp N         &kp V               &kp C      &mkp MB4      &mkp MB5  &kp G          &kp D  &kp M    &kp Z  &lt 5 B
-&mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 7 SPACE  &mkp LCLK  &none         &none     &kp BACKSPACE                         &mt LCTRL ESCAPE
+&lt 4 L        &kp X         &kp N         &kp V               &kp C      &mkp MB4      &mkp MB5  &kp G          &kp D  &kp M    &kp Z  &lt 4 B
+&mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 6 SPACE  &mkp LCLK  &none         &none     &kp BACKSPACE                         &mt LCTRL ESCAPE
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -238,7 +238,7 @@
             bindings = <
 &none          &kp J                      &kp K            &kp L                  &none                           &none         &none              &LTadvance 3 UP_ARROW  &none          &none
 &none          &kp LC(LS(RIGHT_BRACKET))  &mt LCTRL LC(B)  &kp LS(LC(BACKSLASH))  &none   &none         &to 0     &kp LS(LEFT)  &kp LEFT           &kp DOWN               &kp RIGHT      &kp LS(RIGHT)
-&lt 5 L        &kp LC(X)                  &kp LC(C)        &kp LC(V)              &kp C   &mkp MB4      &mkp MB5  &none         &kp RIGHT_BRACKET  &none                  &kp BACKSLASH  &none
+&lt 4 L        &kp LC(X)                  &kp LC(C)        &kp LC(V)              &kp C   &mkp MB4      &mkp MB5  &none         &kp RIGHT_BRACKET  &none                  &kp BACKSLASH  &none
 &mt LCTRL TAB  &kp LEFT_GUI               &kp LEFT_ALT     &trans                 &trans  &trans        &none     &trans                                                                 &mt LCTRL ESCAPE
             >;
 
@@ -251,15 +251,6 @@
 &to_layer_0 E      &to_layer_0 I  &mkp MCLK      &kp LEFT_SHIFT     &to_layer_0 MINUS      &trans      &to 0   &to_layer_0 K  &mkp MB1       &mkp MB3  &mkp MB2       &to_layer_0 H
 &to_layer_0 LCTRL  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V      &to_layer_0 SEMICOLON  &trans      &trans  &to_layer_0 G  &mkp MB4       &to 0     &mkp MB5       &to_layer_0 LCTRL
 &trans             &trans         &trans         &trans             &trans                 &trans      &trans  &trans                                                 &trans
-            >;
-        };
-
-        MOUSE {
-            bindings = <
-&to_layer_0 Q      &to_layer_0 Z  &to_layer_0 U  &to_layer_0 COMMA  &to_layer_0 PERIOD                                         &to_layer_0 F  &to_layer_0 W  &trans    &to_layer_0 Y  &to_layer_0 P
-&to_layer_0 E      &to_layer_0 I  &mkp MCLK      &kp LEFT_SHIFT     &to_layer_0 MINUS      &trans                      &to 0   &to_layer_0 K  &mkp MB1       &mkp MB3  &mkp MB2       &to_layer_0 H
-&to_layer_0 LCTRL  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V      &to_layer_0 SEMICOLON  &trans                      &trans  &to_layer_0 G  &mkp MB4       &to 0     &mkp MB5       &to_layer_0 RCTRL
-&trans             &trans         &trans         &trans             &trans                 &to_layer_0 LEFT_SHIFT      &trans  &trans                                                 &trans
             >;
         };
 
