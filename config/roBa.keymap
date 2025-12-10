@@ -208,9 +208,9 @@
             tapping-term-ms = <150>;
         };
 
-        tapdanceEnter: tapdanceEnter {
+        tapdance: tapdance {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANCEENTER";
+            label = "TAPDANCE";
             #binding-cells = <0>;
             bindings = <&kp LC(ENTER)>, <&kp INTERNATIONAL_5>, <&mo 6>;
 
@@ -241,10 +241,10 @@
 
         Ohnisi {
             bindings = <
-&kp Q          &kp J         &kp U         &kp COMMA           &kp DOT                                        &kp F          &kp W  &lt 3 R  &kp Y  &kp P
-&kp E          &kp I         &kp A         &kp O               &kp MINUS  &none               &none           &kp K          &kp T  &kp N    &kp S  &kp H
-&lt 5 L        &kp X         &kp N         &kp V               &kp C      &mkp MB4            &mkp MB5        &kp G          &kp D  &kp M    &kp Z  &lt 5 B
-&mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 7 SPACE  &mkp LCLK  &tapdanceright      &tapdanceEnter  &kp BACKSPACE                         &mt LCTRL ESCAPE
+&kp Q          &kp J         &kp U         &kp COMMA           &kp DOT                                   &kp F          &kp W  &lt 3 R  &kp Y  &kp P
+&kp E          &kp I         &kp A         &kp O               &kp MINUS  &none               &none      &kp K          &kp T  &kp N    &kp S  &kp H
+&lt 5 L        &kp X         &kp N         &kp V               &kp C      &mkp MB4            &mkp MB5   &kp G          &kp D  &kp M    &kp Z  &lt 5 B
+&mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 7 SPACE  &mkp LCLK  &tapdanceright      &tapdance  &kp BACKSPACE                         &mt LCTRL ESCAPE
             >;
 
             sensor-bindings = <&scroll_up_down>;
