@@ -18,15 +18,13 @@
         compatible = "zmk,combos";
 
         intfour {
-            bindings = <&kp INT4>;
-            key-positions = <38 41>;
-            layers = <0 1>;
+            bindings = <&to 8>;
+            key-positions = <9 21>;
         };
 
         intfive {
-            bindings = <&kp INT5>;
-            key-positions = <39 40>;
-            layers = <0 1>;
+            bindings = <&to 0>;
+            key-positions = <33 42>;
         };
 
         leftclick {
@@ -209,6 +207,33 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
+
+        tapdanceEnter: tapdanceEnter {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCEENTER";
+            #binding-cells = <0>;
+            bindings = <&kp LC(ENTER)>, <&kp INTERNATIONAL_5>, <&mo 6>;
+
+            tapping-term-ms = <150>;
+        };
+
+        tapdanceright: tapdanceright {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCERIGHT";
+            #binding-cells = <0>;
+            bindings = <&mkp RCLK>, <&kp INTERNATIONAL_4>, <&kp LEFT_SHIFT>;
+
+            tapping-term-ms = <150>;
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <0>;
+            bindings = <&kp LC(Z)>, <&kp INTERNATIONAL_5>, <&mo 6>;
+
+            tapping-term-ms = <150>;
+        };
     };
 
     keymap {
@@ -216,10 +241,10 @@
 
         Ohnisi {
             bindings = <
-&kp Q          &kp J         &kp U         &kp COMMA           &kp DOT                                                    &kp F          &kp W  &lt 3 R  &kp Y  &kp P
-&kp E          &kp I         &kp A         &kp O               &kp MINUS  &none                       &none               &kp K          &kp T  &kp N    &kp S  &kp H
-&lt 5 L        &kp X         &kp N         &kp V               &kp C      &mkp MB4                    &mkp MB5            &kp G          &kp D  &kp M    &kp Z  &lt 5 B
-&mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 7 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &LTadvance 6 ENTER  &kp BACKSPACE                         &mt LCTRL ESCAPE
+&kp Q          &kp J         &kp U         &kp COMMA           &kp DOT                                        &kp F          &kp W  &lt 3 R  &kp Y  &kp P
+&kp E          &kp I         &kp A         &kp O               &kp MINUS  &none               &none           &kp K          &kp T  &kp N    &kp S  &kp H
+&lt 5 L        &kp X         &kp N         &kp V               &kp C      &mkp MB4            &mkp MB5        &kp G          &kp D  &kp M    &kp Z  &lt 5 B
+&mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 7 SPACE  &mkp LCLK  &tapdanceright      &tapdanceEnter  &kp BACKSPACE                         &mt LCTRL ESCAPE
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -227,10 +252,10 @@
 
         blender {
             bindings = <
-&kp N1  &kp N2    &kp N3              &kp R               &kp T                                                 &kp Y  &kp U  &lt 3 I  &kp O    &kp P
-&kp A   &kp S     &kp LS(LA(LC(N8)))  &kp LS(LA(LC(N9)))  &mt LCTRL TAB  &to 0                       &to 0      &kp H  &kp R  &kp G    &kp S    &kp SEMI
-&trans  &kp Z     &kp X               &kp Y               &kp B          &kp PERIOD                  &kp SLASH  &kp N  &kp M  &kp D    &kp DOT  &kp FSLH
-&trans  &kp LGUI  &kp LALT            &trans              &trans         &kpmkp LEFT_SHIFT RCLK      &kp LC(Z)  &kp X                           &trans
+&kp N1  &kp N2    &kp N3              &kp R               &kp T                                     &kp Y  &kp U  &lt 3 I  &kp O    &kp P
+&kp A   &kp S     &kp LS(LA(LC(N8)))  &kp LS(LA(LC(N9)))  &mt LCTRL TAB  &to 0           &to 0      &kp H  &kp R  &kp G    &kp S    &kp SEMI
+&trans  &kp Z     &kp X               &kp Y               &kp B          &kp PERIOD      &kp SLASH  &kp N  &kp M  &kp D    &kp DOT  &kp FSLH
+&trans  &kp LGUI  &kp LALT            &trans              &trans         &trans          &kp LC(Z)  &kp X                           &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -238,10 +263,10 @@
 
         layer_8 {
             bindings = <
-&none          &kp J                      &kp K            &kp L                  &none                                                      &none          &none              &LTadvance 3 UP_ARROW  &none          &none
-&none          &kp LC(LS(RIGHT_BRACKET))  &mt LCTRL LC(B)  &kp LS(LC(BACKSLASH))  &none      &none                       &to 0               &kp LS(LEFT)   &kp LEFT           &kp DOWN               &kp RIGHT      &kp LS(RIGHT)
-&lt 5 L        &kp LC(X)                  &kp LC(C)        &kp LC(V)              &kp C      &mkp MB4                    &mkp MB5            &none          &kp RIGHT_BRACKET  &none                  &kp BACKSLASH  &none
-&mt LCTRL TAB  &kp LEFT_GUI               &kp LEFT_ALT     &LTadvance 7 SPACE     &mkp LCLK  &kpmkp LEFT_SHIFT RCLK      &LTadvance 6 LC(Z)  &kp BACKSPACE                                                           &mt LCTRL ESCAPE
+&none          &kp J                      &kp K            &kp L                  &none                                &none         &none              &LTadvance 3 UP_ARROW  &none          &none
+&none          &kp LC(LS(RIGHT_BRACKET))  &mt LCTRL LC(B)  &kp LS(LC(BACKSLASH))  &none   &none         &to 0          &kp LS(LEFT)  &kp LEFT           &kp DOWN               &kp RIGHT      &kp LS(RIGHT)
+&lt 5 L        &kp LC(X)                  &kp LC(C)        &kp LC(V)              &kp C   &mkp MB4      &mkp MB5       &none         &kp RIGHT_BRACKET  &none                  &kp BACKSLASH  &none
+&mt LCTRL TAB  &kp LEFT_GUI               &kp LEFT_ALT     &trans                 &trans  &trans        &new_behavior  &trans                                                                 &mt LCTRL ESCAPE
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -294,6 +319,15 @@
             >;
 
             sensor-bindings = <&inc_dec_kp LA(LC(LG(LEFT_ARROW))) LA(LC(LG(RIGHT_ARROW)))>;
+        };
+
+        test {
+            bindings = <
+&kp LANGUAGE_7  &kp LANGUAGE_8  &kp LANGUAGE_9  &kp INT_HENKAN  &kp INT_MUHENKAN                    &kp INTERNATIONAL_1  &kp INT2             &kp INTERNATIONAL_3  &kp INTERNATIONAL_4  &kp INTERNATIONAL_5
+&kp S           &kp S           &kp S           &kp S           &kp S             &kp S      &kp S  &kp INT6             &kp INTERNATIONAL_7  &kp INTERNATIONAL_8  &kp INTERNATIONAL_9  &kp LANGUAGE_1
+&kp S           &kp S           &kp S           &kp S           &kp S             &kp S      &kp S  &kp LANGUAGE_2       &kp LANGUAGE_3       &kp LANGUAGE_4       &kp LANGUAGE_5       &kp LANGUAGE_6
+&kp S           &kp S           &kp S           &kp S           &kp S             &kp S      &kp S  &kp S                                                                               &kp S
+            >;
         };
     };
 };
