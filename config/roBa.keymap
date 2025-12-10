@@ -207,33 +207,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
-
-        tapdance: tapdance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANCE";
-            #binding-cells = <0>;
-            bindings = <&kp LC(ENTER)>, <&kp INTERNATIONAL_5>, <&mo 6>;
-
-            tapping-term-ms = <150>;
-        };
-
-        tapdanceright: tapdanceright {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANCERIGHT";
-            #binding-cells = <0>;
-            bindings = <&mkp RCLK>, <&kp INTERNATIONAL_4>, <&kp LEFT_SHIFT>;
-
-            tapping-term-ms = <150>;
-        };
-
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR";
-            #binding-cells = <0>;
-            bindings = <&kp LC(Z)>, <&kp INTERNATIONAL_5>, <&mo 6>;
-
-            tapping-term-ms = <150>;
-        };
     };
 
     keymap {
