@@ -3,3 +3,11 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      # ボード名を正しい名前に指定
+      board: xiao_ble
+      
+      # 以前のエラー（バインディング競合）も同時に解決するため、
+      # カスタムモジュールとバインディングディレクトリも追加
+      extra_modules: 'zmk-pmw3610-driver'
+      extra_binding_dirs: 'zmk-pmw3610-driver/dts/bindings'
