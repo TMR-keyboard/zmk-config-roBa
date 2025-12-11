@@ -154,14 +154,6 @@
     };
 
     behaviors {
-        scroll_up_down: up.down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-            tap-ms = <20>;
-        };
-
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
@@ -210,7 +202,7 @@
 &mt LCTRL TAB  &kp LEFT_GUI  &kp LEFT_ALT  &LTadvance 6 SPACE  &mkp LCLK  &none         &none     &kp BACKSPACE                         &mt LCTRL ESCAPE
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&none>;
         };
 
         blender {
@@ -221,7 +213,7 @@
 &trans  &kp LGUI  &kp LALT            &trans              &trans         &trans          &kp LC(Z)  &kp X                           &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&none>;
         };
 
         layer_8 {
@@ -232,7 +224,7 @@
 &mt LCTRL TAB  &kp LEFT_GUI               &kp LEFT_ALT     &trans                 &trans  &trans        &none     &trans                                                                 &mt LCTRL ESCAPE
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&none>;
         };
 
         layer_infinity {
