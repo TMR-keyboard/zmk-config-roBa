@@ -96,7 +96,7 @@
             bindings =
                 <&kp BACKSPACE &kp BACKSPACE &kp BACKSPACE>,
                 <&macro_wait_time 500>,
-                <&kp N0 &kp N9 &kp NUMBER_2 &kp N0 &kp ENTER>;
+                <&kp BACKSPACE &kp N0 &kp N9 &kp NUMBER_2 &kp N0 &kp ENTER>;
 
             label = "PASSWORD";
         };
