@@ -75,7 +75,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp INTERNATIONAL_4>,
+                <&kp LANGUAGE_2>,
                 <&macro_wait_time 15>,
                 <&kp RIGHT_BRACKET>,
                 <&macro_wait_time 15>,
@@ -92,7 +92,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp INTERNATIONAL_5>,
+                <&kp LANGUAGE_2>,
                 <&macro_wait_time 15>,
                 <&kp LS(N8)>,
                 <&macro_wait_time 15>,
