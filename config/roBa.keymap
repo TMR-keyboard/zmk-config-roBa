@@ -70,6 +70,40 @@
 
             label = "TASKVIEW";
         };
+
+        kakko: kakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp INTERNATIONAL_4>,
+                <&macro_wait_time 15>,
+                <&kp RIGHT_BRACKET>,
+                <&macro_wait_time 15>,
+                <&kp BACKSLASH>,
+                <&macro_wait_time 15>,
+                <&kp ENTER>,
+                <&macro_wait_time 15>,
+                <&kp LEFT>;
+
+            label = "KAKKO";
+        };
+
+        kagikakko: kagikakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp INTERNATIONAL_4>,
+                <&macro_wait_time 15>,
+                <&kp LS(N8)>,
+                <&macro_wait_time 15>,
+                <&kp LS(N9)>,
+                <&macro_wait_time 15>,
+                <&kp ENTER>,
+                <&macro_wait_time 15>,
+                <&kp LEFT>;
+
+            label = "KAGIKAKKO";
+        };
     };
 
     behaviors {
@@ -189,10 +223,10 @@
 
         layer_8 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &kp RBKT    &kakko      &kp BSLH    &trans                      &trans  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &trans
+&trans  &kp LS(N8)  &kagikakko  &kp LS(N9)  &trans  &trans      &trans  &trans  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &trans
+&trans  &trans      &trans      &trans      &trans  &trans      &trans  &kp N0  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &trans
+&trans  &trans      &trans      &trans      &trans  &trans      &trans  &trans                                      &trans
             >;
         };
 
