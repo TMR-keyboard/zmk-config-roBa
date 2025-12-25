@@ -99,6 +99,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
+
+        int4: int4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "INT4";
+            #binding-cells = <0>;
+            bindings = <&mkp RCLK>, <&kp INTERNATIONAL_4>, <&kp LEFT_SHIFT>;
+        };
     };
 
     keymap {
@@ -106,10 +113,10 @@
 
         default_layer {
             bindings = <
-&kp Q    &kp J         &kp U         &kp COMMA  &kp DOT                                                  &kp F     &kp W  &kp R  &kp Y  &kp P
-&kp E    &kp I         &kp A         &kp O      &kp MINUS    &kp O                              &kp O    &kp K     &kp T  &kp N  &kp S  &kp H
-&kp L    &kp X         &kp N         &kp V      &kp C        &kp C                              &kp C    &kp G     &kp D  &kp M  &kp Z  &kp B
-&kp TAB  &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp RET  &kp BSPC                       &kp ESC
+&kp Q    &kp J         &kp U         &kp COMMA    &kp DOT                        &kp F     &kp W  &kp R    &kp Y  &kp P
+&kp E    &kp I         &kp A         &kp O        &kp MINUS  &kp O      &kp O    &kp K     &kp T  &lt 5 N  &kp S  &kp H
+&kp L    &kp X         &kp N         &kp V        &kp C      &kp C      &kp C    &kp G     &kp D  &kp M    &kp Z  &kp B
+&kp TAB  &kp LEFT_WIN  &kp LEFT_ALT  &lt 6 SPACE  &mkp LCLK  &int4      &kp RET  &kp BSPC                         &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
