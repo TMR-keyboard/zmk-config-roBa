@@ -30,28 +30,28 @@
         compatible = "zmk,combos";
 
         tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
+            bindings = <&mkp MB5>;
+            key-positions = <19 32>;
         };
 
         shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
+            bindings = <&mkp MB4>;
+            key-positions = <19 30>;
         };
 
         muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
+            bindings = <&mkp MB3>;
+            key-positions = <18 20>;
         };
 
         double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
+            bindings = <&mkp MB1>;
+            key-positions = <18 19>;
         };
 
         eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+            bindings = <&mkp MB2>;
+            key-positions = <19 20>;
         };
     };
 
@@ -162,10 +162,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans     &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp LCLK  &trans  &mkp RCLK  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB4   &trans  &mkp MB5   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
 
@@ -175,6 +175,33 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        layer_9-test {
+            bindings = <
+&kp R  &kp R  &kp R  &kp R  &kp R                    &kp INTERNATIONAL_1  &kp R  &kp R  &kp R  &kp R
+&kp R  &kp R  &kp R  &kp R  &kp R  &kp R      &kp R  &kp R                &kp R  &kp R  &kp R  &kp R
+&kp R  &kp R  &kp R  &kp R  &kp R  &kp R      &kp R  &kp R                &kp R  &kp R  &kp R  &kp R
+&kp R  &kp R  &kp R  &kp R  &kp R  &kp R      &kp R  &kp R                                     &kp R
             >;
         };
     };
