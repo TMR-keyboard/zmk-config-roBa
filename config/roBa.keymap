@@ -53,18 +53,6 @@
             bindings = <&mkp MB2>;
             key-positions = <19 20>;
         };
-
-        inttest {
-            bindings = <&to 9>;
-            key-positions = <5 9>;
-            layers = <0>;
-        };
-
-        intback {
-            bindings = <&to 0>;
-            key-positions = <5 9>;
-            layers = <9>;
-        };
     };
 
     macros {
@@ -150,7 +138,31 @@
             compatible = "zmk,behavior-tap-dance";
             label = "INT4";
             #binding-cells = <0>;
-            bindings = <&mkp RCLK>, <&kp INTERNATIONAL_4>, <&kp LEFT_SHIFT>;
+            bindings = <&mkp RCLK>, <&kp LANGUAGE_1>;
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_BEHAVIOR";
+            bindings = <&kp>, <&int4>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+
+        tapdancespace: tapdancespace {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAPDANCESPACE";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            bindings = <&mo>, <&spaceandlang2>;
+        };
+
+        spaceandlang2: spaceandlang2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SPACEANDLANG2";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp LANGUAGE_2>;
         };
     };
 
@@ -159,10 +171,10 @@
 
         default_layer {
             bindings = <
-&kp Q        &kp J         &kp U         &kp COMMA    &kp DOT                            &kp F     &kp W    &kp R    &kp Y  &kp P
-&mt LCTRL E  &kp I         &kp A         &lt 7 O      &kp MINUS  &kp O      &kp O        &kp K     &lt 7 T  &lt 5 N  &kp S  &mt RCTRL H
-&kp L        &kp X         &kp N         &kp V        &kp C      &kp C      &kp C        &kp G     &kp D    &kp M    &kp Z  &kp B
-&kp TAB      &kp LEFT_WIN  &kp LEFT_ALT  &lt 6 SPACE  &mkp LCLK  &int4      &lt 8 ENTER  &kp BSPC                           &kp ESC
+&kp Q        &kp J         &kp U         &kp COMMA           &kp DOT                                                 &kp F     &kp W    &kp R    &kp Y  &kp P
+&mt LCTRL E  &kp I         &kp A         &lt 7 O             &kp MINUS  &none                           &none        &kp K     &lt 7 T  &lt 5 N  &kp S  &mt RCTRL H
+&kp L        &kp X         &kp N         &kp V               &kp C      &none                           &none        &kp G     &kp D    &kp M    &kp Z  &kp B
+&kp TAB      &kp LEFT_WIN  &kp LEFT_ALT  &tapdancespace 6 0  &mkp LCLK  &new_behavior LEFT_SHIFT 0      &lt 8 ENTER  &kp BSPC                           &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -220,7 +232,7 @@
 &bt BT_SEL 0          &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                  &kp T                 &kp HOME         &kp UP     &kp END      &kp T
 &kp LA(LC(LS(LEFT)))  &kp LG(LEFT)      &taskview          &kp LG(RIGHT)      &kp LS(LA(LC(RIGHT)))  &kp T       &none      &kp LG(LC(LA(LEFT)))  &kp LEFT         &kp DOWN   &kp RIGHT    &kp LA(LC(LG(RIGHT)))
 &kp LG(UP_ARROW)      &kp LG(LS(LEFT))  &kp LG(LC(LA(P)))  &kp LS(LG(RIGHT))  &kp T                  &kp T       &kp LC(A)  &none                 &kp LC(LS(TAB))  &kp LC(T)  &kp LC(TAB)  &kp LC(W)
-&none                 &none             &none              &trans             &trans                 &trans      &kp LC(C)  &kp LC(T)                                                      &kp T
+&trans                &trans            &trans             &trans             &trans                 &trans      &kp LC(C)  &kp LC(T)                                                      &kp T
             >;
         };
 
@@ -235,19 +247,10 @@
 
         layer_8 {
             bindings = <
-&trans  &kp RBKT    &kakko      &kp BSLH    &trans                      &trans  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &trans
-&trans  &kp LS(N8)  &kagikakko  &kp LS(N9)  &trans  &trans      &trans  &trans  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &trans
-&trans  &trans      &trans      &trans      &trans  &trans      &trans  &kp N0  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &trans
-&trans  &trans      &trans      &trans      &trans  &trans      &trans  &trans                                      &trans
-            >;
-        };
-
-        layer_9-test {
-            bindings = <
-&kp LANGUAGE_1  &kp LANGUAGE_2  &kp LANGUAGE_3  &kp LANGUAGE_4  &kp LANGUAGE_5                    &kp INTERNATIONAL_1  &kp INT2             &kp INTERNATIONAL_3  &kp INTERNATIONAL_4  &kp INTERNATIONAL_5
-&kp LANGUAGE_6  &kp LANGUAGE_7  &kp LANGUAGE_8  &kp LANGUAGE_9  &kp R           &kp R      &kp R  &kp INTERNATIONAL_6  &kp INTERNATIONAL_7  &kp INTERNATIONAL_8  &kp INTERNATIONAL_9  &kp R
-&kp R           &kp R           &kp R           &kp R           &kp R           &kp R      &kp R  &kp R                &kp R                &kp R                &kp R                &kp R
-&kp R           &kp R           &kp R           &kp R           &kp R           &kp R      &kp R  &kp R                                                                               &kp R
+&trans  &kp RBKT    &kakko      &kp BSLH    &trans                      &trans               &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &trans
+&trans  &kp LS(N8)  &kagikakko  &kp LS(N9)  &trans  &trans      &trans  &kp INTERNATIONAL_1  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(INTERNATIONAL_1)
+&trans  &trans      &trans      &trans      &trans  &trans      &trans  &kp N0               &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &trans
+&trans  &trans      &trans      &trans      &trans  &trans      &trans  &trans                                                   &trans
             >;
         };
     };
