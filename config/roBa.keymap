@@ -53,6 +53,18 @@
             bindings = <&mkp MB2>;
             key-positions = <19 20>;
         };
+
+        inttest {
+            bindings = <&to 9>;
+            key-positions = <5 9>;
+            layers = <0>;
+        };
+
+        intback {
+            bindings = <&to 0>;
+            key-positions = <5 9>;
+            layers = <9>;
+        };
     };
 
     macros {
@@ -92,7 +104,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp INTERNATIONAL_4>,
+                <&kp INTERNATIONAL_5>,
                 <&macro_wait_time 15>,
                 <&kp LS(N8)>,
                 <&macro_wait_time 15>,
@@ -187,10 +199,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &trans  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB4  &trans  &mkp MB5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
         };
 
@@ -205,10 +217,10 @@
 
         layer_6 {
             bindings = <
-&bt BT_SEL 0          &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                 &kp T                 &kp HOME         &kp UP     &kp END      &kp T
-&kp LA(LC(LS(LEFT)))  &kp LG(LEFT)      &taskview          &kp LG(RIGHT)      &kp LS(LA(LC(RIGHT)))  &kp T      &none      &kp LG(LC(LA(LEFT)))  &kp LEFT         &kp DOWN   &kp RIGHT    &kp LA(LC(LG(RIGHT)))
-&kp LG(UP_ARROW)      &kp LG(LS(LEFT))  &kp LG(LC(LA(P)))  &kp LS(LG(RIGHT))  &kp T                  &kp T      &kp LC(A)  &none                 &kp LC(LS(TAB))  &kp LC(T)  &kp LC(TAB)  &kp LC(W)
-&none                 &none             &none              &trans             &none                  &none      &kp LC(C)  &kp LC(T)                                                      &kp T
+&bt BT_SEL 0          &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                  &kp T                 &kp HOME         &kp UP     &kp END      &kp T
+&kp LA(LC(LS(LEFT)))  &kp LG(LEFT)      &taskview          &kp LG(RIGHT)      &kp LS(LA(LC(RIGHT)))  &kp T       &none      &kp LG(LC(LA(LEFT)))  &kp LEFT         &kp DOWN   &kp RIGHT    &kp LA(LC(LG(RIGHT)))
+&kp LG(UP_ARROW)      &kp LG(LS(LEFT))  &kp LG(LC(LA(P)))  &kp LS(LG(RIGHT))  &kp T                  &kp T       &kp LC(A)  &none                 &kp LC(LS(TAB))  &kp LC(T)  &kp LC(TAB)  &kp LC(W)
+&none                 &none             &none              &trans             &trans                 &trans      &kp LC(C)  &kp LC(T)                                                      &kp T
             >;
         };
 
