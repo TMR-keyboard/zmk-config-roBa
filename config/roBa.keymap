@@ -170,10 +170,10 @@
 
         layer_6 {
             bindings = <
-&kp T  &kp T  &kp T      &kp T  &kp T                    &kp T   &kp HOME  &kp UP    &kp END    &kp T
-&kp T  &kp T  &taskview  &kp T  &kp T  &kp T      &kp T  &kp T   &kp LEFT  &kp DOWN  &kp RIGHT  &kp T
-&kp T  &kp T  &kp T      &kp T  &kp T  &kp T      &kp T  &kp N0  &kp TAB   &kp T     &kp TAB    &kp W
-&kp T  &kp T  &kp T      &kp T  &kp T  &kp T      &kp T  &kp T                                  &kp T
+&kp T  &kp T         &kp T      &kp T          &kp T                    &kp T                 &kp HOME         &kp UP     &kp END      &kp T
+&kp T  &kp LG(LEFT)  &taskview  &kp LG(RIGHT)  &kp T  &kp T      &kp T  &kp LG(LC(LA(LEFT)))  &kp LEFT         &kp DOWN   &kp RIGHT    &kp LA(LC(LG(RIGHT)))
+&kp T  &kp T         &kp T      &kp T          &kp T  &kp T      &kp T  &kp N0                &kp LC(LS(TAB))  &kp LC(T)  &kp LC(TAB)  &kp LC(W)
+&kp T  &kp T         &kp T      &kp T          &kp T  &kp T      &kp T  &kp T                                                          &kp T
             >;
         };
 
