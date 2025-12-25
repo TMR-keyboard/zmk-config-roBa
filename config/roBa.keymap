@@ -232,7 +232,7 @@
 &bt BT_SEL 0          &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                  &kp T                 &kp HOME         &kp UP     &kp END      &kp T
 &kp LA(LC(LS(LEFT)))  &kp LG(LEFT)      &taskview          &kp LG(RIGHT)      &kp LS(LA(LC(RIGHT)))  &kp T       &none      &kp LG(LC(LA(LEFT)))  &kp LEFT         &kp DOWN   &kp RIGHT    &kp LA(LC(LG(RIGHT)))
 &kp LG(UP_ARROW)      &kp LG(LS(LEFT))  &kp LG(LC(LA(P)))  &kp LS(LG(RIGHT))  &kp LS(LG(S))          &kp T       &kp LC(A)  &none                 &kp LC(LS(TAB))  &kp LC(T)  &kp LC(TAB)  &kp LC(W)
-&trans                &trans            &trans             &trans             &trans                 &trans      &kp LC(C)  &kp LC(T)                                                      &kp T
+&trans                &trans            &trans             &trans             &trans                 &trans      &kp LC(C)  &kp LC(V)                                                      &kp T
             >;
         };
 
@@ -249,7 +249,7 @@
             bindings = <
 &trans  &kp RBKT    &kakko      &kp BSLH    &trans                      &trans               &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &trans
 &trans  &kp LS(N8)  &kagikakko  &kp LS(N9)  &trans  &trans      &trans  &kp INTERNATIONAL_1  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(INTERNATIONAL_1)
-&trans  &trans      &trans      &trans      &trans  &trans      &trans  &kp N0               &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &trans
+&trans  &trans      &trans      &trans      &trans  &trans      &trans  &kp N0               &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp QUESTION
 &trans  &trans      &trans      &trans      &trans  &trans      &trans  &trans                                                   &trans
             >;
         };
