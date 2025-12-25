@@ -231,7 +231,7 @@
             bindings = <
 &bt BT_SEL 0          &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                  &kp T                 &kp HOME         &kp UP     &kp END      &kp T
 &kp LA(LC(LS(LEFT)))  &kp LG(LEFT)      &taskview          &kp LG(RIGHT)      &kp LS(LA(LC(RIGHT)))  &kp T       &none      &kp LG(LC(LA(LEFT)))  &kp LEFT         &kp DOWN   &kp RIGHT    &kp LA(LC(LG(RIGHT)))
-&kp LG(UP_ARROW)      &kp LG(LS(LEFT))  &kp LG(LC(LA(P)))  &kp LS(LG(RIGHT))  &kp T                  &kp T       &kp LC(A)  &none                 &kp LC(LS(TAB))  &kp LC(T)  &kp LC(TAB)  &kp LC(W)
+&kp LG(UP_ARROW)      &kp LG(LS(LEFT))  &kp LG(LC(LA(P)))  &kp LS(LG(RIGHT))  &kp LS(LG(S))          &kp T       &kp LC(A)  &none                 &kp LC(LS(TAB))  &kp LC(T)  &kp LC(TAB)  &kp LC(W)
 &trans                &trans            &trans             &trans             &trans                 &trans      &kp LC(C)  &kp LC(T)                                                      &kp T
             >;
         };
