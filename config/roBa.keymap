@@ -128,6 +128,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
+            flavor = "tap-preferred";
         };
 
         int4: int4 {
@@ -160,6 +161,35 @@
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp LANGUAGE_2>, <&none>;
         };
+
+        tskview_kp: tskview_kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TSKVIEW_KP";
+            bindings = <&taskview>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+
+        LT_Advance: LT_Advance {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_ADVANCE";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "balanced";
+        };
+
+        MT_Advance: MT_Advance {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_ADVANCE";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -167,10 +197,10 @@
 
         default_layer {
             bindings = <
-&kp Q        &kp J         &kp U                   &kp COMMA           &kp DOT                                                    &kp F     &kp W    &kp R    &kp Y  &kp P
-&mt LCTRL E  &kp I         &lt 6 A                 &lt 7 O             &kp MINUS  &none                           &none           &kp K     &lt 7 T  &lt 5 N  &kp S  &mt RCTRL H
-&kp L        &kp X         &kp N                   &kp V               &kp C      &kp LANGUAGE_2                  &kp LANGUAGE_1  &kp G     &kp D    &kp M    &kp Z  &kp B
-&kp TAB      &kp LEFT_WIN  &mt LEFT_ALT LC(SPACE)  &tapdancespace 6 0  &mkp LCLK  &new_behavior LEFT_SHIFT 0      &lt 8 ENTER     &kp BSPC                           &kp ESC
+&kp Q                &kp J         &LT_Advance 8 U         &kp COMMA            &kp DOT                                                    &kp F     &kp W            &LT_Advance 8 R  &kp Y  &kp P
+&MT_Advance LCTRL E  &kp I         &LT_Advance 6 A         &LT_Advance 7 O      &kp MINUS  &none                      &none                &kp K     &LT_Advance 7 T  &LT_Advance 5 N  &kp S  &MT_Advance RCTRL H
+&kp L                &kp X         &kp N                   &kp V                &kp C      &kp LANGUAGE_2             &kp LANGUAGE_1       &kp G     &kp D            &kp M            &kp Z  &kp B
+&kp TAB              &kp LEFT_WIN  &mt LEFT_ALT LC(SPACE)  &tskview_kp 0 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT MB2      &LT_Advance 9 ENTER  &kp BSPC                                           &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -214,20 +244,20 @@
             >;
         };
 
-        SCROLL {
+        layer_9 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans     &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp LCLK  &trans  &mkp RCLK  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB4   &trans  &mkp MB5   &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&bt BT_SEL 0          &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                              &none  &none     &none   &none     &none
+&kp LA(LC(LS(LEFT)))  &kp LG(LEFT)      &kp LC(LG(LA(P)))  &kp LG(RIGHT)      &kp LS(LA(LC(RIGHT)))  &none       &none  &none  &mkp MB1  &trans  &mkp MB2  &none
+&kp LG(UP_ARROW)      &kp LG(LS(LEFT))  &kp LG(LC(LA(Q)))  &kp LS(LG(RIGHT))  &kp LS(LG(S))          &none       &none  &none  &mkp MB4  &none   &mkp MB5  &none
+&trans                &trans            &trans             &trans             &trans                 &trans      &none  &none                              &none
             >;
         };
 
         layer_6 {
             bindings = <
 &bt BT_SEL 0          &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                  &kp T                 &kp HOME         &kp UP     &kp END      &kp T
-&kp LA(LC(LS(LEFT)))  &kp LG(LEFT)      &taskview          &kp LG(RIGHT)      &kp LS(LA(LC(RIGHT)))  &kp T       &none      &kp LG(LC(LA(LEFT)))  &kp LEFT         &kp DOWN   &kp RIGHT    &kp LA(LC(LG(RIGHT)))
-&kp LG(UP_ARROW)      &kp LG(LS(LEFT))  &kp LG(LC(LA(P)))  &kp LS(LG(RIGHT))  &kp LS(LG(S))          &kp T       &kp LC(A)  &none                 &kp LC(LS(TAB))  &kp LC(T)  &kp LC(TAB)  &kp LC(W)
+&kp LA(LC(LS(LEFT)))  &kp LG(LEFT)      &mo 6              &kp LG(RIGHT)      &kp LS(LA(LC(RIGHT)))  &kp T       &none      &kp LG(LC(LA(LEFT)))  &kp LEFT         &kp DOWN   &kp RIGHT    &kp LA(LC(LG(RIGHT)))
+&kp LG(UP_ARROW)      &kp LG(LS(LEFT))  &kp LG(LC(LA(Q)))  &kp LS(LG(RIGHT))  &kp LS(LG(S))          &kp T       &kp LC(A)  &none                 &kp LC(LS(TAB))  &kp LC(T)  &kp LC(TAB)  &kp LC(W)
 &trans                &trans            &trans             &trans             &trans                 &trans      &kp LC(C)  &kp LC(V)                                                      &kp T
             >;
         };
@@ -247,6 +277,15 @@
 &trans  &kp LS(N8)  &kagikakko  &kp LS(N9)  &trans  &trans      &trans  &kp INTERNATIONAL_1  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(INTERNATIONAL_1)
 &trans  &trans      &trans      &trans      &trans  &trans      &trans  &kp N0               &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp QUESTION
 &trans  &trans      &trans      &trans      &trans  &trans      &trans  &trans                                                   &trans
+            >;
+        };
+
+        SCROLL {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                                      &trans  &trans     &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans          &trans              &trans  &trans  &mkp LCLK  &trans  &mkp RCLK  &trans
+&trans  &trans  &trans  &trans  &trans          &trans              &trans  &trans  &mkp MB4   &trans  &mkp MB5   &trans
+&trans  &trans  &trans  &trans  &kp LANGUAGE_2  &kp LANGUAGE_1      &trans  &trans                                &trans
             >;
         };
     };
