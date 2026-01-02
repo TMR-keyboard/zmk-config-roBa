@@ -142,9 +142,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LANG2_RCLK";
             #binding-cells = <0>;
-            bindings = <&mkp RCLK>, <&kp LANGUAGE_1>;
+            bindings = <&mkp RCLK>, <&kp LANGUAGE_2>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <350>;
         };
 
         new_behavior_none: new_behavior_none {
@@ -168,15 +168,15 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SPACEANDLANG2";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp LANGUAGE_2>;
+            bindings = <&kp ENTER>, <&kp LANG1>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <350>;
         };
 
         tskview_kp: tskview_kp {
             compatible = "zmk,behavior-hold-tap";
             label = "TSKVIEW_KP";
-            bindings = <&taskview>, <&spaceandlang2>;
+            bindings = <&taskview>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -228,10 +228,10 @@
 
         default_layer {
             bindings = <
-&kp Q                &kp J         &LT_Advance 8 U         &kp COMMA            &kp DOT                                                              &kp F     &kp W           &LT_Advance 8 R  &kp Y  &kp P
-&MT_Advance LCTRL E  &kp I         &LT_Advance 6 A         &num_layer 0 O       &kp MINUS  &none                                &none                &kp K     &num_layer 0 T  &LT_Advance 5 N  &kp S  &MT_Advance RCTRL H
-&kp L                &kp X         &kp N                   &kp V                &kp C      &kp LANGUAGE_2                       &kp LANGUAGE_1       &kp G     &kp D           &kp M            &kp Z  &kp B
-&kp TAB              &kp LEFT_WIN  &mt LEFT_ALT LC(SPACE)  &tskview_kp 0 SPACE  &mkp LCLK  &new_behavior_none LEFT_SHIFT 0      &LT_Advance 9 ENTER  &kp BSPC                                          &kp ESC
+&kp Q                &kp J         &LT_Advance 8 U         &kp COMMA            &kp DOT                                                         &kp F     &kp W            &LT_Advance 8 R  &kp Y  &kp P
+&MT_Advance LCTRL E  &kp I         &LT_Advance 6 A         &LT_Advance 7 O      &kp MINUS  &none                                &none           &kp K     &LT_Advance 7 T  &LT_Advance 5 N  &kp S  &MT_Advance RCTRL H
+&kp L                &kp X         &kp N                   &kp V                &kp C      &kp LANGUAGE_2                       &kp LANGUAGE_1  &kp G     &kp D            &kp M            &kp Z  &kp B
+&kp TAB              &kp LEFT_WIN  &mt LEFT_ALT LC(SPACE)  &tskview_kp 0 SPACE  &mkp LCLK  &new_behavior_none LEFT_SHIFT 0      &spaceandlang2  &kp BSPC                                           &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
