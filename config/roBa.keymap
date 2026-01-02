@@ -100,6 +100,13 @@
 
             label = "KAGIKAKKO";
         };
+
+        numlayer: numlayer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &mo 7>;
+            label = "NUMLAYER";
+        };
     };
 
     behaviors {
@@ -131,17 +138,19 @@
             flavor = "tap-preferred";
         };
 
-        int4: int4 {
+        lang2_RCLK: lang2_RCLK {
             compatible = "zmk,behavior-tap-dance";
-            label = "INT4";
+            label = "LANG2_RCLK";
             #binding-cells = <0>;
-            bindings = <&mkp RCLK>, <&kp LANGUAGE_1>, <&none>;
+            bindings = <&mkp RCLK>, <&kp LANGUAGE_1>;
+
+            tapping-term-ms = <200>;
         };
 
-        new_behavior: new_behavior {
+        new_behavior_none: new_behavior_none {
             compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings = <&kp>, <&int4>;
+            label = "NEW_BEHAVIOR_NONE";
+            bindings = <&kp>, <&lang2_RCLK>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -151,7 +160,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCESPACE";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             bindings = <&mo>, <&spaceandlang2>;
         };
 
@@ -159,13 +168,15 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SPACEANDLANG2";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp LANGUAGE_2>, <&none>;
+            bindings = <&kp SPACE>, <&kp LANGUAGE_2>;
+
+            tapping-term-ms = <200>;
         };
 
         tskview_kp: tskview_kp {
             compatible = "zmk,behavior-hold-tap";
             label = "TSKVIEW_KP";
-            bindings = <&taskview>, <&kp>;
+            bindings = <&taskview>, <&spaceandlang2>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -190,6 +201,26 @@
             tapping-term-ms = <150>;
             flavor = "tap-preferred";
         };
+
+        num_layer: num_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NUM_LAYER";
+            bindings = <&numlayer>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_BEHAVIOR";
+            bindings = <&kp>, <&lang2_RCLK>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -197,10 +228,10 @@
 
         default_layer {
             bindings = <
-&kp Q                &kp J         &LT_Advance 8 U         &kp COMMA            &kp DOT                                                    &kp F     &kp W            &LT_Advance 8 R  &kp Y  &kp P
-&MT_Advance LCTRL E  &kp I         &LT_Advance 6 A         &LT_Advance 7 O      &kp MINUS  &none                      &none                &kp K     &LT_Advance 7 T  &LT_Advance 5 N  &kp S  &MT_Advance RCTRL H
-&kp L                &kp X         &kp N                   &kp V                &kp C      &kp LANGUAGE_2             &kp LANGUAGE_1       &kp G     &kp D            &kp M            &kp Z  &kp B
-&kp TAB              &kp LEFT_WIN  &mt LEFT_ALT LC(SPACE)  &tskview_kp 0 SPACE  &mkp LCLK  &kpmkp LEFT_SHIFT MB2      &LT_Advance 9 ENTER  &kp BSPC                                           &kp ESC
+&kp Q                &kp J         &LT_Advance 8 U         &kp COMMA            &kp DOT                                                              &kp F     &kp W           &LT_Advance 8 R  &kp Y  &kp P
+&MT_Advance LCTRL E  &kp I         &LT_Advance 6 A         &num_layer 0 O       &kp MINUS  &none                                &none                &kp K     &num_layer 0 T  &LT_Advance 5 N  &kp S  &MT_Advance RCTRL H
+&kp L                &kp X         &kp N                   &kp V                &kp C      &kp LANGUAGE_2                       &kp LANGUAGE_1       &kp G     &kp D           &kp M            &kp Z  &kp B
+&kp TAB              &kp LEFT_WIN  &mt LEFT_ALT LC(SPACE)  &tskview_kp 0 SPACE  &mkp LCLK  &new_behavior_none LEFT_SHIFT 0      &LT_Advance 9 ENTER  &kp BSPC                                          &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
