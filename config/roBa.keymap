@@ -9,7 +9,7 @@
 };
 
 &trackball {
-    scroll-layers = <5 6>;
+    scroll-layers = <5>;
 
 // レイヤー6: 仮想デスクトップ系＋タスクビュー＋普通の右矢印
     layer6_ctrl {
@@ -26,7 +26,7 @@
 
     // レイヤー5: ウィンドウスナップ系
     layer5_snap {
-        layers = <5>;
+        layers = <7>;
         bindings =
             <&kp LG(RIGHT_ARROW)>,  // 右にスナップ (Win + →)
             <&kp LG(LEFT_ARROW)>,   // 左にスナップ (Win + ←)
