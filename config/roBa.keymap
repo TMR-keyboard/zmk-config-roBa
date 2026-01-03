@@ -18,9 +18,9 @@
             <&kp LG(LA(LC(RIGHT_ARROW)))>,  // 右: Win + Alt + Ctrl + →
             <&kp LG(LA(LC(LEFT_ARROW)))>,   // 左: Win + Alt + Ctrl + ←
             <&kp LG(TAB)>,                  // 上: Win + Tab
-            <&kp RIGHT_ARROW>;              // 下: → だけ
-        tick = <200>;
-        wait-ms = <200>;
+            <&kp LG(M)>;              // 下: → だけ
+        tick = <40>;
+        wait-ms = <400>;
         tap-ms = <5>;
     };
 
@@ -32,8 +32,8 @@
             <&kp LG(LEFT_ARROW)>,   // 左にスナップ (Win + ←)
             <&kp LG(UP_ARROW)>,     // 最大化   (Win + ↑)
             <&kp LG(DOWN_ARROW)>;   // 最小化 or 元のサイズ (Win + ↓)
-        tick = <200>;
-        wait-ms = <200>;
+        tick = <40>;
+        wait-ms = <400>;
         tap-ms = <5>;
     };
 };
