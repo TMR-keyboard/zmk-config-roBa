@@ -245,8 +245,8 @@
         default_layer {
             bindings = <
 &kp Q                &kp J         &LT_Advance 8 U         &kp COMMA            &kp DOT                                                         &kp F     &kp W            &LT_Advance 8 R  &kp Y  &kp P
-&MT_Advance LCTRL E  &kp I         &LT_Advance 6 A         &LT_Advance 7 O      &kp MINUS  &none                                &none           &kp K     &LT_Advance 7 T  &LT_Advance 5 N  &kp S  &MT_Advance RCTRL H
-&kp L                &kp X         &kp N                   &kp V                &kp C      &kp LANGUAGE_2                       &kp LANGUAGE_1  &kp G     &kp D            &kp M            &kp Z  &kp B
+&MT_Advance LCTRL E  &kp I         &LT_Advance 6 A         &LT_Advance 7 O      &kp MINUS  &kp PG_UP                            &mkp MB5        &kp K     &LT_Advance 7 T  &LT_Advance 5 N  &kp S  &MT_Advance RCTRL H
+&kp L                &kp X         &kp N                   &kp V                &kp C      &kp PAGE_DOWN                        &mkp MB4        &kp G     &kp D            &kp M            &kp Z  &kp B
 &kp TAB              &kp LEFT_WIN  &mt LEFT_ALT LC(SPACE)  &tskview_kp 0 SPACE  &mkp LCLK  &new_behavior_none LEFT_SHIFT 0      &spaceandlang2  &kp BSPC                                           &kp ESC
             >;
 
