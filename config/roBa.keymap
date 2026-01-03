@@ -52,6 +52,18 @@
             bindings = <&mkp MB2>;
             key-positions = <19 20>;
         };
+
+        goodnote {
+            bindings = <&to 1>;
+            key-positions = <15 16>;
+            layers = <0>;
+        };
+
+        onisi {
+            bindings = <&to 0>;
+            key-positions = <15 16>;
+            layers = <1>;
+        };
     };
 
     macros {
@@ -255,10 +267,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+&trans  &trans     &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&kp Z   &kp LC(Z)  &kp P   &kp E   &kp L   &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&trans  &trans     &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
+&trans  &trans     &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
             >;
         };
 
