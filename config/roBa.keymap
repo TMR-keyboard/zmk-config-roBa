@@ -11,27 +11,37 @@
 &trackball {
     scroll-layers = <5>;
 
-// レイヤー6: 仮想デスクトップ系＋タスクビュー＋普通の右矢印
+    // レイヤー6: 仮想デスクトップ系＋タスクビュー＋普通の右矢印
+
     layer6_ctrl {
         layers = <6>;
         bindings =
-            <&kp LG(LA(LC(RIGHT_ARROW)))>,  // 右: Win + Alt + Ctrl + →
-            <&kp LG(LA(LC(LEFT_ARROW)))>,   // 左: Win + Alt + Ctrl + ←
-            <&kp LG(TAB)>,                  // 上: Win + Tab
-            <&kp LG(M)>;              // 下: → だけ
+            <&kp LG(LA(LC(RIGHT_ARROW)))>,
+            // 右: Win + Alt + Ctrl + →,
+            <&kp LG(LA(LC(LEFT_ARROW)))>,
+            // 左: Win + Alt + Ctrl + ←,
+            <&kp LG(TAB)>,
+            // 上: Win + Tab,
+            <&kp LG(M)>;
+              // 下: → だけ
         tick = <200>;
         wait-ms = <40>;
         tap-ms = <5>;
     };
 
     // レイヤー5: ウィンドウスナップ系
+
     layer5_snap {
         layers = <7>;
         bindings =
-            <&kp LG(RIGHT_ARROW)>,  // 右にスナップ (Win + →)
-            <&kp LG(LEFT_ARROW)>,   // 左にスナップ (Win + ←)
-            <&kp LG(UP_ARROW)>,     // 最大化   (Win + ↑)
-            <&kp LG(DOWN_ARROW)>;   // 最小化 or 元のサイズ (Win + ↓)
+            <&kp LG(RIGHT_ARROW)>,
+            // 右にスナップ (Win + →),
+            <&kp LG(LEFT_ARROW)>,
+            // 左にスナップ (Win + ←),
+            <&kp LG(UP_ARROW)>,
+            // 最大化   (Win + ↑),
+            <&kp LG(DOWN_ARROW)>;
+   // 最小化 or 元のサイズ (Win + ↓)
         tick = <200>;
         wait-ms = <40>;
         tap-ms = <5>;
@@ -100,13 +110,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LANGUAGE_2>,
-                <&macro_wait_time 15>,
                 <&kp RIGHT_BRACKET>,
                 <&macro_wait_time 15>,
                 <&kp BACKSLASH>,
                 <&macro_wait_time 15>,
-                <&kp LEFT>;
+                <&kp ENTER &kp LEFT>;
 
             label = "KAKKO";
         };
@@ -263,6 +271,16 @@
 
             tapping-term-ms = <350>;
         };
+
+        enterctrl: enterctrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ENTERCTRL";
+            bindings = <&kp>, <&spaceandlang2>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -270,10 +288,10 @@
 
         default_layer {
             bindings = <
-&kp Q                &kp J         &LT_Advance 8 U         &kp COMMA            &kp DOT                                                         &kp F     &kp W            &LT_Advance 8 R  &kp Y  &kp P
-&MT_Advance LCTRL E  &kp I         &LT_Advance 6 A         &LT_Advance 7 O      &kp MINUS  &kp PG_UP                            &mkp MB5        &kp K     &LT_Advance 7 T  &LT_Advance 5 N  &kp S  &MT_Advance RCTRL H
-&kp L                &kp X         &kp N                   &kp V                &kp C      &kp PAGE_DOWN                        &mkp MB4        &kp G     &kp D            &kp M            &kp Z  &kp B
-&kp TAB              &kp LEFT_WIN  &mt LEFT_ALT LC(SPACE)  &tskview_kp 0 SPACE  &mkp LCLK  &new_behavior_none LEFT_SHIFT 0      &spaceandlang2  &kp BSPC                                           &kp ESC
+&kp Q    &kp J         &LT_Advance 8 U         &kp COMMA        &kp DOT                                                             &kp F     &kp W            &LT_Advance 8 R  &kp Y  &kp P
+&kp E    &kp I         &LT_Advance 6 A         &LT_Advance 7 O  &kp MINUS  &kp PG_UP                            &mkp MB5            &kp K     &LT_Advance 7 T  &LT_Advance 5 N  &kp S  &kp H
+&kp L    &kp X         &kp N                   &kp V            &kp C      &kp PAGE_DOWN                        &mkp MB4            &kp G     &kp D            &kp M            &kp Z  &kp B
+&kp TAB  &kp LEFT_WIN  &mt LEFT_ALT LC(SPACE)  &kp SPACE        &mkp LCLK  &new_behavior_none LEFT_SHIFT 0      &enterctrl RCTRL 0  &kp BSPC                                           &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -346,10 +364,10 @@
 
         layer_8 {
             bindings = <
-&trans  &kp RBKT    &kakko      &kp BSLH    &trans                      &trans               &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &trans
-&trans  &kp LS(N8)  &kagikakko  &kp LS(N9)  &trans  &trans      &trans  &kp INTERNATIONAL_1  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(INTERNATIONAL_1)
-&trans  &trans      &trans      &trans      &trans  &trans      &trans  &kp N0               &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp QUESTION
-&trans  &trans      &trans      &trans      &trans  &trans      &trans  &trans                                                   &trans
+&trans  &kp RBKT    &kakko      &kp BSLH    &trans                                &trans               &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &trans
+&trans  &kp LS(N8)  &kagikakko  &kp LS(N9)  &trans  &trans      &trans            &kp INTERNATIONAL_1  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(LEFT_BRACKET)
+&trans  &trans      &trans      &trans      &trans  &trans      &trans            &kp N0               &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(INTERNATIONAL_1)
+&trans  &trans      &trans      &trans      &trans  &trans      &kp LS(NUMBER_1)  &kp QUESTION                                             &kp FSLH
             >;
         };
 
