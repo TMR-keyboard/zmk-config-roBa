@@ -17,13 +17,15 @@
         layers = <6>;
         bindings =
             <&kp LG(LA(LC(RIGHT_ARROW)))>,
-            // 右: Win + Alt + Ctrl + →,
+            // 右: Win + Alt + Ctrl + →,,
             <&kp LG(LA(LC(LEFT_ARROW)))>,
-            // 左: Win + Alt + Ctrl + ←,
+            // 左: Win + Alt + Ctrl + ←,,
             <&kp LG(TAB)>,
-            // 上: Win + Tab,
+            // 上: Win + Tab,,
             <&kp LG(M)>;
-              // 下: → だけ
+
+        // 下: → だけ
+
         tick = <200>;
         wait-ms = <40>;
         tap-ms = <5>;
@@ -35,13 +37,15 @@
         layers = <7>;
         bindings =
             <&kp LG(RIGHT_ARROW)>,
-            // 右にスナップ (Win + →),
+            // 右にスナップ (Win + →),,
             <&kp LG(LEFT_ARROW)>,
-            // 左にスナップ (Win + ←),
+            // 左にスナップ (Win + ←),,
             <&kp LG(UP_ARROW)>,
-            // 最大化   (Win + ↑),
+            // 最大化   (Win + ↑),,
             <&kp LG(DOWN_ARROW)>;
-   // 最小化 or 元のサイズ (Win + ↓)
+
+        // 最小化 or 元のサイズ (Win + ↓)
+
         tick = <200>;
         wait-ms = <40>;
         tap-ms = <5>;
@@ -86,7 +90,7 @@
         onisi {
             bindings = <&to 0>;
             key-positions = <15 16>;
-            layers = <1>;
+            layers = <2>;
         };
     };
 
@@ -110,7 +114,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp RIGHT_BRACKET>,
+                <&kp LANGUAGE_1 &kp RIGHT_BRACKET>,
                 <&macro_wait_time 15>,
                 <&kp BACKSLASH>,
                 <&macro_wait_time 15>,
@@ -297,6 +301,17 @@
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
+        layer_2 {
+            bindings = <
+&kp Q    &kp W         &LT_Advance 8 E         &kp R            &kp T                                                               &kp Y     &kp U            &LT_Advance 8 I  &kp O    &kp P
+&kp A    &kp S         &LT_Advance 6 D         &LT_Advance 7 F  &kp G      &kp PG_UP                            &mkp MB5            &kp H     &LT_Advance 7 J  &LT_Advance 5 K  &kp L    &kp ENTER
+&kp Z    &kp X         &kp C                   &kp V            &kp B      &kp PAGE_DOWN                        &mkp MB4            &kp N     &kp M            &kp COMMA        &kp DOT  &kp FSLH
+&kp TAB  &kp LEFT_WIN  &mt LEFT_ALT LC(SPACE)  &kp SPACE        &mkp LCLK  &new_behavior_none LEFT_SHIFT 0      &enterctrl RCTRL 0  &kp BSPC                                             &kp ESC
+            >;
+
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+        };
+
         FUNCTION {
             bindings = <
 &trans  &trans     &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
@@ -313,17 +328,6 @@
 &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
 &trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
             >;
-        };
-
-        ARROW {
-            bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         MOUSE {
@@ -365,7 +369,7 @@
         layer_8 {
             bindings = <
 &trans  &kp RBKT    &kakko      &kp BSLH    &trans                                &trans               &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &trans
-&trans  &kp LS(N8)  &kagikakko  &kp LS(N9)  &trans  &trans      &trans            &kp INTERNATIONAL_1  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(LEFT_BRACKET)
+&trans  &kp LS(N8)  &kagikakko  &kp LS(N9)  &trans  &trans      &trans            &kp INTERNATIONAL_1  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LEFT_BRACKET
 &trans  &trans      &trans      &trans      &trans  &trans      &trans            &kp N0               &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(INTERNATIONAL_1)
 &trans  &trans      &trans      &trans      &trans  &trans      &kp LS(NUMBER_1)  &kp QUESTION                                             &kp FSLH
             >;
