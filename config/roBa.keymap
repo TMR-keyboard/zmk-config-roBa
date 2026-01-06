@@ -17,11 +17,11 @@
         layers = <6>;
         bindings =
             <&kp LG(LA(LC(RIGHT_ARROW)))>,
-            // 右: Win + Alt + Ctrl + →,,
+            // 右: Win + Alt + Ctrl + →,,,
             <&kp LG(LA(LC(LEFT_ARROW)))>,
-            // 左: Win + Alt + Ctrl + ←,,
+            // 左: Win + Alt + Ctrl + ←,,,
             <&kp LG(TAB)>,
-            // 上: Win + Tab,,
+            // 上: Win + Tab,,,
             <&kp LG(M)>;
 
         // 下: → だけ
@@ -37,11 +37,11 @@
         layers = <7>;
         bindings =
             <&kp LG(RIGHT_ARROW)>,
-            // 右にスナップ (Win + →),,
+            // 右にスナップ (Win + →),,,
             <&kp LG(LEFT_ARROW)>,
-            // 左にスナップ (Win + ←),,
+            // 左にスナップ (Win + ←),,,
             <&kp LG(UP_ARROW)>,
-            // 最大化   (Win + ↑),,
+            // 最大化   (Win + ↑),,,
             <&kp LG(DOWN_ARROW)>;
 
         // 最小化 or 元のサイズ (Win + ↓)
@@ -90,7 +90,7 @@
         onisi {
             bindings = <&to 0>;
             key-positions = <15 16>;
-            layers = <2>;
+            layers = <1>;
         };
     };
 
