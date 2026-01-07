@@ -17,11 +17,11 @@
         layers = <6>;
         bindings =
             <&kp LG(LA(LC(RIGHT_ARROW)))>,
-            // 右: Win + Alt + Ctrl + →,,,
+            // 右: Win + Alt + Ctrl + →,,,,
             <&kp LG(LA(LC(LEFT_ARROW)))>,
-            // 左: Win + Alt + Ctrl + ←,,,
+            // 左: Win + Alt + Ctrl + ←,,,,
             <&kp LG(TAB)>,
-            // 上: Win + Tab,,,
+            // 上: Win + Tab,,,,
             <&kp LG(M)>;
 
         // 下: → だけ
@@ -37,11 +37,11 @@
         layers = <7>;
         bindings =
             <&kp LG(RIGHT_ARROW)>,
-            // 右にスナップ (Win + →),,,
+            // 右にスナップ (Win + →),,,,
             <&kp LG(LEFT_ARROW)>,
-            // 左にスナップ (Win + ←),,,
+            // 左にスナップ (Win + ←),,,,
             <&kp LG(UP_ARROW)>,
-            // 最大化   (Win + ↑),,,
+            // 最大化   (Win + ↑),,,,
             <&kp LG(DOWN_ARROW)>;
 
         // 最小化 or 元のサイズ (Win + ↓)
@@ -305,7 +305,7 @@
             bindings = <
 &kp Q    &kp W         &LT_Advance 8 E         &kp R            &kp T                                                               &kp Y     &kp U            &LT_Advance 8 I  &kp O    &kp P
 &kp A    &kp S         &LT_Advance 6 D         &LT_Advance 7 F  &kp G      &kp PG_UP                            &mkp MB5            &kp H     &LT_Advance 7 J  &LT_Advance 5 K  &kp L    &kp ENTER
-&kp Z    &kp X         &kp C                   &kp V            &kp B      &kp PAGE_DOWN                        &mkp MB4            &kp N     &kp M            &kp COMMA        &kp DOT  &kp FSLH
+&kp Z    &kp X         &kp C                   &kp V            &kp B      &kp PAGE_DOWN                        &mkp MB4            &kp N     &kp M            &kp COMMA        &kp DOT  &kp MINUS
 &kp TAB  &kp LEFT_WIN  &mt LEFT_ALT LC(SPACE)  &kp SPACE        &mkp LCLK  &new_behavior_none LEFT_SHIFT 0      &enterctrl RCTRL 0  &kp BSPC                                             &kp ESC
             >;
 
