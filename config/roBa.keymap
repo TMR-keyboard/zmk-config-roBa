@@ -17,11 +17,11 @@
         layers = <6>;
         bindings =
             <&kp LG(LA(LC(RIGHT_ARROW)))>,
-            // 右: Win + Alt + Ctrl + →,,,,
+            // 右: Win + Alt + Ctrl + →,,,,,
             <&kp LG(LA(LC(LEFT_ARROW)))>,
-            // 左: Win + Alt + Ctrl + ←,,,,
+            // 左: Win + Alt + Ctrl + ←,,,,,
             <&kp LG(TAB)>,
-            // 上: Win + Tab,,,,
+            // 上: Win + Tab,,,,,
             <&kp LG(M)>;
 
         // 下: → だけ
@@ -37,11 +37,11 @@
         layers = <7>;
         bindings =
             <&kp LG(RIGHT_ARROW)>,
-            // 右にスナップ (Win + →),,,,
+            // 右にスナップ (Win + →),,,,,
             <&kp LG(LEFT_ARROW)>,
-            // 左にスナップ (Win + ←),,,,
+            // 左にスナップ (Win + ←),,,,,
             <&kp LG(UP_ARROW)>,
-            // 最大化   (Win + ↑),,,,
+            // 最大化   (Win + ↑),,,,,
             <&kp LG(DOWN_ARROW)>;
 
         // 最小化 or 元のサイズ (Win + ↓)
@@ -341,19 +341,19 @@
 
         layer_9 {
             bindings = <
-&bt BT_SEL 0          &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                              &none  &none     &none   &none     &none
-&kp LA(LC(LS(LEFT)))  &kp LG(LEFT)      &kp LC(LG(LA(P)))  &kp LG(RIGHT)      &kp LS(LA(LC(RIGHT)))  &none       &none  &none  &mkp MB1  &trans  &mkp MB2  &none
-&kp LG(UP_ARROW)      &kp LG(LS(LEFT))  &kp LG(LC(LA(Q)))  &kp LS(LG(RIGHT))  &kp LS(LG(S))          &none       &none  &none  &mkp MB4  &none   &mkp MB5  &none
-&trans                &trans            &trans             &trans             &trans                 &trans      &none  &none                              &none
+&bt BT_SEL 0          &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3                                  &none      &none     &none   &none     &none
+&kp LA(LC(LS(LEFT)))  &bt BT_DISC 0     &bt BT_DISC 1      &bt BT_DISC 2      &kp LS(LA(LC(RIGHT)))  &none       &none      &none      &mkp MB1  &trans  &mkp MB2  &none
+&kp LG(UP_ARROW)      &kp LG(LS(LEFT))  &kp LG(LC(LA(Q)))  &kp LS(LG(RIGHT))  &kp LS(LG(S))          &none       &none      &none      &mkp MB4  &none   &mkp MB5  &none
+&trans                &trans            &trans             &trans             &trans                 &trans      &kp RC(C)  &kp RC(V)                              &none
             >;
         };
 
         layer_6 {
             bindings = <
-&bt BT_SEL 0          &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                     &kp T                 &kp HOME         &kp UP     &kp END      &kp T
-&kp LA(LC(LS(LEFT)))  &kp LG(LEFT)      &mo 6              &kp LG(RIGHT)      &kp LS(LA(LC(RIGHT)))  &kp T       &none         &kp LG(LC(LA(LEFT)))  &kp LEFT         &kp DOWN   &kp RIGHT    &kp LA(LC(LG(RIGHT)))
-&kp LG(UP_ARROW)      &kp LG(LS(LEFT))  &kp LG(LC(LA(Q)))  &kp LS(LG(RIGHT))  &kp LS(LG(S))          &kp T       &kp LC(A)     &kp LC(A)             &kp LC(LS(TAB))  &kp LC(T)  &kp LC(TAB)  &kp LC(W)
-&trans                &trans            &trans             &trans             &trans                 &trans      &doubleneter  &kp LC(V)                                                      &kp T
+&bt BT_SEL 0          &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                  &none       &kp HOME         &kp UP     &kp END      &none
+&kp LA(LC(LS(LEFT)))  &kp LG(LEFT)      &mo 6              &kp LG(RIGHT)      &kp LS(LA(LC(RIGHT)))  &kp T       &none      &kp LC(A)   &kp LEFT         &kp DOWN   &kp RIGHT    &kp LA(F4)
+&kp LG(UP_ARROW)      &kp LG(LS(LEFT))  &kp LG(LC(LA(Q)))  &kp LS(LG(RIGHT))  &kp LS(LG(S))          &kp T       &kp LC(A)  &kp LC(A)   &kp LC(LS(TAB))  &kp LC(T)  &kp LC(TAB)  &kp LC(W)
+&trans                &trans            &trans             &trans             &trans                 &trans      &kp ENTER  &kp DELETE                                           &none
             >;
         };
 
