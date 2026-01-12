@@ -56,11 +56,11 @@
     layer13_window_ctrl {
         layers = <11>;
         bindings =
-            <&kp LC(LG(RIGHT))>,
+            <&kp LC(LA(RIGHT))>,
             // 右：ウィンドウを右半分に (Ctrl + Cmd + →),,,
-            <&kp LC(LG(LEFT))>,
+            <&kp LC(LA(LEFT))>,
             // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),,,
-            <&kp LA(LG(ENTER))>,
+            <&kp LA(LC(ENTER))>,
             // 上：Enter + Option + Command,,,
             <&kp LG(W)>;
 
@@ -106,7 +106,7 @@
 
         // 下：アプリを完全に終了 (Cmd + Q)
 
-        tick = <250>;            // マクロ起動などが暴発しないよう少し長めに設定
+        tick = <200>;            // マクロ起動などが暴発しないよう少し長めに設定
         wait-ms = <40>;
         tap-ms = <5>;
     };
@@ -226,7 +226,7 @@
         spotlight_search: spotlight_search {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2>, <&macro_wait_time 10>, <&kp LG(SPACE)>;
+            bindings = <&kp LANGUAGE_2>, <&macro_wait_time 50>, <&kp LG(SPACE)>;
 
             label = "SPOTLIGHT_SEARCH";
         };
