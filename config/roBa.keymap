@@ -9,7 +9,7 @@
 };
 
 &trackball {
-    scroll-layers = <5>;
+    scroll-layers = <5 9>;
 
     // レイヤー6: 仮想デスクトップ系＋タスクビュー＋普通の右矢印
 
