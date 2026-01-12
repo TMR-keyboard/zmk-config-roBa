@@ -50,6 +50,47 @@
         wait-ms = <40>;
         tap-ms = <5>;
     };
+    // レイヤー13: ウィンドウ管理と特殊ショートカット
+    layer13_window_ctrl {
+        layers = <11>;
+        bindings =
+            <&kp LC(LG(RIGHT))>, // 右：ウィンドウを右半分に (Ctrl + Cmd + →)
+            <&kp LC(LG(LEFT))>,  // 左：ウィンドウを左半分に (Ctrl + Cmd + ←)
+            <&kp LA(LG(ENTER))>, // 上：Enter + Option + Command
+            <&kp LG(W)>;         // 下：アプリのウィンドウを閉じる (Cmd + W)
+
+        tick = <200>;
+        wait-ms = <40>;
+        tap-ms = <5>;
+    };
+    // レイヤー12: macOSナビゲーション (Mission Control / Expose / Desktop)
+    layer12_macos_nav {
+        layers = <10>;
+        bindings =
+            <&kp LC(RIGHT)>, // 右：右の仮想デスクトップへ移動 (Ctrl + →)
+            <&kp LC(LEFT)>,  // 左：左の仮想デスクトップへ移動 (Ctrl + ←)
+            <&kp LC(UP)>,    // 上：ミッションコントロール (Ctrl + ↑)
+            <&kp LC(DOWN)>;  // 下：アプリケーションエクスポーズ (Ctrl + ↓)
+
+        tick = <200>;        // 連続入力を防ぐため、少し余裕を持たせた設定
+        wait-ms = <40>;
+        tap-ms = <5>;
+    };
+    // レイヤー11: ウィンドウ移動と検索・終了操作
+    layer11_ops {
+        layers = <12>;
+        bindings = 
+            <&kp LS(LC(RIGHT))>, // 右：ウィンドウを右デスクトップへ移動 (Shift + Ctrl + →)
+            <&kp LS(LC(LEFT))>,  // 左：ウィンドウを左デスクトップへ移動 (Shift + Ctrl + ←)
+            <&spotlight_search>, // 上：マクロ実行 (lang2 -> Spotlight)
+            <&kp LG(Q)>;         // 下：アプリを完全に終了 (Cmd + Q)
+
+        tick = <250>;            // マクロ起動などが暴発しないよう少し長めに設定
+        wait-ms = <40>;
+        tap-ms = <5>;
+    };
+
+
 };
 
 / {
@@ -152,6 +193,17 @@
 
             label = "DOUBLEENTER";
         };
+        // lang2を押してからSpotlight（Cmd + Space）を起動するマクロ
+        spotlight_search: spotlight_search {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 10>,
+                <&kp LG(SPACE)>;
+            label = "SPOTLIGHT_SEARCH";
+        };
+
     };
 
     behaviors {
