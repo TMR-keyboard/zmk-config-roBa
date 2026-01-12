@@ -17,11 +17,11 @@
         layers = <6>;
         bindings =
             <&kp LG(LA(LC(RIGHT_ARROW)))>,
-            // 右: Win + Alt + Ctrl + →,,,,,,,
+            // 右: Win + Alt + Ctrl + →,,,,,,,,
             <&kp LG(LA(LC(LEFT_ARROW)))>,
-            // 左: Win + Alt + Ctrl + ←,,,,,,,
+            // 左: Win + Alt + Ctrl + ←,,,,,,,,
             <&kp LG(TAB)>,
-            // 上: Win + Tab,,,,,,,
+            // 上: Win + Tab,,,,,,,,
             <&kp LG(M)>;
 
         // 下: → だけ
@@ -37,11 +37,11 @@
         layers = <7>;
         bindings =
             <&kp LG(RIGHT_ARROW)>,
-            // 右にスナップ (Win + →),,,,,,,
+            // 右にスナップ (Win + →),,,,,,,,
             <&kp LG(LEFT_ARROW)>,
-            // 左にスナップ (Win + ←),,,,,,,
+            // 左にスナップ (Win + ←),,,,,,,,
             <&kp LG(UP_ARROW)>,
-            // 最大化   (Win + ↑),,,,,,,
+            // 最大化   (Win + ↑),,,,,,,,
             <&kp LG(DOWN_ARROW)>;
 
         // 最小化 or 元のサイズ (Win + ↓)
@@ -50,47 +50,60 @@
         wait-ms = <40>;
         tap-ms = <5>;
     };
+
     // レイヤー13: ウィンドウ管理と特殊ショートカット
+
     layer13_window_ctrl {
         layers = <11>;
         bindings =
-            <&kp LC(LG(RIGHT))>, // 右：ウィンドウを右半分に (Ctrl + Cmd + →)
-            <&kp LC(LG(LEFT))>,  // 左：ウィンドウを左半分に (Ctrl + Cmd + ←)
-            <&kp LA(LG(ENTER))>, // 上：Enter + Option + Command
-            <&kp LG(W)>;         // 下：アプリのウィンドウを閉じる (Cmd + W)
-
+            <&kp LC(LG(RIGHT))>,
+            // 右：ウィンドウを右半分に (Ctrl + Cmd + →),
+            <&kp LC(LG(LEFT))>,
+            // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),
+            <&kp LA(LG(ENTER))>,
+            // 上：Enter + Option + Command,
+            <&kp LG(W)>;
+         // 下：アプリのウィンドウを閉じる (Cmd + W)
         tick = <200>;
         wait-ms = <40>;
         tap-ms = <5>;
     };
+
     // レイヤー12: macOSナビゲーション (Mission Control / Expose / Desktop)
+
     layer12_macos_nav {
         layers = <10>;
         bindings =
-            <&kp LC(RIGHT)>, // 右：右の仮想デスクトップへ移動 (Ctrl + →)
-            <&kp LC(LEFT)>,  // 左：左の仮想デスクトップへ移動 (Ctrl + ←)
-            <&kp LC(UP)>,    // 上：ミッションコントロール (Ctrl + ↑)
-            <&kp LC(DOWN)>;  // 下：アプリケーションエクスポーズ (Ctrl + ↓)
-
+            <&kp LC(RIGHT)>,
+            // 右：右の仮想デスクトップへ移動 (Ctrl + →),
+            <&kp LC(LEFT)>,
+            // 左：左の仮想デスクトップへ移動 (Ctrl + ←),
+            <&kp LC(UP)>,
+            // 上：ミッションコントロール (Ctrl + ↑),
+            <&kp LC(DOWN)>;
+  // 下：アプリケーションエクスポーズ (Ctrl + ↓)
         tick = <200>;        // 連続入力を防ぐため、少し余裕を持たせた設定
         wait-ms = <40>;
         tap-ms = <5>;
     };
+
     // レイヤー11: ウィンドウ移動と検索・終了操作
+
     layer11_ops {
         layers = <12>;
-        bindings = 
-            <&kp LS(LC(RIGHT))>, // 右：ウィンドウを右デスクトップへ移動 (Shift + Ctrl + →)
-            <&kp LS(LC(LEFT))>,  // 左：ウィンドウを左デスクトップへ移動 (Shift + Ctrl + ←)
-            <&spotlight_search>, // 上：マクロ実行 (lang2 -> Spotlight)
-            <&kp LG(Q)>;         // 下：アプリを完全に終了 (Cmd + Q)
-
+        bindings =
+            <&kp LS(LC(RIGHT))>,
+            // 右：ウィンドウを右デスクトップへ移動 (Shift + Ctrl + →),
+            <&kp LS(LC(LEFT))>,
+            // 左：ウィンドウを左デスクトップへ移動 (Shift + Ctrl + ←),
+            <&spotlight_search>,
+            // 上：マクロ実行 (lang2 -> Spotlight),
+            <&kp LG(Q)>;
+         // 下：アプリを完全に終了 (Cmd + Q)
         tick = <250>;            // マクロ起動などが暴発しないよう少し長めに設定
         wait-ms = <40>;
         tap-ms = <5>;
     };
-
-
 };
 
 / {
@@ -193,17 +206,16 @@
 
             label = "DOUBLEENTER";
         };
+
         // lang2を押してからSpotlight（Cmd + Space）を起動するマクロ
+
         spotlight_search: spotlight_search {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = 
-                <&kp LANGUAGE_2>,
-                <&macro_wait_time 10>,
-                <&kp LG(SPACE)>;
+            bindings = <&kp LANGUAGE_2>, <&macro_wait_time 10>, <&kp LG(SPACE)>;
+
             label = "SPOTLIGHT_SEARCH";
         };
-
     };
 
     behaviors {
@@ -366,10 +378,10 @@
 
         layer_2 {
             bindings = <
-&kp Q    &kp J         &LT_Advance 8 U         &kp COMMA        &kp DOT                                                                    &kp F     &kp W            &LT_Advance 8 R  &kp Y  &kp P
-&kp E    &kp I         &LT_Advance 7 A         &LT_Advance 7 O  &kp MINUS  &kp PG_UP                            &mkp MB5                   &kp K     &LT_Advance 7 T  &LT_Advance 6 N  &kp S  &kp H
-&kp L    &kp X         &kp N                   &kp V            &kp C      &kp PAGE_DOWN                        &mkp MB4                   &kp G     &kp D            &kp M            &kp Z  &kp B
-&kp TAB  &kp LEFT_WIN  &mt LEFT_ALT LC(SPACE)  &kp SPACE        &mkp LCLK  &new_behavior_none LEFT_SHIFT 0      &enterctrl LEFT_COMMAND 0  &kp BSPC                                           &kp ESC
+&kp Q    &kp J         &LT_Advance 12 U        &kp COMMA         &kp DOT                                                                    &kp F     &kp W             &LT_Advance 12 R  &kp Y  &kp P
+&kp E    &kp I         &LT_Advance 10 A        &LT_Advance 11 O  &kp MINUS  &kp PG_UP                            &mkp MB5                   &kp K     &LT_Advance 11 T  &LT_Advance 9 N   &kp S  &kp H
+&kp L    &kp X         &kp N                   &kp V             &kp C      &kp PAGE_DOWN                        &mkp MB4                   &kp G     &kp D             &kp M             &kp Z  &kp B
+&kp TAB  &kp LEFT_WIN  &mt LEFT_ALT LC(SPACE)  &kp SPACE         &mkp LCLK  &new_behavior_none LEFT_SHIFT 0      &enterctrl LEFT_COMMAND 0  &kp BSPC                                             &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -441,7 +453,7 @@
         layer_10 {
             bindings = <
 &bt BT_SEL 0          &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                  &none       &kp HOME         &kp UP     &kp END      &none
-&kp LA(LC(LS(LEFT)))  &kp LG(LEFT)      &mo 7              &kp LG(RIGHT)      &kp LS(LA(LC(RIGHT)))  &kp T       &none      &kp LC(A)   &kp LEFT         &kp DOWN   &kp RIGHT    &kp LG(Q)
+&kp LA(LC(LS(LEFT)))  &kp LG(LEFT)      &mo 10             &kp LG(RIGHT)      &kp LS(LA(LC(RIGHT)))  &kp T       &none      &kp LC(A)   &kp LEFT         &kp DOWN   &kp RIGHT    &kp LG(Q)
 &kp LG(UP_ARROW)      &kp LG(LS(LEFT))  &kp LG(LC(LA(Q)))  &kp LS(LG(RIGHT))  &kp LS(LG(S))          &kp T       &kp LC(A)  &kp LC(A)   &kp LC(LS(TAB))  &kp LG(T)  &kp LC(TAB)  &kp LG(W)
 &trans                &trans            &trans             &trans             &trans                 &trans      &kp ENTER  &kp DELETE                                           &none
             >;
