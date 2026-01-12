@@ -17,11 +17,11 @@
         layers = <6>;
         bindings =
             <&kp LG(LA(LC(RIGHT_ARROW)))>,
-            // 右: Win + Alt + Ctrl + →,,,,,,,,,
+            // 右: Win + Alt + Ctrl + →,,,,,,,,,,
             <&kp LG(LA(LC(LEFT_ARROW)))>,
-            // 左: Win + Alt + Ctrl + ←,,,,,,,,,
+            // 左: Win + Alt + Ctrl + ←,,,,,,,,,,
             <&kp LG(TAB)>,
-            // 上: Win + Tab,,,,,,,,,
+            // 上: Win + Tab,,,,,,,,,,
             <&kp LG(M)>;
 
         // 下: → だけ
@@ -37,11 +37,11 @@
         layers = <7>;
         bindings =
             <&kp LG(RIGHT_ARROW)>,
-            // 右にスナップ (Win + →),,,,,,,,,
+            // 右にスナップ (Win + →),,,,,,,,,,
             <&kp LG(LEFT_ARROW)>,
-            // 左にスナップ (Win + ←),,,,,,,,,
+            // 左にスナップ (Win + ←),,,,,,,,,,
             <&kp LG(UP_ARROW)>,
-            // 最大化   (Win + ↑),,,,,,,,,
+            // 最大化   (Win + ↑),,,,,,,,,,
             <&kp LG(DOWN_ARROW)>;
 
         // 最小化 or 元のサイズ (Win + ↓)
@@ -57,11 +57,11 @@
         layers = <11>;
         bindings =
             <&kp LC(LG(RIGHT))>,
-            // 右：ウィンドウを右半分に (Ctrl + Cmd + →),,
+            // 右：ウィンドウを右半分に (Ctrl + Cmd + →),,,
             <&kp LC(LG(LEFT))>,
-            // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),,
+            // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),,,
             <&kp LA(LG(ENTER))>,
-            // 上：Enter + Option + Command,,
+            // 上：Enter + Option + Command,,,
             <&kp LG(W)>;
 
         // 下：アプリのウィンドウを閉じる (Cmd + W)
@@ -77,11 +77,11 @@
         layers = <10>;
         bindings =
             <&kp LC(RIGHT)>,
-            // 右：右の仮想デスクトップへ移動 (Ctrl + →),,
+            // 右：右の仮想デスクトップへ移動 (Ctrl + →),,,
             <&kp LC(LEFT)>,
-            // 左：左の仮想デスクトップへ移動 (Ctrl + ←),,
+            // 左：左の仮想デスクトップへ移動 (Ctrl + ←),,,
             <&kp LC(UP)>,
-            // 上：ミッションコントロール (Ctrl + ↑),,
+            // 上：ミッションコントロール (Ctrl + ↑),,,
             <&kp LC(DOWN)>;
 
         // 下：アプリケーションエクスポーズ (Ctrl + ↓)
@@ -97,11 +97,11 @@
         layers = <12>;
         bindings =
             <&kp LS(LC(RIGHT))>,
-            // 右：ウィンドウを右デスクトップへ移動 (Shift + Ctrl + →),,
+            // 右：ウィンドウを右デスクトップへ移動 (Shift + Ctrl + →),,,
             <&kp LS(LC(LEFT))>,
-            // 左：ウィンドウを左デスクトップへ移動 (Shift + Ctrl + ←),,
+            // 左：ウィンドウを左デスクトップへ移動 (Shift + Ctrl + ←),,,
             <&spotlight_search>,
-            // 上：マクロ実行 (lang2 -> Spotlight),,
+            // 上：マクロ実行 (lang2 -> Spotlight),,,
             <&kp LG(Q)>;
 
         // 下：アプリを完全に終了 (Cmd + Q)
@@ -144,13 +144,21 @@
         goodnote {
             bindings = <&to 1>;
             key-positions = <15 16>;
-            layers = <0>;
         };
 
         onisi {
             bindings = <&to 0>;
-            key-positions = <15 16>;
-            layers = <1>;
+            key-positions = <28 27>;
+        };
+
+        Mac {
+            bindings = <&to 2>;
+            key-positions = <0 9>;
+        };
+
+        macqwerty {
+            bindings = <&to 3>;
+            key-positions = <42 34>;
         };
     };
 
@@ -393,13 +401,15 @@
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
-        NUM {
+        layer_3 {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
+&kp Q    &kp W         &LT_Advance 12 E        &kp R             &kp T                                                               &kp Y     &kp U             &LT_Advance 12 I  &kp O    &kp P
+&kp A    &kp S         &LT_Advance 10 D        &LT_Advance 11 F  &kp G      &kp PG_UP                            &mkp MB5            &kp H     &LT_Advance 11 J  &LT_Advance 9 K   &kp L    &kp ENTER
+&kp Z    &kp X         &kp C                   &kp V             &kp B      &kp PAGE_DOWN                        &mkp MB4            &kp N     &kp M             &kp COMMA         &kp DOT  &kp MINUS
+&kp TAB  &kp LEFT_WIN  &mt LEFT_ALT LC(SPACE)  &kp SPACE         &mkp LCLK  &new_behavior_none LEFT_SHIFT 0      &enterctrl RCTRL 0  &kp BSPC                                               &kp ESC
             >;
+
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
         MOUSE {
