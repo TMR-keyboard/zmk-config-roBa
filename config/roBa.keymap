@@ -17,11 +17,11 @@
         layers = <6>;
         bindings =
             <&kp LG(LA(LC(RIGHT_ARROW)))>,
-            // 右: Win + Alt + Ctrl + →,,,,,,,,,,,,,,
+            // 右: Win + Alt + Ctrl + →,,,,,,,,,,,,,,,
             <&kp LG(LA(LC(LEFT_ARROW)))>,
-            // 左: Win + Alt + Ctrl + ←,,,,,,,,,,,,,,
+            // 左: Win + Alt + Ctrl + ←,,,,,,,,,,,,,,,
             <&kp LG(TAB)>,
-            // 上: Win + Tab,,,,,,,,,,,,,,
+            // 上: Win + Tab,,,,,,,,,,,,,,,
             <&kp LG(M)>;
 
         // 下: → だけ
@@ -37,11 +37,11 @@
         layers = <7>;
         bindings =
             <&kp LG(RIGHT_ARROW)>,
-            // 右にスナップ (Win + →),,,,,,,,,,,,,,
+            // 右にスナップ (Win + →),,,,,,,,,,,,,,,
             <&kp LG(LEFT_ARROW)>,
-            // 左にスナップ (Win + ←),,,,,,,,,,,,,,
+            // 左にスナップ (Win + ←),,,,,,,,,,,,,,,
             <&kp LG(UP_ARROW)>,
-            // 最大化   (Win + ↑),,,,,,,,,,,,,,
+            // 最大化   (Win + ↑),,,,,,,,,,,,,,,
             <&kp LG(DOWN_ARROW)>;
 
         // 最小化 or 元のサイズ (Win + ↓)
@@ -57,11 +57,11 @@
         layers = <11>;
         bindings =
             <&kp LC(LA(RIGHT))>,
-            // 右：ウィンドウを右半分に (Ctrl + Cmd + →),,,,,,,
+            // 右：ウィンドウを右半分に (Ctrl + Cmd + →),,,,,,,,
             <&kp LC(LA(LEFT))>,
-            // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),,,,,,,
+            // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),,,,,,,,
             <&kp LA(LC(ENTER))>,
-            // 上：Enter + Option + Command,,,,,,,
+            // 上：Enter + Option + Command,,,,,,,,
             <&kp LG(W)>;
 
         // 下：アプリのウィンドウを閉じる (Cmd + W)
@@ -77,11 +77,11 @@
         layers = <10>;
         bindings =
             <&kp LC(RIGHT)>,
-            // 右：右の仮想デスクトップへ移動 (Ctrl + →),,,,,,,
+            // 右：右の仮想デスクトップへ移動 (Ctrl + →),,,,,,,,
             <&kp LC(LEFT)>,
-            // 左：左の仮想デスクトップへ移動 (Ctrl + ←),,,,,,,
+            // 左：左の仮想デスクトップへ移動 (Ctrl + ←),,,,,,,,
             <&kp LC(UP)>,
-            // 上：ミッションコントロール (Ctrl + ↑),,,,,,,
+            // 上：ミッションコントロール (Ctrl + ↑),,,,,,,,
             <&kp LC(DOWN)>;
 
         // 下：アプリケーションエクスポーズ (Ctrl + ↓)
@@ -97,11 +97,11 @@
         layers = <12>;
         bindings =
             <&kp LS(LC(RIGHT))>,
-            // 右：ウィンドウを右デスクトップへ移動 (Shift + Ctrl + →),,,,,,,
+            // 右：ウィンドウを右デスクトップへ移動 (Shift + Ctrl + →),,,,,,,,
             <&kp LS(LC(LEFT))>,
-            // 左：ウィンドウを左デスクトップへ移動 (Shift + Ctrl + ←),,,,,,,
+            // 左：ウィンドウを左デスクトップへ移動 (Shift + Ctrl + ←),,,,,,,,
             <&spotlight_search>,
-            // 上：マクロ実行 (lang2 -> Spotlight),,,,,,,
+            // 上：マクロ実行 (lang2 -> Spotlight),,,,,,,,
             <&kp LG(Q)>;
 
         // 下：アプリを完全に終了 (Cmd + Q)
@@ -261,7 +261,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LC(NUMBER_1)>,
-                <&macro_wait_time 500>,
+                <&macro_wait_time 1500>,
                 <&kp LS(LG(O))>;
 
             label = "NEW_SPACE";
