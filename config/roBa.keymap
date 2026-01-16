@@ -96,9 +96,9 @@
     layer11_ops {
         layers = <12>;
         bindings =
-            <&kp LS(LC(RIGHT))>,
+            <&kp LG(LA(LC(RIGHT)))>,
             // 右：ウィンドウを右デスクトップへ移動 (Shift + Ctrl + →),,,,,,,,
-            <&kp LS(LC(LEFT))>,
+           <&kp LG(LA(LC(LEFT)))>,
             // 左：ウィンドウを左デスクトップへ移動 (Shift + Ctrl + ←),,,,,,,,
             <&spotlight_search>,
             // 上：マクロ実行 (lang2 -> Spotlight),,,,,,,,
