@@ -17,11 +17,11 @@
         layers = <6>;
         bindings =
             <&kp LG(LA(LC(RIGHT_ARROW)))>,
-            // 右: Win + Alt + Ctrl + →,,,,,,,,,,,,,,,,,,,,
+            // 右: Win + Alt + Ctrl + →,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(LA(LC(LEFT_ARROW)))>,
-            // 左: Win + Alt + Ctrl + ←,,,,,,,,,,,,,,,,,,,,
+            // 左: Win + Alt + Ctrl + ←,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(TAB)>,
-            // 上: Win + Tab,,,,,,,,,,,,,,,,,,,,
+            // 上: Win + Tab,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(M)>;
 
         // 下: → だけ
@@ -37,11 +37,11 @@
         layers = <7>;
         bindings =
             <&kp LG(RIGHT_ARROW)>,
-            // 右にスナップ (Win + →),,,,,,,,,,,,,,,,,,,,
+            // 右にスナップ (Win + →),,,,,,,,,,,,,,,,,,,,,
             <&kp LG(LEFT_ARROW)>,
-            // 左にスナップ (Win + ←),,,,,,,,,,,,,,,,,,,,
+            // 左にスナップ (Win + ←),,,,,,,,,,,,,,,,,,,,,
             <&kp LG(UP_ARROW)>,
-            // 最大化   (Win + ↑),,,,,,,,,,,,,,,,,,,,
+            // 最大化   (Win + ↑),,,,,,,,,,,,,,,,,,,,,
             <&kp LG(DOWN_ARROW)>;
 
         // 最小化 or 元のサイズ (Win + ↓)
@@ -57,11 +57,11 @@
         layers = <11>;
         bindings =
             <&kp LC(LA(RIGHT))>,
-            // 右：ウィンドウを右半分に (Ctrl + Cmd + →),,,,,,,,,,,,,
+            // 右：ウィンドウを右半分に (Ctrl + Cmd + →),,,,,,,,,,,,,,
             <&kp LC(LA(LEFT))>,
-            // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),,,,,,,,,,,,,
+            // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),,,,,,,,,,,,,,
             <&kp LA(LC(ENTER))>,
-            // 上：Enter + Option + Command,,,,,,,,,,,,,
+            // 上：Enter + Option + Command,,,,,,,,,,,,,,
             <&kp LG(W)>;
 
         // 下：アプリのウィンドウを閉じる (Cmd + W)
@@ -77,11 +77,11 @@
         layers = <10>;
         bindings =
             <&kp LC(RIGHT)>,
-            // 右：右の仮想デスクトップへ移動 (Ctrl + →),,,,,,,,,,,,,
+            // 右：右の仮想デスクトップへ移動 (Ctrl + →),,,,,,,,,,,,,,
             <&kp LC(LEFT)>,
-            // 左：左の仮想デスクトップへ移動 (Ctrl + ←),,,,,,,,,,,,,
+            // 左：左の仮想デスクトップへ移動 (Ctrl + ←),,,,,,,,,,,,,,
             <&kp LC(UP)>,
-            // 上：ミッションコントロール (Ctrl + ↑),,,,,,,,,,,,,
+            // 上：ミッションコントロール (Ctrl + ↑),,,,,,,,,,,,,,
             <&kp LC(DOWN)>;
 
         // 下：アプリケーションエクスポーズ (Ctrl + ↓)
@@ -97,11 +97,11 @@
         layers = <12>;
         bindings =
             <&kp LG(LA(LC(RIGHT)))>,
-            // 右：ウィンドウを右デスクトップへ移動 (Shift + Ctrl + →),,,,,,,,,,,,,
+            // 右：ウィンドウを右デスクトップへ移動 (Shift + Ctrl + →),,,,,,,,,,,,,,
             <&kp LG(LA(LC(LEFT)))>,
-            // 左：ウィンドウを左デスクトップへ移動 (Shift + Ctrl + ←),,,,,,,,,,,,,
+            // 左：ウィンドウを左デスクトップへ移動 (Shift + Ctrl + ←),,,,,,,,,,,,,,
             <&spotlight_search>,
-            // 上：マクロ実行 (lang2 -> Spotlight),,,,,,,,,,,,,
+            // 上：マクロ実行 (lang2 -> Spotlight),,,,,,,,,,,,,,
             <&kp LG(Q)>;
 
         // 下：アプリを完全に終了 (Cmd + Q)
@@ -192,8 +192,9 @@
         };
     };
 
-macros {
+    macros {
         // --- 既存のマクロ（ここは維持） ---
+
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -205,20 +206,35 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(TAB)>, <&macro_pause_for_release>, <&mkp LCLK>;
+
             label = "TASKVIEW";
         };
 
         kakko: kakko {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_1 &kp RIGHT_BRACKET>, <&macro_wait_time 15>, <&kp BACKSLASH>, <&macro_wait_time 15>, <&kp ENTER &kp LEFT>;
+            bindings =
+                <&kp LANGUAGE_1 &kp RIGHT_BRACKET>,
+                <&macro_wait_time 15>,
+                <&kp BACKSLASH>,
+                <&macro_wait_time 15>,
+                <&kp ENTER &kp LEFT>;
+
             label = "KAKKO";
         };
 
         kagikakko: kagikakko {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2>, <&macro_wait_time 15>, <&kp LS(N8)>, <&macro_wait_time 15>, <&kp LS(N9)>, <&macro_wait_time 15>, <&kp LEFT>;
+            bindings =
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 15>,
+                <&kp LS(N8)>,
+                <&macro_wait_time 15>,
+                <&kp LS(N9)>,
+                <&macro_wait_time 15>,
+                <&kp LEFT>;
+
             label = "KAGIKAKKO";
         };
 
@@ -233,6 +249,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp ENTER>, <&macro_wait_time 10>, <&kp ENTER>;
+
             label = "DOUBLEENTER";
         };
 
@@ -240,6 +257,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LANGUAGE_2>, <&macro_wait_time 50>, <&kp LG(SPACE)>;
+
             label = "SPOTLIGHT_SEARCH";
         };
 
@@ -247,30 +265,42 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(NUMBER_1)>, <&macro_wait_time 1000>, <&mkp LCLK>;
+
             label = "NEW_SPACE";
         };
 
         newchat: newchat {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(NUMBER_1)>, <&macro_wait_time 1000>, <&mkp LCLK>, <&macro_wait_time 500>, <&kp LS(LG(O))>;
+            bindings =
+                <&kp LC(NUMBER_1)>,
+                <&macro_wait_time 1000>,
+                <&mkp LCLK>,
+                <&macro_wait_time 500>,
+                <&kp LS(LG(O))>;
+
             label = "NEWCHAT";
         };
 
         doubleCMD: doubleCMD {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_COMMAND>, <&macro_wait_time 15>, <&kp LEFT_COMMAND>;
+            bindings =
+                <&kp LEFT_COMMAND>,
+                <&macro_wait_time 15>,
+                <&kp LEFT_COMMAND>;
+
             label = "DOUBLECMD";
         };
 
         // --- 今回追加したマクロ（修正済み） ---
+
         m_list: m_list {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <15>;
             tap-ms = <15>;
-            bindings = <&kp LANG2>, <&kp MINUS>, <&kp SPACE>, <&kp LANG1>;
+            bindings = <&kp LANG2 &kp MINUS &kp SPACE &kp LANG1>;
         };
 
         m_quote: m_quote {
@@ -278,7 +308,7 @@ macros {
             #binding-cells = <0>;
             wait-ms = <15>;
             tap-ms = <15>;
-            bindings = <&kp LANG2>, <&kp GT>, <&kp SPACE>, <&kp LANG1>;
+            bindings = <&kp LANG2 &kp GT &kp SPACE &kp LANG1>;
         };
 
         m_todo: m_todo {
@@ -286,7 +316,7 @@ macros {
             #binding-cells = <0>;
             wait-ms = <15>;
             tap-ms = <15>;
-            bindings = <&kp LANG2>, <&kp MINUS>, <&kp SPACE>, <&kp LBKT>, <&kp RBKT>, <&kp SPACE>, <&kp LANG1>;
+            bindings = <&kp LANG2 &kp MINUS &kp SPACE &kp LBKT &kp RBKT &kp SPACE &kp LANG1>;
         };
 
         m_tag: m_tag {
@@ -294,7 +324,7 @@ macros {
             #binding-cells = <0>;
             wait-ms = <15>;
             tap-ms = <15>;
-            bindings = <&kp LANG2>, <&kp HASH>, <&kp LANG1>;
+            bindings = <&kp LANG2 &kp HASH &kp LANG1>;
         };
 
         m_task_tag: m_task_tag {
@@ -302,14 +332,15 @@ macros {
             #binding-cells = <0>;
             wait-ms = <15>;
             tap-ms = <15>;
-            bindings = <&kp LANG2>, <&kp MINUS>, <&kp SPACE>, <&kp LBKT>, <&kp RBKT>, <&kp SPACE>, <&kp HASH>, <&kp LANG1>;
+            bindings = <&kp LANG2 &kp MINUS &kp SPACE &kp LBKT &kp RBKT &kp SPACE &kp HASH &kp LANG1>;
         };
-m_h2: m_h2 {
+
+        m_h2: m_h2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <15>;
             tap-ms = <15>;
-            bindings = <&kp LANG2>, <&kp HASH>, <&kp HASH>, <&kp SPACE>, <&kp LANG1>;
+            bindings = <&kp LANG2 &kp HASH &kp HASH &kp SPACE &kp LANG1>;
         };
 
         m_h3: m_h3 {
@@ -317,7 +348,7 @@ m_h2: m_h2 {
             #binding-cells = <0>;
             wait-ms = <15>;
             tap-ms = <15>;
-            bindings = <&kp LANG2>, <&kp HASH>, <&kp HASH>, <&kp HASH>, <&kp SPACE>, <&kp LANG1>;
+            bindings = <&kp LANG2 &kp HASH &kp HASH &kp HASH &kp SPACE &kp LANG1>;
         };
 
         m_bold: m_bold {
@@ -325,10 +356,9 @@ m_h2: m_h2 {
             #binding-cells = <0>;
             wait-ms = <15>;
             tap-ms = <15>;
-            bindings = <&kp LANG2>, <&kp ASTRK>, <&kp ASTRK>, <&kp ASTRK>, <&kp ASTRK>, <&kp LEFT>, <&kp LEFT>, <&kp LANG1>;
+            bindings = <&kp LANG2 &kp ASTRK &kp ASTRK &kp ASTRK &kp ASTRK &kp LEFT &kp LEFT &kp LANG1>;
         };
     }; // ← ここで macros ブロックを閉じる
-
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
@@ -637,10 +667,10 @@ m_h2: m_h2 {
 
         Obsidian {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                      &trans   &m_h2    &m_bold      &m_h3   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &m_todo  &m_list  &m_task_tag  &m_tag  &m_quote
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans   &trans   &trans       &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                 &trans
             >;
         };
     };
