@@ -17,11 +17,11 @@
         layers = <6>;
         bindings =
             <&kp LG(LA(LC(RIGHT_ARROW)))>,
-            // 右: Win + Alt + Ctrl + →,,,,,,,,,,,,,,,,,,
+            // 右: Win + Alt + Ctrl + →,,,,,,,,,,,,,,,,,,,
             <&kp LG(LA(LC(LEFT_ARROW)))>,
-            // 左: Win + Alt + Ctrl + ←,,,,,,,,,,,,,,,,,,
+            // 左: Win + Alt + Ctrl + ←,,,,,,,,,,,,,,,,,,,
             <&kp LG(TAB)>,
-            // 上: Win + Tab,,,,,,,,,,,,,,,,,,
+            // 上: Win + Tab,,,,,,,,,,,,,,,,,,,
             <&kp LG(M)>;
 
         // 下: → だけ
@@ -37,11 +37,11 @@
         layers = <7>;
         bindings =
             <&kp LG(RIGHT_ARROW)>,
-            // 右にスナップ (Win + →),,,,,,,,,,,,,,,,,,
+            // 右にスナップ (Win + →),,,,,,,,,,,,,,,,,,,
             <&kp LG(LEFT_ARROW)>,
-            // 左にスナップ (Win + ←),,,,,,,,,,,,,,,,,,
+            // 左にスナップ (Win + ←),,,,,,,,,,,,,,,,,,,
             <&kp LG(UP_ARROW)>,
-            // 最大化   (Win + ↑),,,,,,,,,,,,,,,,,,
+            // 最大化   (Win + ↑),,,,,,,,,,,,,,,,,,,
             <&kp LG(DOWN_ARROW)>;
 
         // 最小化 or 元のサイズ (Win + ↓)
@@ -57,11 +57,11 @@
         layers = <11>;
         bindings =
             <&kp LC(LA(RIGHT))>,
-            // 右：ウィンドウを右半分に (Ctrl + Cmd + →),,,,,,,,,,,
+            // 右：ウィンドウを右半分に (Ctrl + Cmd + →),,,,,,,,,,,,
             <&kp LC(LA(LEFT))>,
-            // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),,,,,,,,,,,
+            // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),,,,,,,,,,,,
             <&kp LA(LC(ENTER))>,
-            // 上：Enter + Option + Command,,,,,,,,,,,
+            // 上：Enter + Option + Command,,,,,,,,,,,,
             <&kp LG(W)>;
 
         // 下：アプリのウィンドウを閉じる (Cmd + W)
@@ -77,11 +77,11 @@
         layers = <10>;
         bindings =
             <&kp LC(RIGHT)>,
-            // 右：右の仮想デスクトップへ移動 (Ctrl + →),,,,,,,,,,,
+            // 右：右の仮想デスクトップへ移動 (Ctrl + →),,,,,,,,,,,,
             <&kp LC(LEFT)>,
-            // 左：左の仮想デスクトップへ移動 (Ctrl + ←),,,,,,,,,,,
+            // 左：左の仮想デスクトップへ移動 (Ctrl + ←),,,,,,,,,,,,
             <&kp LC(UP)>,
-            // 上：ミッションコントロール (Ctrl + ↑),,,,,,,,,,,
+            // 上：ミッションコントロール (Ctrl + ↑),,,,,,,,,,,,
             <&kp LC(DOWN)>;
 
         // 下：アプリケーションエクスポーズ (Ctrl + ↓)
@@ -97,11 +97,11 @@
         layers = <12>;
         bindings =
             <&kp LG(LA(LC(RIGHT)))>,
-            // 右：ウィンドウを右デスクトップへ移動 (Shift + Ctrl + →),,,,,,,,,,,
+            // 右：ウィンドウを右デスクトップへ移動 (Shift + Ctrl + →),,,,,,,,,,,,
             <&kp LG(LA(LC(LEFT)))>,
-            // 左：ウィンドウを左デスクトップへ移動 (Shift + Ctrl + ←),,,,,,,,,,,
+            // 左：ウィンドウを左デスクトップへ移動 (Shift + Ctrl + ←),,,,,,,,,,,,
             <&spotlight_search>,
-            // 上：マクロ実行 (lang2 -> Spotlight),,,,,,,,,,,
+            // 上：マクロ実行 (lang2 -> Spotlight),,,,,,,,,,,,
             <&kp LG(Q)>;
 
         // 下：アプリを完全に終了 (Cmd + Q)
@@ -281,6 +281,17 @@
 
             label = "NEWCHAT";
         };
+
+        doubleCMD: doubleCMD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_COMMAND>,
+                <&macro_wait_time 15>,
+                <&kp LEFT_COMMAND>;
+
+            label = "DOUBLECMD";
+        };
     };
 
     behaviors {
@@ -432,6 +443,24 @@
             tapping-term-ms = <150>;
             flavor = "tap-preferred";
         };
+
+        doubleN_doubleCMD: doubleN_doubleCMD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOUBLEN_DOUBLECMD";
+            #binding-cells = <0>;
+            bindings = <&kp N>, <&doubleCMD>;
+
+            tapping-term-ms = <350>;
+        };
+
+        doubleC_doubleCMD: doubleC_doubleCMD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOUBLEC_DOUBLECMD";
+            #binding-cells = <0>;
+            bindings = <&kp C>, <&doubleCMD>;
+
+            tapping-term-ms = <350>;
+        };
     };
 
     keymap {
@@ -461,10 +490,10 @@
 
         layer_2 {
             bindings = <
-&kp Q    &kp J         &LT_Advance 12 U  &kp COMMA         &kp DOT                                                                &kp F     &kp W             &LT_Advance 12 R  &kp Y  &kp P
-&kp E    &kp I         &LT_Advance 10 A  &LT_Advance 11 O  &kp MINUS  &kp PG_UP                            &kp LG(BACKSLASH)      &kp K     &LT_Advance 11 T  &LT_Advance 9 N   &kp S  &kp H
-&kp L    &kp X         &kp N             &kp V             &kp C      &kp PAGE_DOWN                        &kp LG(RIGHT_BRACKET)  &kp G     &kp D             &kp M             &kp Z  &kp B
-&kp TAB  &kp LEFT_WIN  &kp LEFT_ALT      &space_newchat    &mkp LCLK  &new_behavior_none LEFT_SHIFT 0      &enterctrl LCTRL 0     &kp BSPC                                             &kp ESC
+&kp Q    &kp J      &LT_Advance 12 U    &kp COMMA         &kp DOT                                                                    &kp F     &kp W             &LT_Advance 12 R  &kp Y  &kp P
+&kp E    &kp I      &LT_Advance 10 A    &LT_Advance 11 O  &kp MINUS  &kp PG_UP                            &kp LG(BACKSLASH)          &kp K     &LT_Advance 11 T  &LT_Advance 9 N   &kp S  &kp H
+&kp L    &kp X      &doubleN_doubleCMD  &kp V             &kp C      &kp PAGE_DOWN                        &kp LG(RIGHT_BRACKET)      &kp G     &kp D             &kp M             &kp Z  &kp B
+&kp TAB  &kp LCTRL  &kp LEFT_ALT        &space_newchat    &mkp LCLK  &new_behavior_none LEFT_SHIFT 0      &enterctrl LEFT_COMMAND 0  &kp BSPC                                             &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -472,10 +501,10 @@
 
         layer_3 {
             bindings = <
-&kp Q    &kp W         &LT_Advance 12 E  &kp R             &kp T                                                                  &kp Y                       &kp U             &LT_Advance 12 I  &kp O    &kp P
-&kp A    &kp S         &LT_Advance 10 D  &LT_Advance 11 F  &kp G      &kp PG_UP                            &kp LG(BACKSLASH)      &kp H                       &LT_Advance 11 J  &LT_Advance 9 K   &kp L    &kp ENTER
-&kp Z    &kp X         &kp C             &kp V             &kp B      &kp PAGE_DOWN                        &kp LG(RIGHT_BRACKET)  &kp N                       &kp M             &kp COMMA         &kp DOT  &kp MINUS
-&kp TAB  &kp LEFT_WIN  &kp LEFT_ALT      &space_newchat    &mkp LCLK  &new_behavior_none LEFT_SHIFT 0      &enterctrl RCTRL 0     &mt LEFT_COMMAND BACKSPACE                                               &kp ESC
+&kp Q    &kp W      &LT_Advance 12 E    &kp R             &kp T                                                                      &kp Y                       &kp U             &LT_Advance 12 I  &kp O    &kp P
+&kp A    &kp S      &LT_Advance 10 D    &LT_Advance 11 F  &kp G      &kp PG_UP                            &kp LG(BACKSLASH)          &kp H                       &LT_Advance 11 J  &LT_Advance 9 K   &kp L    &kp ENTER
+&kp Z    &kp X      &doubleC_doubleCMD  &kp V             &kp B      &kp PAGE_DOWN                        &kp LG(RIGHT_BRACKET)      &kp N                       &kp M             &kp COMMA         &kp DOT  &kp MINUS
+&kp TAB  &kp LCTRL  &kp LEFT_ALT        &space_newchat    &mkp LCLK  &new_behavior_none LEFT_SHIFT 0      &enterctrl LEFT_COMMAND 0  &mt LEFT_COMMAND BACKSPACE                                               &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -568,6 +597,15 @@
 &none  &none  &none  &none  &none  &none      &bt BT_CLR      &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
 &none  &none  &none  &none  &none  &none      &bt BT_CLR_ALL  &none          &none          &none          &none          &none
 &none  &none  &none  &none  &none  &none      &none           &none                                                       &none
+            >;
+        };
+
+        Obsidian {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
