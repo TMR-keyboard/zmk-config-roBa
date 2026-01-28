@@ -292,6 +292,59 @@
 
             label = "DOUBLECMD";
         };
+m_list: m_list {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings
+        <&kp LANG2>,
+        <&kp MINUS>, <&kp SPACE>,
+        <&kp LANG1>;
+};
+m_quote: m_quote {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings
+        <&kp LANG2>,
+        <&kp GT>, <&kp SPACE>,
+        <&kp LANG1>;
+};
+m_todo: m_todo {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings
+        <&kp LANG2>,
+        <&kp MINUS>, <&kp SPACE>, 
+        <&kp LBKT>, <&kp RBKT>, <&kp SPACE>,
+        <&kp LANG1>;
+};
+m_tag: m_tag {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings
+        <&kp LANG2>, 
+        <&kp HASH>, 
+        <&kp LANG1>;
+};
+m_task_tag: m_task_tag {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings
+        <&kp LANG2>,              // 1. 英語に切り替え
+        <&kp MINUS>, <&kp SPACE>, // 2. "- "
+        <&kp LBKT>, <&kp RBKT>,   // 3. "[]"
+        <&kp SPACE>, <&kp HASH>,  // 4. " #"
+        <&kp LANG1>;              // 5. 日本語に戻す
+};
     };
 
     behaviors {
