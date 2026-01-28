@@ -326,7 +326,7 @@ m_todo: m_todo {
 m_tag: m_tag {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    wait-ms = <15>;
+    wait-ms = <10>;
     tap-ms = <15>;
     bindings
         <&kp LANG2>, 
