@@ -264,7 +264,7 @@ macros {
             label = "DOUBLECMD";
         };
 
-        // --- 今回追加・JIS修正済みマクロ ---
+        // --- 今回追加・JIS完全修正版 ---
 
         m_list: m_list {
             compatible = "zmk,behavior-macro";
@@ -279,7 +279,7 @@ macros {
             #binding-cells = <0>;
             wait-ms = <15>;
             tap-ms = <15>;
-            bindings = <&kp LANG2>, <&kp LS(DOT)>, <&kp SPACE>, <&kp LANG1>; // > は Shift + .
+            bindings = <&kp LANG2>, <&kp LS(DOT)>, <&kp SPACE>, <&kp LANG1>; 
         };
 
         m_todo: m_todo {
@@ -287,7 +287,7 @@ macros {
             #binding-cells = <0>;
             wait-ms = <15>;
             tap-ms = <15>;
-            bindings = <&kp LANG2>, <&kp MINUS>, <&kp SPACE>, <&kp RAUI>, <&kp RBRC>, <&kp SPACE>, <&kp LANG1>; // [ ] は RAUIとRBRC
+            bindings = <&kp LANG2>, <&kp MINUS>, <&kp SPACE>, <&kp AT>, <&kp LBKT>, <&kp SPACE>, <&kp LANG1>; 
         };
 
         m_tag: m_tag {
@@ -295,7 +295,7 @@ macros {
             #binding-cells = <0>;
             wait-ms = <15>;
             tap-ms = <15>;
-            bindings = <&kp LANG2>, <&kp LS(N3)>, <&kp LANG1>; // # は Shift + 3
+            bindings = <&kp LANG2>, <&kp LS(N3)>, <&kp LANG1>;
         };
 
         m_task_tag: m_task_tag {
@@ -303,7 +303,7 @@ macros {
             #binding-cells = <0>;
             wait-ms = <15>;
             tap-ms = <15>;
-            bindings = <&kp LANG2>, <&kp MINUS>, <&kp SPACE>, <&kp RAUI>, <&kp RBRC>, <&kp SPACE>, <&kp LS(N3)>, <&kp LANG1>;
+            bindings = <&kp LANG2>, <&kp MINUS>, <&kp SPACE>, <&kp AT>, <&kp LBKT>, <&kp SPACE>, <&kp LS(N3)>, <&kp LANG1>;
         };
 
         m_h2: m_h2 {
@@ -327,9 +327,9 @@ macros {
             #binding-cells = <0>;
             wait-ms = <15>;
             tap-ms = <15>;
-            bindings = <&kp LANG2>, <&kp LS(COLON)>, <&kp LS(COLON)>, <&kp LS(COLON)>, <&kp LS(COLON)>, <&kp LEFT>, <&kp LEFT>, <&kp LANG1>; // * は Shift + :
+            bindings = <&kp LANG2>, <&kp LS(COLON)>, <&kp LS(COLON)>, <&kp LS(COLON)>, <&kp LS(COLON)>, <&kp LEFT>, <&kp LEFT>, <&kp LANG1>;
         };
-    };
+    } // 閉じセミコロンは外側の階層に合わせて調整
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
