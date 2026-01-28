@@ -304,6 +304,29 @@ macros {
             tap-ms = <15>;
             bindings = <&kp LANG2>, <&kp MINUS>, <&kp SPACE>, <&kp LBKT>, <&kp RBKT>, <&kp SPACE>, <&kp HASH>, <&kp LANG1>;
         };
+m_h2: m_h2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <15>;
+            tap-ms = <15>;
+            bindings = <&kp LANG2>, <&kp HASH>, <&kp HASH>, <&kp SPACE>, <&kp LANG1>;
+        };
+
+        m_h3: m_h3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <15>;
+            tap-ms = <15>;
+            bindings = <&kp LANG2>, <&kp HASH>, <&kp HASH>, <&kp HASH>, <&kp SPACE>, <&kp LANG1>;
+        };
+
+        m_bold: m_bold {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <15>;
+            tap-ms = <15>;
+            bindings = <&kp LANG2>, <&kp ASTRK>, <&kp ASTRK>, <&kp ASTRK>, <&kp ASTRK>, <&kp LEFT>, <&kp LEFT>, <&kp LANG1>;
+        };
     }; // ← ここで macros ブロックを閉じる
 
     behaviors {
