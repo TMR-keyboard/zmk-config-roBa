@@ -329,7 +329,7 @@ macros {
             tap-ms = <15>;
             bindings = <&kp LANG2>, <&kp LS(COLON)>, <&kp LS(COLON)>, <&kp LS(COLON)>, <&kp LS(COLON)>, <&kp LEFT>, <&kp LEFT>, <&kp LANG1>;
         };
-    } // 閉じセミコロンは外側の階層に合わせて調整
+    }; // 閉じセミコロンは外側の階層に合わせて調整
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
