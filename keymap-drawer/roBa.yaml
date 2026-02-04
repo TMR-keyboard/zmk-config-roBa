@@ -2,320 +2,695 @@ layout: {zmk_keyboard: roBa}
 layers:
   default:
   - Q
+  - J
+  - {t: U, h: '8'}
+  - ','
+  - .
+  - F
+  - W
+  - {t: R, h: '8'}
+  - Y
+  - P
+  - E
+  - I
+  - {t: A, h: '7'}
+  - {t: O, h: '7'}
+  - '-'
+  - PG UP
+  - '&mkp MB5'
+  - K
+  - {t: T, h: '7'}
+  - {t: N, h: '6'}
+  - S
+  - H
+  - L
+  - X
+  - N
+  - V
+  - C
+  - PAGE DOWN
+  - '&mkp MB4'
+  - G
+  - D
+  - M
+  - Z
+  - B
+  - TAB
+  - LEFT WIN
+  - {t: Ctl+SPACE, h: LEFT ALT}
+  - SPACE
+  - '&mkp LCLK'
+  - {t: '&lang2_RCLK', h: LEFT SHIFT}
+  - {t: '&spaceandlang2', h: RCTRL}
+  - BSPC
+  - ESC
+  '1':
+  - Q
+  - W
+  - {t: E, h: '8'}
+  - R
+  - T
+  - Y
+  - U
+  - {t: I, h: '8'}
+  - O
+  - P
+  - A
+  - S
+  - {t: D, h: '7'}
+  - {t: F, h: '7'}
+  - G
+  - PG UP
+  - '&mkp MB5'
+  - H
+  - {t: J, h: '7'}
+  - {t: K, h: '6'}
+  - L
+  - ENTER
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - PAGE DOWN
+  - '&mkp MB4'
+  - N
+  - M
+  - ','
+  - .
+  - '-'
+  - TAB
+  - LEFT WIN
+  - {t: Ctl+SPACE, h: LEFT ALT}
+  - SPACE
+  - '&mkp LCLK'
+  - {t: '&lang2_RCLK', h: LEFT SHIFT}
+  - {t: '&spaceandlang2', h: RCTRL}
+  - BSPC
+  - ESC
+  '2':
+  - Q
+  - J
+  - {t: U, h: '12'}
+  - ','
+  - .
+  - F
+  - W
+  - {t: R, h: '12'}
+  - Y
+  - P
+  - E
+  - I
+  - {t: A, h: '10'}
+  - {t: O, h: '&new_mac'}
+  - '-'
+  - PG UP
+  - Gui+\
+  - K
+  - {t: T, h: '&new_mac'}
+  - {t: N, h: '13'}
+  - S
+  - H
+  - L
+  - {t: X, h: Obsidian}
+  - '&doubleN_doubleCMD'
+  - V
+  - C
+  - PAGE DOWN
+  - Gui+]
+  - G
+  - D
+  - M
+  - Z
+  - B
+  - TAB
+  - LCTRL
+  - LEFT ALT
+  - '&space_newchat'
+  - '&mkp LCLK'
+  - {t: '&lang2_RCLK', h: LEFT SHIFT}
+  - {t: '&spaceandlang2', h: LEFT COMMAND}
+  - BSPC
+  - ESC
+  '3':
+  - Q
+  - W
+  - {t: E, h: '12'}
+  - R
+  - T
+  - Y
+  - U
+  - {t: I, h: '12'}
+  - O
+  - P
+  - A
+  - S
+  - {t: D, h: '10'}
+  - {t: F, h: '&new_m'}
+  - G
+  - PG UP
+  - Gui+\
+  - H
+  - {t: J, h: '&new_m'}
+  - {t: K, h: '13'}
+  - L
+  - ENTER
+  - Z
+  - {t: X, h: Obsidian}
+  - '&doubleC_doubleCMD'
+  - V
+  - B
+  - PAGE DOWN
+  - Gui+]
+  - N
+  - M
+  - ','
+  - .
+  - '-'
+  - TAB
+  - LCTRL
+  - LEFT ALT
+  - '&space_newchat'
+  - '&mkp LCLK'
+  - {t: '&lang2_RCLK', h: LEFT SHIFT}
+  - {t: '&spaceandlang2', h: LEFT COMMAND}
+  - BACKSPACE
+  - ESC
+  Blender:
+  - Q
   - W
   - E
   - R
   - T
   - Y
   - U
-  - {t: I, h: SCROLL}
+  - I
   - O
   - P
   - A
-  - S
-  - D
-  - F
+  - '&mkp MCLK'
+  - {t: S, h: '10'}
+  - {t: D, h: '11'}
   - G
-  - Sft+Gui+S
-  - '-'
+  - F
+  - {t: ▽, type: trans}
   - H
   - J
-  - K
+  - {t: K, h: '13'}
   - L
-  - ''''
-  - {t: Z, h: LEFT SHIFT}
+  - RET
+  - Z
   - X
   - C
   - V
   - B
-  - ':'
-  - ;
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - N
   - M
   - ','
   - .
-  - /
-  - LCTRL
-  - LEFT WIN
-  - LEFT ALT
-  - {t: '&to_layer_0 INT_HENKAN', h: '6'}
-  - {t: SPACE, h: NUM}
-  - {t: '&to_layer_0 INT_MUHENKAN', h: ARROW}
-  - BACKSPACE
-  - {t: ENTER, h: FUNCTION}
-  - DEL
-  FUNCTION:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F13
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F11
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - F12
-  NUM:
   - '-'
-  - KP 7
-  - KP 8
-  - KP 9
-  - +
-  - ^
-  - '&'
-  - '~'
-  - (
-  - )
-  - /
-  - KP 4
-  - KP 5
-  - KP 6
-  - '*'
-  - Ctl+Alt+KP 0
-  - _
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - {t: KP 0, h: LEFT SHIFT}
-  - KP 1
-  - KP 2
-  - KP 3
-  - .
-  - '='
-  - {t: ▽, type: trans}
-  - '['
-  - ']'
-  - '{'
-  - '}'
-  - \
+  - TAB
+  - LGUI
+  - LALT
+  - SPACE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '|'
-  ARROW:
-  - ESCAPE
-  - Ctl+Sft+TAB
-  - UP ARROW
-  - Ctl+TAB
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - HOME
-  - LEFT ARROW
-  - DOWN ARROW
-  - RIGHT ARROW
-  - END
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - LEFT SHIFT
-  - Gui+Sft+LEFT ARROW
-  - {t: ▽, type: trans}
-  - Gui+Sft+RIGHT ARROW
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  MOUSE:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: ENTER, h: LCTRL}
+  - {t: X, h: LEFT COMMAND}
+  - ESC
+  '9':
+  - {t: BT, h: '0'}
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Meh+LEFT
+  - {t: BT DISC, h: '0'}
+  - {t: BT DISC, h: '1'}
+  - {t: BT DISC, h: '2'}
+  - Meh+RIGHT
+  - ''
+  - ''
+  - ''
   - '&mkp MB1'
-  - '&mkp MB3'
+  - {t: ▽, type: trans}
   - '&mkp MB2'
+  - ''
+  - Gui+UP ARROW
+  - Gui+Sft+LEFT
+  - Gui+Ctl+Alt+Q
+  - Sft+Gui+RIGHT
+  - Sft+Gui+S
+  - ''
+  - ''
+  - ''
+  - '&mkp MB4'
+  - ''
+  - '&mkp MB5'
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  SCROLL:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Ctl+C
+  - Ctl+V
+  - ''
   '6':
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
+  - ''
+  - HOME
+  - UP
+  - END
+  - ''
+  - Meh+LEFT
+  - Gui+LEFT
+  - '7'
+  - Gui+RIGHT
+  - Meh+RIGHT
+  - T
+  - ''
+  - Ctl+A
+  - LEFT
+  - {t: DOWN, type: held}
+  - RIGHT
+  - Alt+F4
+  - Gui+UP ARROW
+  - Gui+Sft+LEFT
+  - Gui+Ctl+Alt+Q
+  - Sft+Gui+RIGHT
+  - Sft+Gui+S
+  - T
+  - Ctl+A
+  - Ctl+A
+  - Ctl+Sft+TAB
+  - Ctl+T
+  - Ctl+TAB
+  - Ctl+W
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - ENTER
+  - DELETE
+  - ''
+  '7':
+  - F9
+  - F10
+  - F11
+  - F12
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '7'
+  - '8'
+  - '9'
+  - /
+  - F5
+  - F6
+  - {t: F7, type: held}
+  - F8
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - LEFT
+  - '4'
+  - '5'
+  - '6'
+  - RIGHT
+  - F1
+  - F2
+  - F3
+  - F4
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '0'
   - '1'
   - '2'
   - '3'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&bootloader'
-  - {t: ▽, type: trans}
+  - .
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ENTER
+  - BSPC
+  - {t: ▽, type: trans}
+  '8':
+  - {t: ▽, type: trans}
+  - ']'
+  - {t: '&kakko', type: held}
+  - \
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+7
+  - Sft+8
+  - Sft+9
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+8
+  - '&kagikakko'
+  - Sft+9
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - INTERNATIONAL 1
+  - Sft+4
+  - Sft+5
+  - Sft+6
+  - '['
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '0'
+  - Sft+1
+  - Sft+2
+  - Sft+3
+  - Sft+INTERNATIONAL 1
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+1
+  - '?'
+  - /
+  '13':
+  - '&toMac'
+  - Ctl+1
+  - Ctl+2
+  - Ctl+3
+  - '&toiPad'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '2'}
+  - Ctl+4
+  - Ctl+5
+  - Ctl+6
+  - Gui+Sft+4
+  - ''
+  - ''
+  - ''
+  - '&mkp MB1'
+  - {type: held}
+  - '&mkp MB2'
+  - ''
+  - Gui+UP ARROW
+  - {t: BT DISC, h: '0'}
+  - {t: BT DISC, h: '1'}
+  - {t: BT DISC, h: '2'}
+  - Sft+Gui+S
+  - ''
+  - ''
+  - ''
+  - '&mkp MB4'
+  - ''
+  - '&mkp MB5'
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Gui+C
+  - Gui+V
+  - ''
+  '10':
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - ''
+  - HOME
+  - UP
+  - END
+  - ''
+  - Meh+LEFT
+  - Gui+LEFT
+  - {t: '10', type: held}
+  - Gui+RIGHT
+  - Meh+RIGHT
+  - T
+  - Hyper+R
+  - Ctl+LEFT
+  - LEFT
+  - DOWN
+  - RIGHT
+  - Ctl+RIGHT
+  - Gui+UP ARROW
+  - Gui+Sft+LEFT
+  - Gui+Ctl+Alt+Q
+  - Sft+Gui+RIGHT
+  - Sft+Gui+S
+  - T
+  - Hyper+F
+  - Ctl+A
+  - Ctl+Sft+TAB
+  - Gui+T
+  - Ctl+TAB
+  - Gui+W
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ENTER
+  - DELETE
+  - ''
+  '11':
+  - F9
+  - F10
+  - F11
+  - F12
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '7'
+  - '8'
+  - '9'
+  - /
+  - F5
+  - F6
+  - F7
+  - {t: F8, type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT
+  - '4'
+  - '5'
+  - '6'
+  - RIGHT
+  - F1
+  - F2
+  - F3
+  - F4
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - .
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ENTER
+  - BSPC
+  - {t: ▽, type: trans}
+  '12':
+  - {t: ▽, type: trans}
+  - ']'
+  - {t: '&kakko', type: held}
+  - \
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+7
+  - Sft+8
+  - Sft+9
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+8
+  - '&kagikakko'
+  - Sft+9
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - INTERNATIONAL 1
+  - Sft+4
+  - Sft+5
+  - Sft+6
+  - '['
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '0'
+  - Sft+1
+  - Sft+2
+  - Sft+3
+  - Sft+INTERNATIONAL 1
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+1
+  - '?'
+  - /
+  BT:
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - BT CLR
+  - {t: BT DISC, h: '0'}
+  - {t: BT DISC, h: '1'}
+  - {t: BT DISC, h: '2'}
+  - {t: BT DISC, h: '3'}
+  - {t: BT DISC, h: '4'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - BT CLR ALL
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  Obsidian:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&m_h2'
+  - '&m_bold'
+  - '&m_h3'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&m_todo'
+  - '&m_list'
+  - '&m_task_tag'
+  - '&m_tag'
+  - '&m_quote'
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - BT CLR ALL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
-- p: [11, 12]
-  k: TAB
-- p: [12, 13]
-  k: Sft+TAB
-- p: [11, 10]
-  k: '&to_layer_0 INT_MUHENKAN'
-- p: [20, 21]
-  k: '"'
-- p: [24, 25]
-  k: '='
+- p: [19, 32]
+  k: '&mkp MB5'
+  l: [default, '1']
+- p: [19, 30]
+  k: '&mkp MB4'
+  l: [default, '1']
+- p: [18, 20]
+  k: '&mkp MB3'
+- p: [18, 19]
+  k: '&mkp MB1'
+- p: [19, 20]
+  k: '&mkp MB2'
+- p: [15, 16]
+  k: {t: '1', h: toggle}
+- p: [28, 27]
+  k: {t: default, h: toggle}
+- p: [0, 9]
+  k: {t: '2', h: toggle}
+- p: [42, 34]
+  k: {t: '3', h: toggle}
+- p: [19, 30]
+  k: Gui+]
+  l: ['2', '3']
+- p: [19, 32]
+  k: Gui+\
+  l: ['2', '3']
+- p: [9, 34]
+  k: {t: Blender, h: toggle}
+  l: [default, '1', '2', '3']
+- p: [0, 42]
+  k: {t: '2', h: toggle}
+- p: [4, 26]
+  k: BT
