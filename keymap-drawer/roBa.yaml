@@ -107,7 +107,7 @@ layers:
   - PG UP
   - Gui+\
   - K
-  - {t: T, h: '&new_mac'}
+  - {t: T, h: '11'}
   - {t: N, h: '13'}
   - S
   - H
@@ -411,7 +411,7 @@ layers:
   - Ctl+4
   - Ctl+5
   - Ctl+6
-  - Gui+Sft+4
+  - Gui+Sft+Ctl+4
   - ''
   - ''
   - ''
@@ -498,12 +498,12 @@ layers:
   - F5
   - F6
   - F7
-  - {t: F8, type: held}
+  - F8
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LEFT
-  - '4'
+  - {t: '4', type: held}
   - '5'
   - '6'
   - RIGHT
@@ -522,8 +522,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - VOLUME DOWN
+  - VOLUME UP
   - {t: ▽, type: trans}
   - ENTER
   - BSPC
@@ -566,9 +566,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - PREV
+  - PP
+  - NEXT
   - Sft+1
   - '?'
   - /
