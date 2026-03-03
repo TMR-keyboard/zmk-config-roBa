@@ -17,11 +17,11 @@
         layers = <6>;
         bindings =
             <&kp LG(LA(LC(RIGHT_ARROW)))>,
-            // 右: Win + Alt + Ctrl + →,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 右: Win + Alt + Ctrl + →,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(LA(LC(LEFT_ARROW)))>,
-            // 左: Win + Alt + Ctrl + ←,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 左: Win + Alt + Ctrl + ←,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(TAB)>,
-            // 上: Win + Tab,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 上: Win + Tab,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(M)>;
 
         // 下: → だけ
@@ -37,11 +37,11 @@
         layers = <7>;
         bindings =
             <&kp LG(RIGHT_ARROW)>,
-            // 右にスナップ (Win + →),,,,,,,,,,,,,,,,,,,,,,,,,
+            // 右にスナップ (Win + →),,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(LEFT_ARROW)>,
-            // 左にスナップ (Win + ←),,,,,,,,,,,,,,,,,,,,,,,,,
+            // 左にスナップ (Win + ←),,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(UP_ARROW)>,
-            // 最大化   (Win + ↑),,,,,,,,,,,,,,,,,,,,,,,,,
+            // 最大化   (Win + ↑),,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(DOWN_ARROW)>;
 
         // 最小化 or 元のサイズ (Win + ↓)
@@ -57,11 +57,11 @@
         layers = <11>;
         bindings =
             <&kp LC(LA(RIGHT))>,
-            // 右：ウィンドウを右半分に (Ctrl + Cmd + →),,,,,,,,,,,,,,,,,,
+            // 右：ウィンドウを右半分に (Ctrl + Cmd + →),,,,,,,,,,,,,,,,,,,
             <&kp LC(LA(LEFT))>,
-            // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),,,,,,,,,,,,,,,,,,
+            // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),,,,,,,,,,,,,,,,,,,
             <&kp LA(LC(ENTER))>,
-            // 上：Enter + Option + Command,,,,,,,,,,,,,,,,,,
+            // 上：Enter + Option + Command,,,,,,,,,,,,,,,,,,,
             <&kp LG(W)>;
 
         // 下：アプリのウィンドウを閉じる (Cmd + W)
@@ -77,11 +77,11 @@
         layers = <10>;
         bindings =
             <&kp LC(RIGHT)>,
-            // 右：右の仮想デスクトップへ移動 (Ctrl + →),,,,,,,,,,,,,,,,,,
+            // 右：右の仮想デスクトップへ移動 (Ctrl + →),,,,,,,,,,,,,,,,,,,
             <&kp LC(LEFT)>,
-            // 左：左の仮想デスクトップへ移動 (Ctrl + ←),,,,,,,,,,,,,,,,,,
+            // 左：左の仮想デスクトップへ移動 (Ctrl + ←),,,,,,,,,,,,,,,,,,,
             <&kp LC(UP)>,
-            // 上：ミッションコントロール (Ctrl + ↑),,,,,,,,,,,,,,,,,,
+            // 上：ミッションコントロール (Ctrl + ↑),,,,,,,,,,,,,,,,,,,
             <&kp LC(DOWN)>;
 
         // 下：アプリケーションエクスポーズ (Ctrl + ↓)
@@ -97,11 +97,11 @@
         layers = <12>;
         bindings =
             <&kp LG(LA(LC(RIGHT)))>,
-            // 右：ウィンドウを右デスクトップへ移動 (Shift + Ctrl + →),,,,,,,,,,,,,,,,,,
+            // 右：ウィンドウを右デスクトップへ移動 (Shift + Ctrl + →),,,,,,,,,,,,,,,,,,,
             <&kp LG(LA(LC(LEFT)))>,
-            // 左：ウィンドウを左デスクトップへ移動 (Shift + Ctrl + ←),,,,,,,,,,,,,,,,,,
+            // 左：ウィンドウを左デスクトップへ移動 (Shift + Ctrl + ←),,,,,,,,,,,,,,,,,,,
             <&spotlight_search>,
-            // 上：マクロ実行 (lang2 -> Spotlight),,,,,,,,,,,,,,,,,,
+            // 上：マクロ実行 (lang2 -> Spotlight),,,,,,,,,,,,,,,,,,,
             <&kp LG(Q)>;
 
         // 下：アプリを完全に終了 (Cmd + Q)
@@ -135,7 +135,7 @@
 
         double_quotation {
             bindings = <&mkp MB1>;
-            key-positions = <18 19>;
+            key-positions = <18 19 37>;
         };
 
         eq {
@@ -233,7 +233,7 @@
                 <&macro_wait_time 15>,
                 <&kp LS(N9)>,
                 <&macro_wait_time 15>,
-                <&kp LEFT>;
+                <&kp LANGUAGE_1 &kp LEFT>;
 
             label = "KAGIKAKKO";
         };
@@ -277,13 +277,10 @@
             label = "NEWCHAT";
         };
 
-        doubleCMD: doubleCMD {
+        doubleCTRL: doubleCMD {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LEFT_COMMAND>,
-                <&macro_wait_time 15>,
-                <&kp LEFT_COMMAND>;
+            bindings = <&kp LCTRL>, <&macro_wait_time 15>, <&kp LCTRL>;
 
             label = "DOUBLECMD";
         };
@@ -415,6 +412,144 @@
 
             label = "NEW_M";
         };
+
+        language_switch_num_0: language_switch_num_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 15>,
+                <&kp N0>,
+                <&macro_wait_time 15>,
+                <&kp LANGUAGE_1>;
+
+            label = "LANGUAGE_SWITCH_NUM_0";
+        };
+
+        language_switch_num_1: language_switch_num_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 15>,
+                <&kp N1>,
+                <&macro_wait_time 15>,
+                <&kp LANGUAGE_1>;
+
+            label = "LANGUAGE_SWITCH_NUM_1";
+        };
+
+        language_switch_num_2: language_switch_num_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 15>,
+                <&kp N2>,
+                <&macro_wait_time 15>,
+                <&kp LANGUAGE_1>;
+
+            label = "LANGUAGE_SWITCH_NUM_2";
+        };
+
+        language_switch_num_3: language_switch_num_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 15>,
+                <&kp N3>,
+                <&macro_wait_time 15>,
+                <&kp LANGUAGE_1>;
+
+            label = "LANGUAGE_SWITCH_NUM_3";
+        };
+
+        language_switch_num_4: language_switch_num_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 15>,
+                <&kp N4>,
+                <&macro_wait_time 15>,
+                <&kp LANGUAGE_1>;
+
+            label = "LANGUAGE_SWITCH_NUM_4";
+        };
+
+        language_switch_num_5: language_switch_num_5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 15>,
+                <&kp N5>,
+                <&macro_wait_time 15>,
+                <&kp LANGUAGE_1>;
+
+            label = "LANGUAGE_SWITCH_NUM_5";
+        };
+
+        language_switch_num_6: language_switch_num_6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 15>,
+                <&kp N6>,
+                <&macro_wait_time 15>,
+                <&kp LANGUAGE_1>;
+
+            label = "LANGUAGE_SWITCH_NUM_6";
+        };
+
+        language_switch_num_7: language_switch_num_7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 15>,
+                <&kp N7>,
+                <&macro_wait_time 15>,
+                <&kp LANGUAGE_1>;
+
+            label = "LANGUAGE_SWITCH_NUM_7";
+        };
+
+        language_switch_num_8: language_switch_num_8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 15>,
+                <&kp N8>,
+                <&macro_wait_time 15>,
+                <&kp LANGUAGE_1>;
+
+            label = "LANGUAGE_SWITCH_NUM_8";
+        };
+
+        language_switch_num_9: language_switch_num_9 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 15>,
+                <&kp N9>,
+                <&macro_wait_time 15>,
+                <&kp LANGUAGE_1>;
+
+            label = "LANGUAGE_SWITCH_NUM_9";
+        };
+
+        tyuutenn: tyuutenn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_1>, <&macro_wait_time 15>, <&kp SLASH>;
+
+            label = "TYUUTENN";
+        };
     };
 
     behaviors {
@@ -497,7 +632,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
         };
 
         MT_Advance: MT_Advance {
@@ -571,7 +706,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DOUBLEN_DOUBLECMD";
             #binding-cells = <0>;
-            bindings = <&kp N>, <&doubleCMD>;
+            bindings = <&kp N>, <&doubleCTRL>;
 
             tapping-term-ms = <350>;
         };
@@ -580,7 +715,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DOUBLEC_DOUBLECMD";
             #binding-cells = <0>;
-            bindings = <&kp C>, <&doubleCMD>;
+            bindings = <&kp C>, <&doubleCTRL>;
 
             tapping-term-ms = <350>;
         };
@@ -633,10 +768,10 @@
 
         layer_2 {
             bindings = <
-&kp Q    &kp J      &LT_Advance 12 U    &kp COMMA           &kp DOT                                                                    &kp F     &kp W             &LT_Advance 12 R  &kp Y  &kp P
-&kp E    &kp I      &LT_Advance 10 A    &Num_back_to_2 0 O  &kp MINUS  &kp PG_UP                            &kp LG(BACKSLASH)          &kp K     &LT_Advance 11 T  &LT_Advance 9 N   &kp S  &kp H
-&kp L    &lt 14 X   &doubleN_doubleCMD  &kp V               &kp C      &kp PAGE_DOWN                        &kp LG(RIGHT_BRACKET)      &kp G     &kp D             &kp M             &kp Z  &kp B
-&kp TAB  &kp LCTRL  &kp LEFT_ALT        &space_newchat      &mkp LCLK  &new_behavior_none LEFT_SHIFT 0      &enterctrl LEFT_COMMAND 0  &kp BSPC                                             &kp ESC
+&kp Q    &kp J      &LT_Advance 12 U    &kp COMMA         &kp DOT                                                                        &kp F                         &kp W             &LT_Advance 12 R  &kp Y  &kp P
+&kp E    &kp I      &LT_Advance 10 A    &LT_Advance 11 O  &kp MINUS                     &kp PG_UP          &kp LG(BACKSLASH)             &kp K                         &LT_Advance 11 T  &LT_Advance 9 N   &kp S  &kp H
+&kp L    &lt 14 X   &doubleN_doubleCMD  &kp V             &kp C                         &kp PAGE_DOWN      &kp LG(RIGHT_BRACKET)         &kp G                         &kp D             &kp M             &kp Z  &kp B
+&kp TAB  &kp LCTRL  &kp LEFT_ALT        &mkp LCLK         &MT_Advance LEFT_SHIFT SPACE  &mkp RCLK          &MT_Advance LEFT_SHIFT SPACE  &MT_Advance LEFT_SHIFT SPACE                                             &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -644,10 +779,10 @@
 
         layer_3 {
             bindings = <
-&kp Q    &kp W      &LT_Advance 12 E    &kp R               &kp T                                                                      &kp Y          &kp U               &LT_Advance 12 I  &kp O    &kp P
-&kp A    &kp S      &LT_Advance 10 D    &Num_Back_to_3 0 F  &kp G      &kp PG_UP                            &kp LG(BACKSLASH)          &kp H          &Num_Back_to_3 0 J  &LT_Advance 9 K   &kp L    &kp ENTER
-&kp Z    &lt 14 X   &doubleC_doubleCMD  &kp V               &kp B      &kp PAGE_DOWN                        &kp LG(RIGHT_BRACKET)      &kp N          &kp M               &kp COMMA         &kp DOT  &kp MINUS
-&kp TAB  &kp LCTRL  &kp LEFT_ALT        &space_newchat      &mkp LCLK  &new_behavior_none LEFT_SHIFT 0      &enterctrl LEFT_COMMAND 0  &kp BACKSPACE                                                 &kp ESC
+&kp Q    &kp W      &LT_Advance 12 E    &kp R             &kp T                                                                   &kp Y                         &kp U             &LT_Advance 12 I  &kp O    &kp P
+&kp A    &kp S      &LT_Advance 10 D    &LT_Advance 11 F  &kp G                         &kp PG_UP          &kp LG(BACKSLASH)      &kp H                         &LT_Advance 11 J  &LT_Advance 9 K   &kp L    &kp ENTER
+&kp Z    &lt 14 X   &doubleC_doubleCMD  &kp V             &kp B                         &kp PAGE_DOWN      &kp LG(RIGHT_BRACKET)  &kp N                         &kp M             &kp COMMA         &kp DOT  &kp MINUS
+&kp TAB  &kp LCTRL  &kp LEFT_ALT        &mkp LCLK         &MT_Advance LEFT_SHIFT SPACE  &mkp RCLK          &kp SPACE              &MT_Advance LEFT_SHIFT SPACE                                               &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -700,34 +835,34 @@
 
         layer_13 {
             bindings = <
-&toMac            &kp LC(N1)     &kp LC(N2)     &kp LC(N3)     &toiPad                                          &none      &none     &none   &none     &none
-&bt BT_SEL 2      &kp LC(N4)     &kp LC(N5)     &kp LC(N6)     &kp LG(LS(LC(NUMBER_4)))  &none       &none      &none      &mkp MB1  &trans  &mkp MB2  &none
-&kp LG(UP_ARROW)  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &kp LS(LG(S))             &none       &none      &none      &mkp MB4  &none   &mkp MB5  &none
-&trans            &trans         &trans         &trans         &trans                    &trans      &kp LG(C)  &kp LG(V)                              &none
+&toMac            &kp LC(N1)     &kp LC(N2)     &kp LC(N3)     &toiPad                                                  &none      &none     &none   &none     &none
+&bt BT_SEL 2      &kp LC(N4)     &kp LC(N5)     &kp LC(N6)     &kp LG(LS(LC(NUMBER_4)))  &none               &none      &none      &mkp MB1  &trans  &mkp MB2  &none
+&kp LG(UP_ARROW)  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &kp LS(LG(S))             &none               &none      &none      &mkp MB4  &none   &mkp MB5  &none
+&trans            &trans         &trans         &trans         &kp LANGUAGE_2            &kp LANGUAGE_2      &kp LG(C)  &kp LG(V)                              &none
             >;
         };
 
         layer_10 {
             bindings = <
-&bt BT_SEL 0          &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                              &none         &kp HOME         &kp UP     &kp END      &none
-&kp LA(LC(LS(LEFT)))  &kp LG(LEFT)      &mo 10             &kp LG(RIGHT)      &kp LS(LA(LC(RIGHT)))  &kp T       &kp LS(LA(LC(LG(R))))  &kp LC(LEFT)  &kp LEFT         &kp DOWN   &kp RIGHT    &kp LC(RIGHT)
-&kp LG(UP_ARROW)      &kp LG(LS(LEFT))  &kp LG(LC(LA(Q)))  &kp LS(LG(RIGHT))  &kp LS(LG(S))          &kp T       &kp LC(LA(LS(LG(F))))  &kp LC(A)     &kp LC(LS(TAB))  &kp LG(T)  &kp LC(TAB)  &kp LG(W)
-&trans                &trans            &trans             &trans             &trans                 &trans      &kp ENTER              &kp DELETE                                             &none
+&bt BT_SEL 0          &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                              &none           &kp HOME         &kp UP     &kp END      &none
+&kp LA(LC(LS(LEFT)))  &kp LG(LEFT)      &mo 10             &kp LG(RIGHT)      &kp LS(LA(LC(RIGHT)))  &kp T       &kp LS(LA(LC(LG(R))))  &kp LC(LEFT)    &kp LEFT         &kp DOWN   &kp RIGHT    &kp LC(RIGHT)
+&kp LG(UP_ARROW)      &kp LG(LS(LEFT))  &kp LG(LC(LA(Q)))  &kp LS(LG(RIGHT))  &kp LS(LG(S))          &kp T       &kp LC(LA(LS(LG(F))))  &kp LC(A)       &kp LC(LS(TAB))  &kp LG(T)  &kp LC(TAB)  &kp LG(W)
+&trans                &trans            &trans             &trans             &trans                 &trans      &kp LANGUAGE_1         &kp LANGUAGE_1                                           &none
             >;
         };
 
         layer_11 {
             bindings = <
-&kp F9  &kp F10  &kp F11  &kp F12            &trans                                  &trans    &kp N7  &kp N8  &kp N9  &kp FSLH
-&kp F5  &kp F6   &kp F7   &kp F8             &trans           &trans      &trans     &kp LEFT  &kp N4  &kp N5  &kp N6  &kp RIGHT
-&kp F1  &kp F2   &kp F3   &kp F4             &trans           &trans      &trans     &kp N0    &kp N1  &kp N2  &kp N3  &kp DOT
-&trans  &trans   &trans   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans      &kp ENTER  &kp BSPC                          &trans
+&kp F9  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &trans                                           &kp COLON               &language_switch_num_7  &language_switch_num_8  &language_switch_num_9  &kp FSLH
+&kp F5  &kp F6             &kp F7      &kp F8           &trans         &trans             &kp LS(EQUAL)  &kp LS(EQUAL)           &language_switch_num_4  &language_switch_num_5  &language_switch_num_6  &kp MINUS
+&kp F1  &kp F2             &kp F3      &kp F4           &trans         &trans             &kp MINUS      &language_switch_num_0  &language_switch_num_1  &language_switch_num_2  &language_switch_num_3  &kp DOT
+&trans  &trans             &trans      &trans           &kp BACKSPACE  &kp BACKSPACE      &kp ENTER      &kp ENTER                                                                                       &trans
             >;
         };
 
         layer_12 {
             bindings = <
-&trans  &kp RBKT    &kakko      &kp BSLH    &trans                                      &trans               &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &trans
+&trans  &kp RBKT    &kakko      &kp BSLH    &trans                                      &kp LS(SEMICOLON)    &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &tyuutenn
 &trans  &kp LS(N8)  &kagikakko  &kp LS(N9)  &trans    &trans          &trans            &kp INTERNATIONAL_1  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LEFT_BRACKET
 &trans  &trans      &trans      &trans      &trans    &trans          &trans            &kp N0               &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(INTERNATIONAL_1)
 &trans  &trans      &trans      &kp C_PREV  &kp C_PP  &kp C_NEXT      &kp LS(NUMBER_1)  &kp QUESTION                                             &kp FSLH
