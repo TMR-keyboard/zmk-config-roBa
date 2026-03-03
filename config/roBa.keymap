@@ -418,9 +418,8 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LANGUAGE_2>,
-                <&macro_wait_time 15>,
                 <&kp N0>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp LANGUAGE_1>;
 
             label = "LANGUAGE_SWITCH_NUM_0";
@@ -431,9 +430,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LANGUAGE_2>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp N1>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp LANGUAGE_1>;
 
             label = "LANGUAGE_SWITCH_NUM_1";
@@ -444,9 +443,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LANGUAGE_2>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp N2>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp LANGUAGE_1>;
 
             label = "LANGUAGE_SWITCH_NUM_2";
@@ -457,9 +456,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LANGUAGE_2>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp N3>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp LANGUAGE_1>;
 
             label = "LANGUAGE_SWITCH_NUM_3";
@@ -470,9 +469,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LANGUAGE_2>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp N4>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp LANGUAGE_1>;
 
             label = "LANGUAGE_SWITCH_NUM_4";
@@ -483,9 +482,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LANGUAGE_2>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp N5>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp LANGUAGE_1>;
 
             label = "LANGUAGE_SWITCH_NUM_5";
@@ -496,9 +495,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LANGUAGE_2>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp N6>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp LANGUAGE_1>;
 
             label = "LANGUAGE_SWITCH_NUM_6";
@@ -509,9 +508,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LANGUAGE_2>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp N7>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp LANGUAGE_1>;
 
             label = "LANGUAGE_SWITCH_NUM_7";
@@ -522,9 +521,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LANGUAGE_2>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp N8>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp LANGUAGE_1>;
 
             label = "LANGUAGE_SWITCH_NUM_8";
@@ -535,9 +534,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LANGUAGE_2>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp N9>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp LANGUAGE_1>;
 
             label = "LANGUAGE_SWITCH_NUM_9";
