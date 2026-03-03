@@ -102,7 +102,7 @@ layers:
   - E
   - I
   - {t: A, h: '10'}
-  - {t: O, h: '&new_mac'}
+  - {t: O, h: '11'}
   - '-'
   - PG UP
   - Gui+\
@@ -126,11 +126,11 @@ layers:
   - TAB
   - LCTRL
   - LEFT ALT
-  - '&space_newchat'
   - '&mkp LCLK'
-  - {t: '&lang2_RCLK', h: LEFT SHIFT}
-  - {t: '&spaceandlang2', h: LEFT COMMAND}
-  - BSPC
+  - {t: SPACE, h: LEFT SHIFT}
+  - '&mkp RCLK'
+  - {t: SPACE, h: LEFT SHIFT}
+  - {t: SPACE, h: LEFT SHIFT}
   - ESC
   '3':
   - Q
@@ -146,12 +146,12 @@ layers:
   - A
   - S
   - {t: D, h: '10'}
-  - {t: F, h: '&new_m'}
+  - {t: F, h: '11'}
   - G
   - PG UP
   - Gui+\
   - H
-  - {t: J, h: '&new_m'}
+  - {t: J, h: '11'}
   - {t: K, h: '13'}
   - L
   - ENTER
@@ -170,11 +170,11 @@ layers:
   - TAB
   - LCTRL
   - LEFT ALT
-  - '&space_newchat'
   - '&mkp LCLK'
-  - {t: '&lang2_RCLK', h: LEFT SHIFT}
-  - {t: '&spaceandlang2', h: LEFT COMMAND}
-  - BACKSPACE
+  - {t: SPACE, h: LEFT SHIFT}
+  - '&mkp RCLK'
+  - SPACE
+  - {t: SPACE, h: LEFT SHIFT}
   - ESC
   Blender:
   - Q
@@ -435,8 +435,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LANGUAGE 2
+  - LANGUAGE 2
   - Gui+C
   - Gui+V
   - ''
@@ -481,52 +481,52 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ENTER
-  - DELETE
+  - LANGUAGE 1
+  - LANGUAGE 1
   - ''
   '11':
   - F9
-  - F10
-  - F11
-  - F12
+  - VOLUME DOWN
+  - MUTE
+  - VOLUME UP
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '7'
-  - '8'
-  - '9'
+  - ':'
+  - '&language_switch_num_7'
+  - '&language_switch_num_8'
+  - '&language_switch_num_9'
   - /
   - F5
   - F6
   - F7
-  - F8
+  - {t: F8, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - LEFT
-  - {t: '4', type: held}
-  - '5'
-  - '6'
-  - RIGHT
+  - Sft+=
+  - Sft+=
+  - '&language_switch_num_4'
+  - '&language_switch_num_5'
+  - '&language_switch_num_6'
+  - '-'
   - F1
   - F2
   - F3
   - F4
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '0'
-  - '1'
-  - '2'
-  - '3'
+  - '-'
+  - '&language_switch_num_0'
+  - '&language_switch_num_1'
+  - '&language_switch_num_2'
+  - '&language_switch_num_3'
   - .
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - VOLUME DOWN
-  - VOLUME UP
   - {t: ▽, type: trans}
+  - BACKSPACE
+  - BACKSPACE
   - ENTER
-  - BSPC
+  - ENTER
   - {t: ▽, type: trans}
   '12':
   - {t: ▽, type: trans}
@@ -534,11 +534,11 @@ layers:
   - {t: '&kakko', type: held}
   - \
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Sft+;
   - Sft+7
   - Sft+8
   - Sft+9
-  - {t: ▽, type: trans}
+  - '&tyuutenn'
   - {t: ▽, type: trans}
   - Sft+8
   - '&kagikakko'
@@ -669,7 +669,7 @@ combos:
   l: [default, '1']
 - p: [18, 20]
   k: '&mkp MB3'
-- p: [18, 19]
+- p: [18, 19, 37]
   k: '&mkp MB1'
 - p: [19, 20]
   k: '&mkp MB2'
