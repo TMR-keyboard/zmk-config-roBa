@@ -418,6 +418,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LANGUAGE_2>,
+                <&macro_wait_time 2>,
                 <&kp N0>,
                 <&macro_wait_time 2>,
                 <&kp LANGUAGE_1>;
