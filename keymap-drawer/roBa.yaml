@@ -490,11 +490,11 @@ layers:
   - MUTE
   - VOLUME UP
   - {t: ▽, type: trans}
-  - ':'
+  - '&language_switch_num_asterrisc'
   - '&language_switch_num_7'
   - '&language_switch_num_8'
   - '&language_switch_num_9'
-  - /
+  - '&language_switch_num_slash'
   - F5
   - F6
   - F7
@@ -502,7 +502,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Sft+=
-  - Sft+=
+  - '&language_switch_num_plus'
   - '&language_switch_num_4'
   - '&language_switch_num_5'
   - '&language_switch_num_6'
@@ -518,7 +518,7 @@ layers:
   - '&language_switch_num_1'
   - '&language_switch_num_2'
   - '&language_switch_num_3'
-  - .
+  - '&language_switch_num_period'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
