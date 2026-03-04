@@ -17,11 +17,11 @@
         layers = <6>;
         bindings =
             <&kp LG(LA(LC(RIGHT_ARROW)))>,
-            // 右: Win + Alt + Ctrl + →,,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 右: Win + Alt + Ctrl + →,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(LA(LC(LEFT_ARROW)))>,
-            // 左: Win + Alt + Ctrl + ←,,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 左: Win + Alt + Ctrl + ←,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(TAB)>,
-            // 上: Win + Tab,,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 上: Win + Tab,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(M)>;
 
         // 下: → だけ
@@ -37,11 +37,11 @@
         layers = <7>;
         bindings =
             <&kp LG(RIGHT_ARROW)>,
-            // 右にスナップ (Win + →),,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 右にスナップ (Win + →),,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(LEFT_ARROW)>,
-            // 左にスナップ (Win + ←),,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 左にスナップ (Win + ←),,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(UP_ARROW)>,
-            // 最大化   (Win + ↑),,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 最大化   (Win + ↑),,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(DOWN_ARROW)>;
 
         // 最小化 or 元のサイズ (Win + ↓)
@@ -57,11 +57,11 @@
         layers = <11>;
         bindings =
             <&kp LC(LA(RIGHT))>,
-            // 右：ウィンドウを右半分に (Ctrl + Cmd + →),,,,,,,,,,,,,,,,,,,
+            // 右：ウィンドウを右半分に (Ctrl + Cmd + →),,,,,,,,,,,,,,,,,,,,
             <&kp LC(LA(LEFT))>,
-            // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),,,,,,,,,,,,,,,,,,,
+            // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),,,,,,,,,,,,,,,,,,,,
             <&kp LA(LC(ENTER))>,
-            // 上：Enter + Option + Command,,,,,,,,,,,,,,,,,,,
+            // 上：Enter + Option + Command,,,,,,,,,,,,,,,,,,,,
             <&kp LG(W)>;
 
         // 下：アプリのウィンドウを閉じる (Cmd + W)
@@ -77,11 +77,11 @@
         layers = <10>;
         bindings =
             <&kp LC(RIGHT)>,
-            // 右：右の仮想デスクトップへ移動 (Ctrl + →),,,,,,,,,,,,,,,,,,,
+            // 右：右の仮想デスクトップへ移動 (Ctrl + →),,,,,,,,,,,,,,,,,,,,
             <&kp LC(LEFT)>,
-            // 左：左の仮想デスクトップへ移動 (Ctrl + ←),,,,,,,,,,,,,,,,,,,
+            // 左：左の仮想デスクトップへ移動 (Ctrl + ←),,,,,,,,,,,,,,,,,,,,
             <&kp LC(UP)>,
-            // 上：ミッションコントロール (Ctrl + ↑),,,,,,,,,,,,,,,,,,,
+            // 上：ミッションコントロール (Ctrl + ↑),,,,,,,,,,,,,,,,,,,,
             <&kp LC(DOWN)>;
 
         // 下：アプリケーションエクスポーズ (Ctrl + ↓)
@@ -97,11 +97,11 @@
         layers = <12>;
         bindings =
             <&kp LG(LA(LC(RIGHT)))>,
-            // 右：ウィンドウを右デスクトップへ移動 (Shift + Ctrl + →),,,,,,,,,,,,,,,,,,,
+            // 右：ウィンドウを右デスクトップへ移動 (Shift + Ctrl + →),,,,,,,,,,,,,,,,,,,,
             <&kp LG(LA(LC(LEFT)))>,
-            // 左：ウィンドウを左デスクトップへ移動 (Shift + Ctrl + ←),,,,,,,,,,,,,,,,,,,
+            // 左：ウィンドウを左デスクトップへ移動 (Shift + Ctrl + ←),,,,,,,,,,,,,,,,,,,,
             <&spotlight_search>,
-            // 上：マクロ実行 (lang2 -> Spotlight),,,,,,,,,,,,,,,,,,,
+            // 上：マクロ実行 (lang2 -> Spotlight),,,,,,,,,,,,,,,,,,,,
             <&kp LG(Q)>;
 
         // 下：アプリを完全に終了 (Cmd + Q)
@@ -550,6 +550,84 @@
 
             label = "TYUUTENN";
         };
+
+        language_switch_num_period: language_switch_num_period {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 15>,
+                <&kp PERIOD>,
+                <&macro_wait_time 15>,
+                <&kp LANGUAGE_1>;
+
+            label = "LANGUAGE_SWITCH_NUM_PERIOD";
+        };
+
+        language_switch_num_period: language_switch_num_period {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 15>,
+                <&kp PERIOD>,
+                <&macro_wait_time 15>,
+                <&kp LANGUAGE_1>;
+
+            label = "LANGUAGE_SWITCH_NUM_PERIOD";
+        };
+
+        language_switch_num_slash: language_switch_num_slash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 15>,
+                <&kp SLASH>,
+                <&macro_wait_time 15>,
+                <&kp LANGUAGE_1>;
+
+            label = "LANGUAGE_SWITCH_NUM_SLASH";
+        };
+
+        language_switch_num_plus: language_switch_num_colon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 15>,
+                <&kp COLON>,
+                <&macro_wait_time 15>,
+                <&kp LANGUAGE_1>;
+
+            label = "LANGUAGE_SWITCH_NUM_COLON";
+        };
+
+        language_switch_num_asterrisc: language_switch_num_asterrisc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 15>,
+                <&kp RS(COLON)>,
+                <&macro_wait_time 15>,
+                <&kp LANGUAGE_1>;
+
+            label = "LANGUAGE_SWITCH_NUM_ASTERRISC";
+        };
+
+        language_switch_num_haihun: language_switch_num_haihun {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 15>,
+                <&kp MINUS>,
+                <&macro_wait_time 15>,
+                <&kp LANGUAGE_1>;
+
+            label = "LANGUAGE_SWITCH_NUM_HAIHUN";
+        };
     };
 
     behaviors {
@@ -853,10 +931,10 @@
 
         layer_11 {
             bindings = <
-&kp F9  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &trans                                           &kp COLON               &language_switch_num_7  &language_switch_num_8  &language_switch_num_9  &kp FSLH
-&kp F5  &kp F6             &kp F7      &kp F8           &trans         &trans             &kp LS(EQUAL)  &kp LS(EQUAL)           &language_switch_num_4  &language_switch_num_5  &language_switch_num_6  &kp MINUS
-&kp F1  &kp F2             &kp F3      &kp F4           &trans         &trans             &kp MINUS      &language_switch_num_0  &language_switch_num_1  &language_switch_num_2  &language_switch_num_3  &kp DOT
-&trans  &trans             &trans      &trans           &kp BACKSPACE  &kp BACKSPACE      &kp ENTER      &kp ENTER                                                                                       &trans
+&kp F9  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &trans                                           &language_switch_num_asterrisc  &language_switch_num_7  &language_switch_num_8  &language_switch_num_9  &language_switch_num_slash
+&kp F5  &kp F6             &kp F7      &kp F8           &trans         &trans             &kp LS(EQUAL)  &language_switch_num_plus       &language_switch_num_4  &language_switch_num_5  &language_switch_num_6  &kp MINUS
+&kp F1  &kp F2             &kp F3      &kp F4           &trans         &trans             &kp MINUS      &language_switch_num_0          &language_switch_num_1  &language_switch_num_2  &language_switch_num_3  &language_switch_num_period
+&trans  &trans             &trans      &trans           &kp BACKSPACE  &kp BACKSPACE      &kp ENTER      &kp ENTER                                                                                               &trans
             >;
         };
 
