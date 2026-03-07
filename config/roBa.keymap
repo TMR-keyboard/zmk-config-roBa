@@ -595,7 +595,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LANGUAGE_2>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 3>,
                 <&kp RS(COLON)>,
                 <&macro_wait_time 15>,
                 <&kp LANGUAGE_1>;
