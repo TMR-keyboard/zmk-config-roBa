@@ -431,9 +431,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LANGUAGE_2>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp N1>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 2>,
                 <&kp LANGUAGE_1>;
 
             label = "LANGUAGE_SWITCH_NUM_1";
