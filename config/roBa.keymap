@@ -17,11 +17,11 @@
         layers = <6>;
         bindings =
             <&kp LG(LA(LC(RIGHT_ARROW)))>,
-            // 右: Win + Alt + Ctrl + →,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 右: Win + Alt + Ctrl + →,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(LA(LC(LEFT_ARROW)))>,
-            // 左: Win + Alt + Ctrl + ←,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 左: Win + Alt + Ctrl + ←,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(TAB)>,
-            // 上: Win + Tab,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 上: Win + Tab,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(M)>;
 
         // 下: → だけ
@@ -37,11 +37,11 @@
         layers = <7>;
         bindings =
             <&kp LG(RIGHT_ARROW)>,
-            // 右にスナップ (Win + →),,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 右にスナップ (Win + →),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(LEFT_ARROW)>,
-            // 左にスナップ (Win + ←),,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 左にスナップ (Win + ←),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(UP_ARROW)>,
-            // 最大化   (Win + ↑),,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 最大化   (Win + ↑),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(DOWN_ARROW)>;
 
         // 最小化 or 元のサイズ (Win + ↓)
@@ -57,11 +57,11 @@
         layers = <11>;
         bindings =
             <&kp LC(LA(RIGHT))>,
-            // 右：ウィンドウを右半分に (Ctrl + Cmd + →),,,,,,,,,,,,,,,,,,,,,,
+            // 右：ウィンドウを右半分に (Ctrl + Cmd + →),,,,,,,,,,,,,,,,,,,,,,,
             <&kp LC(LA(LEFT))>,
-            // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),,,,,,,,,,,,,,,,,,,,,,
+            // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),,,,,,,,,,,,,,,,,,,,,,,
             <&kp LA(LC(ENTER))>,
-            // 上：Enter + Option + Command,,,,,,,,,,,,,,,,,,,,,,
+            // 上：Enter + Option + Command,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(W)>;
 
         // 下：アプリのウィンドウを閉じる (Cmd + W)
@@ -77,11 +77,11 @@
         layers = <10>;
         bindings =
             <&kp LC(LEFT)>,
-            // 右：右の仮想デスクトップへ移動 (Ctrl + →),,,,,,,,,,,,,,,,,,,,,,
+            // 右：右の仮想デスクトップへ移動 (Ctrl + →),,,,,,,,,,,,,,,,,,,,,,,
             <&kp LC(RIGHT)>,
-            // 左：左の仮想デスクトップへ移動 (Ctrl + ←),,,,,,,,,,,,,,,,,,,,,,
+            // 左：左の仮想デスクトップへ移動 (Ctrl + ←),,,,,,,,,,,,,,,,,,,,,,,
             <&kp LC(UP)>,
-            // 上：ミッションコントロール (Ctrl + ↑),,,,,,,,,,,,,,,,,,,,,,
+            // 上：ミッションコントロール (Ctrl + ↑),,,,,,,,,,,,,,,,,,,,,,,
             <&kp LC(M)>;
 
         // 下：アプリケーションエクスポーズ (Ctrl + ↓)
@@ -99,13 +99,13 @@
         tab {
             bindings = <&mkp MB5>;
             key-positions = <19 32>;
-            layers = <0 1>;
+            layers = <1 2>;
         };
 
         shift_tab {
             bindings = <&mkp MB4>;
             key-positions = <19 30>;
-            layers = <0 1>;
+            layers = <1 2>;
         };
 
         muhennkann {
@@ -124,17 +124,17 @@
         };
 
         goodnote {
-            bindings = <&to 1>;
+            bindings = <&to 2>;
             key-positions = <15 16>;
         };
 
         onisi {
-            bindings = <&to 0>;
+            bindings = <&to 1>;
             key-positions = <28 27>;
         };
 
         Mac {
-            bindings = <&to 2>;
+            bindings = <&to 0>;
             key-positions = <0 9>;
         };
 
@@ -146,23 +146,23 @@
         back {
             bindings = <&kp LG(RIGHT_BRACKET)>;
             key-positions = <19 30>;
-            layers = <2 3>;
+            layers = <0 3>;
         };
 
         go {
             bindings = <&kp LG(BACKSLASH)>;
             key-positions = <19 32>;
-            layers = <2 3>;
+            layers = <0 3>;
         };
 
         to_blender {
             bindings = <&to 4>;
             key-positions = <9 34>;
-            layers = <0 1 2 3>;
+            layers = <1 2 0 3>;
         };
 
         todefalt {
-            bindings = <&to 2>;
+            bindings = <&to 0>;
             key-positions = <0 42>;
         };
 
@@ -174,7 +174,7 @@
         quitApp {
             bindings = <&kp LG(Q)>;
             key-positions = <18 19 20 21>;
-            layers = <2>;
+            layers = <0>;
         };
     };
 
@@ -184,7 +184,7 @@
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&to 1 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
 
@@ -340,7 +340,7 @@
         toMac: toMac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0>, <&macro_wait_time 200>, <&to 2>;
+            bindings = <&bt BT_SEL 0>, <&macro_wait_time 200>, <&to 0>;
 
             label = "TOMAC";
         };
@@ -348,7 +348,7 @@
         toiPad: toiPad {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1>, <&macro_wait_time 200>, <&to 2>;
+            bindings = <&bt BT_SEL 1>, <&macro_wait_time 200>, <&to 0>;
 
             label = "TOIPAD";
         };
@@ -364,7 +364,7 @@
         BackToNum_and_lang1_at_2: BackToNum_and_lang1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_1>, <&macro_wait_time 50>, <&to 2>;
+            bindings = <&kp LANGUAGE_1>, <&macro_wait_time 50>, <&to 0>;
 
             label = "BACKTONUM_AND_LANG1";
         };
@@ -383,7 +383,7 @@
             bindings =
                 <&kp LANGUAGE_2 &to 11>,
                 <&macro_pause_for_release>,
-                <&kp LANGUAGE_1 &to 2>;
+                <&kp LANGUAGE_1 &to 0>;
 
             label = "NEW_MAC";
         };
@@ -803,6 +803,17 @@
     keymap {
         compatible = "zmk,keymap";
 
+        layer_2 {
+            bindings = <
+&kp Q                       &kp J             &LT_Advance 12 U                        &kp COMMA         &kp DOT                                                            &kp F                         &kp W             &LT_Advance 12 R  &kp Y  &kp P
+&MT_Advance LEFT_COMMAND E  &LT_Advance 14 I  &LT_Advance 10 A                        &LT_Advance 11 O  &kp MINUS                     &kp LG(C)      &kp LG(A)             &kp K                         &LT_Advance 11 T  &LT_Advance 9 N   &kp S  &MT_Advance RIGHT_COMMAND H
+&kp L                       &kp X             &doubleN_doubleCMD                      &kp V             &kp C                         &kp LG(X)      &kp LG(V)             &kp G                         &kp D             &kp M             &kp Z  &kp B
+&kp TAB                     &kp LEFT_ALT      &MT_Advance LCTRL LS(LC(LG(NUMBER_4)))  &mkp LCLK         &MT_Advance LEFT_SHIFT SPACE  &mkp RCLK      &spotlight_and_eisuu  &MT_Advance LEFT_SHIFT SPACE                                             &kp ESC
+            >;
+
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+        };
+
         default_layer {
             bindings = <
 &kp Q                       &kp J         &LT_Advance 8 U                &kp COMMA        &kp DOT                                                            &kp F                         &kp W            &LT_Advance 8 R  &kp Y  &kp P
@@ -825,22 +836,11 @@
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
-        layer_2 {
-            bindings = <
-&kp Q                       &kp J             &LT_Advance 12 U          &kp COMMA         &kp DOT                                                            &kp F                         &kp W             &LT_Advance 12 R  &kp Y  &kp P
-&MT_Advance LEFT_COMMAND E  &LT_Advance 14 I  &LT_Advance 10 A          &LT_Advance 11 O  &kp MINUS                     &kp LG(C)      &kp LG(A)             &kp K                         &LT_Advance 11 T  &LT_Advance 9 N   &kp S  &MT_Advance RIGHT_COMMAND H
-&kp L                       &kp X             &doubleN_doubleCMD        &kp V             &kp C                         &kp LG(X)      &kp LG(V)             &kp G                         &kp D             &kp M             &kp Z  &kp B
-&kp TAB                     &kp LCTRL         &kp LS(LC(LG(NUMBER_4)))  &mkp LCLK         &MT_Advance LEFT_SHIFT SPACE  &mkp RCLK      &spotlight_and_eisuu  &MT_Advance LEFT_SHIFT SPACE                                             &kp ESC
-            >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
-        };
-
         layer_3 {
             bindings = <
 &kp Q    &kp W      &LT_Advance 12 E    &kp R             &kp T                                                                   &kp Y                         &kp U             &LT_Advance 12 I  &kp O    &kp P
 &kp A    &kp S      &LT_Advance 10 D    &LT_Advance 11 F  &kp G                         &kp PG_UP          &kp LG(BACKSLASH)      &kp H                         &LT_Advance 11 J  &LT_Advance 9 K   &kp L    &kp ENTER
-&kp Z    &lt 0 X    &doubleC_doubleCMD  &kp V             &kp B                         &kp PAGE_DOWN      &kp LG(RIGHT_BRACKET)  &kp N                         &kp M             &kp COMMA         &kp DOT  &kp MINUS
+&kp Z    &lt 1 X    &doubleC_doubleCMD  &kp V             &kp B                         &kp PAGE_DOWN      &kp LG(RIGHT_BRACKET)  &kp N                         &kp M             &kp COMMA         &kp DOT  &kp MINUS
 &kp TAB  &kp LCTRL  &kp LEFT_ALT        &mkp LCLK         &MT_Advance LEFT_SHIFT SPACE  &mkp RCLK          &kp SPACE              &MT_Advance LEFT_SHIFT SPACE                                               &kp ESC
             >;
 
