@@ -17,11 +17,11 @@
         layers = <6>;
         bindings =
             <&kp LG(LA(LC(RIGHT_ARROW)))>,
-            // 右: Win + Alt + Ctrl + →,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 右: Win + Alt + Ctrl + →,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(LA(LC(LEFT_ARROW)))>,
-            // 左: Win + Alt + Ctrl + ←,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 左: Win + Alt + Ctrl + ←,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(TAB)>,
-            // 上: Win + Tab,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 上: Win + Tab,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(M)>;
 
         // 下: → だけ
@@ -37,11 +37,11 @@
         layers = <7>;
         bindings =
             <&kp LG(RIGHT_ARROW)>,
-            // 右にスナップ (Win + →),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 右にスナップ (Win + →),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(LEFT_ARROW)>,
-            // 左にスナップ (Win + ←),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 左にスナップ (Win + ←),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(UP_ARROW)>,
-            // 最大化   (Win + ↑),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            // 最大化   (Win + ↑),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(DOWN_ARROW)>;
 
         // 最小化 or 元のサイズ (Win + ↓)
@@ -57,11 +57,11 @@
         layers = <11>;
         bindings =
             <&kp LC(LA(RIGHT))>,
-            // 右：ウィンドウを右半分に (Ctrl + Cmd + →),,,,,,,,,,,,,,,,,,,,,,,
+            // 右：ウィンドウを右半分に (Ctrl + Cmd + →),,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LC(LA(LEFT))>,
-            // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),,,,,,,,,,,,,,,,,,,,,,,
+            // 左：ウィンドウを左半分に (Ctrl + Cmd + ←),,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LA(LC(ENTER))>,
-            // 上：Enter + Option + Command,,,,,,,,,,,,,,,,,,,,,,,
+            // 上：Enter + Option + Command,,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(W)>;
 
         // 下：アプリのウィンドウを閉じる (Cmd + W)
@@ -77,11 +77,11 @@
         layers = <10>;
         bindings =
             <&kp LC(LEFT)>,
-            // 右：右の仮想デスクトップへ移動 (Ctrl + →),,,,,,,,,,,,,,,,,,,,,,,
+            // 右：右の仮想デスクトップへ移動 (Ctrl + →),,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LC(RIGHT)>,
-            // 左：左の仮想デスクトップへ移動 (Ctrl + ←),,,,,,,,,,,,,,,,,,,,,,,
+            // 左：左の仮想デスクトップへ移動 (Ctrl + ←),,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LC(UP)>,
-            // 上：ミッションコントロール (Ctrl + ↑),,,,,,,,,,,,,,,,,,,,,,,
+            // 上：ミッションコントロール (Ctrl + ↑),,,,,,,,,,,,,,,,,,,,,,,,
             <&kp LG(M)>;
 
         // 下：アプリケーションエクスポーズ (Ctrl + ↓)
@@ -798,6 +798,15 @@
             tapping-term-ms = <150>;
             flavor = "tap-preferred";
         };
+
+        Mkpkp: Mkpkp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MKPKP";
+            bindings = <&mkp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
     };
 
     keymap {
@@ -807,7 +816,7 @@
             bindings = <
 &kp Q                       &kp J             &LT_Advance 12 U                        &kp COMMA         &kp DOT                                                            &kp F                         &kp W             &LT_Advance 12 R  &kp Y  &kp P
 &MT_Advance LEFT_COMMAND E  &LT_Advance 14 I  &LT_Advance 10 A                        &LT_Advance 11 O  &kp MINUS                     &kp LG(C)      &kp LG(A)             &kp K                         &LT_Advance 11 T  &LT_Advance 9 N   &kp S  &MT_Advance RIGHT_COMMAND H
-&kp L                       &kp X             &doubleN_doubleCMD                      &kp V             &kp C                         &kp LG(X)      &kp LG(V)             &kp G                         &kp D             &kp M             &kp Z  &kp B
+&kp L                       &kp X             &MT_Advance LEFT_SHIFT N                &Mkpkp MB3 V      &kp C                         &kp LG(X)      &kp LG(V)             &kp G                         &kp D             &kp M             &kp Z  &kp B
 &kp TAB                     &kp LEFT_ALT      &MT_Advance LCTRL LS(LC(LG(NUMBER_4)))  &mkp LCLK         &MT_Advance LEFT_SHIFT SPACE  &mkp RCLK      &spotlight_and_eisuu  &MT_Advance LEFT_SHIFT SPACE                                             &kp ESC
             >;
 
